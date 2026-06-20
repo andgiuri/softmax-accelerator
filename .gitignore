@@ -1,25 +1,19 @@
-# Vitis / Vivado build outputs
-stream_attn/hls/stream_attn_hls/
-stream_attn/hls/*.zip
-stream_attn/hls/*.log
-stream_attn/hls/vitis_hls.log
-stream_attn/vivado/*/
-*.jou
-*.log
-*.str
+# --- Keep build outputs (HLS/Vivado reports, logs, bitstreams) tracked so they
+#     can be reviewed in the repo. Only ignore locks and editor/OS noise. ---
+
+# Xilinx lock/journal/backup noise (useless to read, churn on every run)
 .Xil/
+*.jou
+*.str
 vivado*.backup*
-
-# Bitstream / handoff artifacts (built on remote, uploaded to board)
-*.bit
-*.hwh
-*.bin
-*.xsa
-
-# Generated data
-*.npy
-*.npz
+*.wdb
 
 # Python
 __pycache__/
 *.pyc
+
+# Generated input data (regenerate deterministically with gen_inputs.py)
+*.npz
+
+# macOS
+.DS_Store
