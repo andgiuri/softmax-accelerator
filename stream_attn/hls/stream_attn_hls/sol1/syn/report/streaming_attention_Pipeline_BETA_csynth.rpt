@@ -1,0 +1,247 @@
+
+
+================================================================
+== Vitis HLS Report for 'streaming_attention_Pipeline_BETA'
+================================================================
+* Date:           Sat Jun 20 05:22:15 2026
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        stream_attn_hls
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.844 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       82|       82|  0.820 us|  0.820 us|   82|   82|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- BETA    |       80|       80|        21|          4|          1|    16|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     25|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       0|     65|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    175|    -|
+|Register         |        -|    -|     798|     64|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     798|    329|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------+------------------+---------+----+---+----+-----+
+    |        Instance       |      Module      | BRAM_18K| DSP| FF| LUT| URAM|
+    +-----------------------+------------------+---------+----+---+----+-----+
+    |mux_165_32_1_1_x_U325  |mux_165_32_1_1_x  |        0|   0|  0|  65|    0|
+    +-----------------------+------------------+---------+----+---+----+-----+
+    |Total                  |                  |        0|   0|  0|  65|    0|
+    +-----------------------+------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln101_fu_451_p2   |         +|   0|  0|  13|           5|           1|
+    |icmp_ln101_fu_445_p2  |      icmp|   0|  0|  10|           5|           6|
+    |ap_enable_pp0         |       xor|   0|  0|   2|           1|           2|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  25|          11|           9|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                         |  25|          5|    1|          5|
+    |ap_done_int                       |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0           |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1           |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter5           |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter2_reg  |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter3_reg  |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter4_reg  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_j_2              |   9|          2|    5|         10|
+    |ap_sig_allocacmp_l_tile_load      |   9|          2|   32|         64|
+    |grp_fu_423_opcode                 |  14|          3|    2|          6|
+    |grp_fu_423_p0                     |  14|          3|   32|         96|
+    |grp_fu_423_p1                     |  14|          3|   32|         96|
+    |j_fu_134                          |   9|          2|    5|         10|
+    |l_tile_fu_130                     |   9|          2|   32|         64|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             | 175|         38|  149|        367|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |add_ln101_reg_780                 |   5|   0|    5|          0|
+    |ap_CS_fsm                         |   4|   0|    4|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter4_reg  |   1|   0|    1|          0|
+    |beta_10_fu_178                    |  32|   0|   32|          0|
+    |beta_11_fu_182                    |  32|   0|   32|          0|
+    |beta_12_fu_186                    |  32|   0|   32|          0|
+    |beta_13_fu_190                    |  32|   0|   32|          0|
+    |beta_14_fu_194                    |  32|   0|   32|          0|
+    |beta_15_fu_198                    |  32|   0|   32|          0|
+    |beta_16_reg_799                   |  32|   0|   32|          0|
+    |beta_1_fu_142                     |  32|   0|   32|          0|
+    |beta_2_fu_146                     |  32|   0|   32|          0|
+    |beta_3_fu_150                     |  32|   0|   32|          0|
+    |beta_4_fu_154                     |  32|   0|   32|          0|
+    |beta_5_fu_158                     |  32|   0|   32|          0|
+    |beta_6_fu_162                     |  32|   0|   32|          0|
+    |beta_7_fu_166                     |  32|   0|   32|          0|
+    |beta_8_fu_170                     |  32|   0|   32|          0|
+    |beta_9_fu_174                     |  32|   0|   32|          0|
+    |beta_fu_138                       |  32|   0|   32|          0|
+    |icmp_ln101_reg_776                |   1|   0|    1|          0|
+    |j_fu_134                          |   5|   0|    5|          0|
+    |l_tile_fu_130                     |  32|   0|   32|          0|
+    |tmp_4_reg_785                     |  32|   0|   32|          0|
+    |trunc_ln103_reg_790               |   4|   0|    4|          0|
+    |x_assign_1_reg_794                |  32|   0|   32|          0|
+    |icmp_ln101_reg_776                |  64|  32|    1|          0|
+    |trunc_ln103_reg_790               |  64|  32|    4|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 798|  64|  675|          0|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+-----------------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |           Source Object           |    C Type    |
++----------------------+-----+-----+------------+-----------------------------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_4113_p_din0    |  out|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_4113_p_din1    |  out|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_4113_p_opcode  |  out|    2|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_4113_p_dout0   |   in|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_4113_p_ce      |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_1561_p_din0    |  out|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_1561_p_din1    |  out|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_1561_p_dout0   |   in|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_1561_p_ce      |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|score_reload          |   in|   32|     ap_none|                       score_reload|        scalar|
+|score_1_reload        |   in|   32|     ap_none|                     score_1_reload|        scalar|
+|score_2_reload        |   in|   32|     ap_none|                     score_2_reload|        scalar|
+|score_3_reload        |   in|   32|     ap_none|                     score_3_reload|        scalar|
+|score_4_reload        |   in|   32|     ap_none|                     score_4_reload|        scalar|
+|score_5_reload        |   in|   32|     ap_none|                     score_5_reload|        scalar|
+|score_6_reload        |   in|   32|     ap_none|                     score_6_reload|        scalar|
+|score_7_reload        |   in|   32|     ap_none|                     score_7_reload|        scalar|
+|score_8_reload        |   in|   32|     ap_none|                     score_8_reload|        scalar|
+|score_9_reload        |   in|   32|     ap_none|                     score_9_reload|        scalar|
+|score_10_reload       |   in|   32|     ap_none|                    score_10_reload|        scalar|
+|score_11_reload       |   in|   32|     ap_none|                    score_11_reload|        scalar|
+|score_12_reload       |   in|   32|     ap_none|                    score_12_reload|        scalar|
+|score_13_reload       |   in|   32|     ap_none|                    score_13_reload|        scalar|
+|score_14_reload       |   in|   32|     ap_none|                    score_14_reload|        scalar|
+|score_15_reload       |   in|   32|     ap_none|                    score_15_reload|        scalar|
+|tile_max_reload       |   in|   32|     ap_none|                    tile_max_reload|        scalar|
+|beta_15_out           |  out|   32|      ap_vld|                        beta_15_out|       pointer|
+|beta_15_out_ap_vld    |  out|    1|      ap_vld|                        beta_15_out|       pointer|
+|beta_14_out           |  out|   32|      ap_vld|                        beta_14_out|       pointer|
+|beta_14_out_ap_vld    |  out|    1|      ap_vld|                        beta_14_out|       pointer|
+|beta_13_out           |  out|   32|      ap_vld|                        beta_13_out|       pointer|
+|beta_13_out_ap_vld    |  out|    1|      ap_vld|                        beta_13_out|       pointer|
+|beta_12_out           |  out|   32|      ap_vld|                        beta_12_out|       pointer|
+|beta_12_out_ap_vld    |  out|    1|      ap_vld|                        beta_12_out|       pointer|
+|beta_11_out           |  out|   32|      ap_vld|                        beta_11_out|       pointer|
+|beta_11_out_ap_vld    |  out|    1|      ap_vld|                        beta_11_out|       pointer|
+|beta_10_out           |  out|   32|      ap_vld|                        beta_10_out|       pointer|
+|beta_10_out_ap_vld    |  out|    1|      ap_vld|                        beta_10_out|       pointer|
+|beta_9_out            |  out|   32|      ap_vld|                         beta_9_out|       pointer|
+|beta_9_out_ap_vld     |  out|    1|      ap_vld|                         beta_9_out|       pointer|
+|beta_8_out            |  out|   32|      ap_vld|                         beta_8_out|       pointer|
+|beta_8_out_ap_vld     |  out|    1|      ap_vld|                         beta_8_out|       pointer|
+|beta_7_out            |  out|   32|      ap_vld|                         beta_7_out|       pointer|
+|beta_7_out_ap_vld     |  out|    1|      ap_vld|                         beta_7_out|       pointer|
+|beta_6_out            |  out|   32|      ap_vld|                         beta_6_out|       pointer|
+|beta_6_out_ap_vld     |  out|    1|      ap_vld|                         beta_6_out|       pointer|
+|beta_5_out            |  out|   32|      ap_vld|                         beta_5_out|       pointer|
+|beta_5_out_ap_vld     |  out|    1|      ap_vld|                         beta_5_out|       pointer|
+|beta_4_out            |  out|   32|      ap_vld|                         beta_4_out|       pointer|
+|beta_4_out_ap_vld     |  out|    1|      ap_vld|                         beta_4_out|       pointer|
+|beta_3_out            |  out|   32|      ap_vld|                         beta_3_out|       pointer|
+|beta_3_out_ap_vld     |  out|    1|      ap_vld|                         beta_3_out|       pointer|
+|beta_2_out            |  out|   32|      ap_vld|                         beta_2_out|       pointer|
+|beta_2_out_ap_vld     |  out|    1|      ap_vld|                         beta_2_out|       pointer|
+|beta_1_out            |  out|   32|      ap_vld|                         beta_1_out|       pointer|
+|beta_1_out_ap_vld     |  out|    1|      ap_vld|                         beta_1_out|       pointer|
+|beta_out              |  out|   32|      ap_vld|                           beta_out|       pointer|
+|beta_out_ap_vld       |  out|    1|      ap_vld|                           beta_out|       pointer|
+|l_tile_out            |  out|   32|      ap_vld|                         l_tile_out|       pointer|
+|l_tile_out_ap_vld     |  out|    1|      ap_vld|                         l_tile_out|       pointer|
++----------------------+-----+-----+------------+-----------------------------------+--------------+
+

@@ -1,0 +1,487 @@
+
+
+================================================================
+== Vitis HLS Report for 'streaming_attention_Pipeline_MAC'
+================================================================
+* Date:           Sat Jun 20 05:22:09 2026
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        stream_attn_hls
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.688 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       69|       69|  0.690 us|  0.690 us|   69|   69|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- MAC     |       67|       67|         5|          1|          1|    64|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 5, States = { 1 2 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.45>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%dot_16 = alloca i32 1"   --->   Operation 8 'alloca' 'dot_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%dot_17 = alloca i32 1"   --->   Operation 9 'alloca' 'dot_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%dot_18 = alloca i32 1"   --->   Operation 10 'alloca' 'dot_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%dot_19 = alloca i32 1"   --->   Operation 11 'alloca' 'dot_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%dot_20 = alloca i32 1"   --->   Operation 12 'alloca' 'dot_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%dot_21 = alloca i32 1"   --->   Operation 13 'alloca' 'dot_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%dot_22 = alloca i32 1"   --->   Operation 14 'alloca' 'dot_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%dot_23 = alloca i32 1"   --->   Operation 15 'alloca' 'dot_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%dot_24 = alloca i32 1"   --->   Operation 16 'alloca' 'dot_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%dot_25 = alloca i32 1"   --->   Operation 17 'alloca' 'dot_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%dot_26 = alloca i32 1"   --->   Operation 18 'alloca' 'dot_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%dot_27 = alloca i32 1"   --->   Operation 19 'alloca' 'dot_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%dot_28 = alloca i32 1"   --->   Operation 20 'alloca' 'dot_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%dot_29 = alloca i32 1"   --->   Operation 21 'alloca' 'dot_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%dot_30 = alloca i32 1"   --->   Operation 22 'alloca' 'dot_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%dot_31 = alloca i32 1"   --->   Operation 23 'alloca' 'dot_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%d = alloca i32 1"   --->   Operation 24 'alloca' 'd' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%q_63_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_63_reload"   --->   Operation 25 'read' 'q_63_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%q_62_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_62_reload"   --->   Operation 26 'read' 'q_62_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%q_61_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_61_reload"   --->   Operation 27 'read' 'q_61_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%q_60_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_60_reload"   --->   Operation 28 'read' 'q_60_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%q_59_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_59_reload"   --->   Operation 29 'read' 'q_59_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%q_58_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_58_reload"   --->   Operation 30 'read' 'q_58_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%q_57_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_57_reload"   --->   Operation 31 'read' 'q_57_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%q_56_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_56_reload"   --->   Operation 32 'read' 'q_56_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%q_55_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_55_reload"   --->   Operation 33 'read' 'q_55_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%q_54_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_54_reload"   --->   Operation 34 'read' 'q_54_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%q_53_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_53_reload"   --->   Operation 35 'read' 'q_53_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%q_52_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_52_reload"   --->   Operation 36 'read' 'q_52_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%q_51_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_51_reload"   --->   Operation 37 'read' 'q_51_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%q_50_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_50_reload"   --->   Operation 38 'read' 'q_50_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%q_49_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_49_reload"   --->   Operation 39 'read' 'q_49_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%q_48_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_48_reload"   --->   Operation 40 'read' 'q_48_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%q_47_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_47_reload"   --->   Operation 41 'read' 'q_47_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%q_46_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_46_reload"   --->   Operation 42 'read' 'q_46_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%q_45_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_45_reload"   --->   Operation 43 'read' 'q_45_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%q_44_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_44_reload"   --->   Operation 44 'read' 'q_44_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%q_43_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_43_reload"   --->   Operation 45 'read' 'q_43_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%q_42_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_42_reload"   --->   Operation 46 'read' 'q_42_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%q_41_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_41_reload"   --->   Operation 47 'read' 'q_41_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%q_40_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_40_reload"   --->   Operation 48 'read' 'q_40_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%q_39_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_39_reload"   --->   Operation 49 'read' 'q_39_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%q_38_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_38_reload"   --->   Operation 50 'read' 'q_38_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%q_37_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_37_reload"   --->   Operation 51 'read' 'q_37_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%q_36_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_36_reload"   --->   Operation 52 'read' 'q_36_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%q_35_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_35_reload"   --->   Operation 53 'read' 'q_35_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%q_34_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_34_reload"   --->   Operation 54 'read' 'q_34_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%q_33_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_33_reload"   --->   Operation 55 'read' 'q_33_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%q_32_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_32_reload"   --->   Operation 56 'read' 'q_32_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%q_31_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_31_reload"   --->   Operation 57 'read' 'q_31_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%q_30_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_30_reload"   --->   Operation 58 'read' 'q_30_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%q_29_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_29_reload"   --->   Operation 59 'read' 'q_29_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%q_28_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_28_reload"   --->   Operation 60 'read' 'q_28_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%q_27_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_27_reload"   --->   Operation 61 'read' 'q_27_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%q_26_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_26_reload"   --->   Operation 62 'read' 'q_26_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%q_25_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_25_reload"   --->   Operation 63 'read' 'q_25_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%q_24_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_24_reload"   --->   Operation 64 'read' 'q_24_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%q_23_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_23_reload"   --->   Operation 65 'read' 'q_23_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%q_22_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_22_reload"   --->   Operation 66 'read' 'q_22_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%q_21_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_21_reload"   --->   Operation 67 'read' 'q_21_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%q_20_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_20_reload"   --->   Operation 68 'read' 'q_20_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%q_19_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_19_reload"   --->   Operation 69 'read' 'q_19_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%q_18_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_18_reload"   --->   Operation 70 'read' 'q_18_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%q_17_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_17_reload"   --->   Operation 71 'read' 'q_17_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%q_16_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_16_reload"   --->   Operation 72 'read' 'q_16_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%q_15_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_15_reload"   --->   Operation 73 'read' 'q_15_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%q_14_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_14_reload"   --->   Operation 74 'read' 'q_14_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%q_13_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_13_reload"   --->   Operation 75 'read' 'q_13_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%q_12_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_12_reload"   --->   Operation 76 'read' 'q_12_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%q_11_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_11_reload"   --->   Operation 77 'read' 'q_11_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%q_10_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_10_reload"   --->   Operation 78 'read' 'q_10_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%q_9_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_9_reload"   --->   Operation 79 'read' 'q_9_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%q_8_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_8_reload"   --->   Operation 80 'read' 'q_8_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%q_7_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_7_reload"   --->   Operation 81 'read' 'q_7_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%q_6_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_6_reload"   --->   Operation 82 'read' 'q_6_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%q_5_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_5_reload"   --->   Operation 83 'read' 'q_5_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%q_4_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_4_reload"   --->   Operation 84 'read' 'q_4_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%q_3_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_3_reload"   --->   Operation 85 'read' 'q_3_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%q_2_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_2_reload"   --->   Operation 86 'read' 'q_2_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%q_1_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_1_reload"   --->   Operation 87 'read' 'q_1_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%q_reload_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %q_reload"   --->   Operation 88 'read' 'q_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (1.58ns)   --->   "%store_ln0 = store i7 0, i7 %d"   --->   Operation 89 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 90 [1/1] (1.58ns)   --->   "%store_ln0 = store i22 0, i22 %dot_31"   --->   Operation 90 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 91 [1/1] (1.58ns)   --->   "%store_ln0 = store i22 0, i22 %dot_30"   --->   Operation 91 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 92 [1/1] (1.58ns)   --->   "%store_ln0 = store i22 0, i22 %dot_29"   --->   Operation 92 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 93 [1/1] (1.58ns)   --->   "%store_ln0 = store i22 0, i22 %dot_28"   --->   Operation 93 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 94 [1/1] (1.58ns)   --->   "%store_ln0 = store i22 0, i22 %dot_27"   --->   Operation 94 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 95 [1/1] (1.58ns)   --->   "%store_ln0 = store i22 0, i22 %dot_26"   --->   Operation 95 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 96 [1/1] (1.58ns)   --->   "%store_ln0 = store i22 0, i22 %dot_25"   --->   Operation 96 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 97 [1/1] (1.58ns)   --->   "%store_ln0 = store i22 0, i22 %dot_24"   --->   Operation 97 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 98 [1/1] (1.58ns)   --->   "%store_ln0 = store i22 0, i22 %dot_23"   --->   Operation 98 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 99 [1/1] (1.58ns)   --->   "%store_ln0 = store i22 0, i22 %dot_22"   --->   Operation 99 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 100 [1/1] (1.58ns)   --->   "%store_ln0 = store i22 0, i22 %dot_21"   --->   Operation 100 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 101 [1/1] (1.58ns)   --->   "%store_ln0 = store i22 0, i22 %dot_20"   --->   Operation 101 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 102 [1/1] (1.58ns)   --->   "%store_ln0 = store i22 0, i22 %dot_19"   --->   Operation 102 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 103 [1/1] (1.58ns)   --->   "%store_ln0 = store i22 0, i22 %dot_18"   --->   Operation 103 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 104 [1/1] (1.58ns)   --->   "%store_ln0 = store i22 0, i22 %dot_17"   --->   Operation 104 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 105 [1/1] (1.58ns)   --->   "%store_ln0 = store i22 0, i22 %dot_16"   --->   Operation 105 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc72"   --->   Operation 106 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%d_2 = load i7 %d" [attention_tile.cpp:75]   --->   Operation 107 'load' 'd_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (1.48ns)   --->   "%icmp_ln75 = icmp_eq  i7 %d_2, i7 64" [attention_tile.cpp:75]   --->   Operation 108 'icmp' 'icmp_ln75' <Predicate = true> <Delay = 1.48> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 64, i64 64, i64 64"   --->   Operation 109 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (1.87ns)   --->   "%add_ln75 = add i7 %d_2, i7 1" [attention_tile.cpp:75]   --->   Operation 110 'add' 'add_ln75' <Predicate = true> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%br_ln75 = br i1 %icmp_ln75, void %for.inc72.split, void %for.body82.preheader.exitStub" [attention_tile.cpp:75]   --->   Operation 111 'br' 'br_ln75' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%zext_ln75 = zext i7 %d_2" [attention_tile.cpp:75]   --->   Operation 112 'zext' 'zext_ln75' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (3.13ns)   --->   "%tmp_1 = mux i8 @_ssdm_op_Mux.ap_auto.64i8.i7, i8 %q_reload_read, i8 %q_1_reload_read, i8 %q_2_reload_read, i8 %q_3_reload_read, i8 %q_4_reload_read, i8 %q_5_reload_read, i8 %q_6_reload_read, i8 %q_7_reload_read, i8 %q_8_reload_read, i8 %q_9_reload_read, i8 %q_10_reload_read, i8 %q_11_reload_read, i8 %q_12_reload_read, i8 %q_13_reload_read, i8 %q_14_reload_read, i8 %q_15_reload_read, i8 %q_16_reload_read, i8 %q_17_reload_read, i8 %q_18_reload_read, i8 %q_19_reload_read, i8 %q_20_reload_read, i8 %q_21_reload_read, i8 %q_22_reload_read, i8 %q_23_reload_read, i8 %q_24_reload_read, i8 %q_25_reload_read, i8 %q_26_reload_read, i8 %q_27_reload_read, i8 %q_28_reload_read, i8 %q_29_reload_read, i8 %q_30_reload_read, i8 %q_31_reload_read, i8 %q_32_reload_read, i8 %q_33_reload_read, i8 %q_34_reload_read, i8 %q_35_reload_read, i8 %q_36_reload_read, i8 %q_37_reload_read, i8 %q_38_reload_read, i8 %q_39_reload_read, i8 %q_40_reload_read, i8 %q_41_reload_read, i8 %q_42_reload_read, i8 %q_43_reload_read, i8 %q_44_reload_read, i8 %q_45_reload_read, i8 %q_46_reload_read, i8 %q_47_reload_read, i8 %q_48_reload_read, i8 %q_49_reload_read, i8 %q_50_reload_read, i8 %q_51_reload_read, i8 %q_52_reload_read, i8 %q_53_reload_read, i8 %q_54_reload_read, i8 %q_55_reload_read, i8 %q_56_reload_read, i8 %q_57_reload_read, i8 %q_58_reload_read, i8 %q_59_reload_read, i8 %q_60_reload_read, i8 %q_61_reload_read, i8 %q_62_reload_read, i8 %q_63_reload_read, i7 %d_2" [attention_tile.cpp:79]   --->   Operation 113 'mux' 'tmp_1' <Predicate = (!icmp_ln75)> <Delay = 3.13> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 3.13> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%kt_addr = getelementptr i8 %kt, i64 0, i64 %zext_ln75" [attention_tile.cpp:79]   --->   Operation 114 'getelementptr' 'kt_addr' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 115 [2/2] (2.32ns)   --->   "%kt_load = load i6 %kt_addr" [attention_tile.cpp:79]   --->   Operation 115 'load' 'kt_load' <Predicate = (!icmp_ln75)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%kt_1_addr = getelementptr i8 %kt_1, i64 0, i64 %zext_ln75" [attention_tile.cpp:79]   --->   Operation 116 'getelementptr' 'kt_1_addr' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 117 [2/2] (2.32ns)   --->   "%kt_1_load = load i6 %kt_1_addr" [attention_tile.cpp:79]   --->   Operation 117 'load' 'kt_1_load' <Predicate = (!icmp_ln75)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%kt_2_addr = getelementptr i8 %kt_2, i64 0, i64 %zext_ln75" [attention_tile.cpp:79]   --->   Operation 118 'getelementptr' 'kt_2_addr' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 119 [2/2] (2.32ns)   --->   "%kt_2_load = load i6 %kt_2_addr" [attention_tile.cpp:79]   --->   Operation 119 'load' 'kt_2_load' <Predicate = (!icmp_ln75)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%kt_3_addr = getelementptr i8 %kt_3, i64 0, i64 %zext_ln75" [attention_tile.cpp:79]   --->   Operation 120 'getelementptr' 'kt_3_addr' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 121 [2/2] (2.32ns)   --->   "%kt_3_load = load i6 %kt_3_addr" [attention_tile.cpp:79]   --->   Operation 121 'load' 'kt_3_load' <Predicate = (!icmp_ln75)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%kt_4_addr = getelementptr i8 %kt_4, i64 0, i64 %zext_ln75" [attention_tile.cpp:79]   --->   Operation 122 'getelementptr' 'kt_4_addr' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 123 [2/2] (2.32ns)   --->   "%kt_4_load = load i6 %kt_4_addr" [attention_tile.cpp:79]   --->   Operation 123 'load' 'kt_4_load' <Predicate = (!icmp_ln75)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%kt_5_addr = getelementptr i8 %kt_5, i64 0, i64 %zext_ln75" [attention_tile.cpp:79]   --->   Operation 124 'getelementptr' 'kt_5_addr' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 125 [2/2] (2.32ns)   --->   "%kt_5_load = load i6 %kt_5_addr" [attention_tile.cpp:79]   --->   Operation 125 'load' 'kt_5_load' <Predicate = (!icmp_ln75)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%kt_6_addr = getelementptr i8 %kt_6, i64 0, i64 %zext_ln75" [attention_tile.cpp:79]   --->   Operation 126 'getelementptr' 'kt_6_addr' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 127 [2/2] (2.32ns)   --->   "%kt_6_load = load i6 %kt_6_addr" [attention_tile.cpp:79]   --->   Operation 127 'load' 'kt_6_load' <Predicate = (!icmp_ln75)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%kt_7_addr = getelementptr i8 %kt_7, i64 0, i64 %zext_ln75" [attention_tile.cpp:79]   --->   Operation 128 'getelementptr' 'kt_7_addr' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 129 [2/2] (2.32ns)   --->   "%kt_7_load = load i6 %kt_7_addr" [attention_tile.cpp:79]   --->   Operation 129 'load' 'kt_7_load' <Predicate = (!icmp_ln75)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%kt_8_addr = getelementptr i8 %kt_8, i64 0, i64 %zext_ln75" [attention_tile.cpp:79]   --->   Operation 130 'getelementptr' 'kt_8_addr' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 131 [2/2] (2.32ns)   --->   "%kt_8_load = load i6 %kt_8_addr" [attention_tile.cpp:79]   --->   Operation 131 'load' 'kt_8_load' <Predicate = (!icmp_ln75)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%kt_9_addr = getelementptr i8 %kt_9, i64 0, i64 %zext_ln75" [attention_tile.cpp:79]   --->   Operation 132 'getelementptr' 'kt_9_addr' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 133 [2/2] (2.32ns)   --->   "%kt_9_load = load i6 %kt_9_addr" [attention_tile.cpp:79]   --->   Operation 133 'load' 'kt_9_load' <Predicate = (!icmp_ln75)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%kt_10_addr = getelementptr i8 %kt_10, i64 0, i64 %zext_ln75" [attention_tile.cpp:79]   --->   Operation 134 'getelementptr' 'kt_10_addr' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 135 [2/2] (2.32ns)   --->   "%kt_10_load = load i6 %kt_10_addr" [attention_tile.cpp:79]   --->   Operation 135 'load' 'kt_10_load' <Predicate = (!icmp_ln75)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 136 [1/1] (0.00ns)   --->   "%kt_11_addr = getelementptr i8 %kt_11, i64 0, i64 %zext_ln75" [attention_tile.cpp:79]   --->   Operation 136 'getelementptr' 'kt_11_addr' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 137 [2/2] (2.32ns)   --->   "%kt_11_load = load i6 %kt_11_addr" [attention_tile.cpp:79]   --->   Operation 137 'load' 'kt_11_load' <Predicate = (!icmp_ln75)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%kt_12_addr = getelementptr i8 %kt_12, i64 0, i64 %zext_ln75" [attention_tile.cpp:79]   --->   Operation 138 'getelementptr' 'kt_12_addr' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 139 [2/2] (2.32ns)   --->   "%kt_12_load = load i6 %kt_12_addr" [attention_tile.cpp:79]   --->   Operation 139 'load' 'kt_12_load' <Predicate = (!icmp_ln75)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%kt_13_addr = getelementptr i8 %kt_13, i64 0, i64 %zext_ln75" [attention_tile.cpp:79]   --->   Operation 140 'getelementptr' 'kt_13_addr' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 141 [2/2] (2.32ns)   --->   "%kt_13_load = load i6 %kt_13_addr" [attention_tile.cpp:79]   --->   Operation 141 'load' 'kt_13_load' <Predicate = (!icmp_ln75)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%kt_14_addr = getelementptr i8 %kt_14, i64 0, i64 %zext_ln75" [attention_tile.cpp:79]   --->   Operation 142 'getelementptr' 'kt_14_addr' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 143 [2/2] (2.32ns)   --->   "%kt_14_load = load i6 %kt_14_addr" [attention_tile.cpp:79]   --->   Operation 143 'load' 'kt_14_load' <Predicate = (!icmp_ln75)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "%kt_15_addr = getelementptr i8 %kt_15, i64 0, i64 %zext_ln75" [attention_tile.cpp:79]   --->   Operation 144 'getelementptr' 'kt_15_addr' <Predicate = (!icmp_ln75)> <Delay = 0.00>
+ST_1 : Operation 145 [2/2] (2.32ns)   --->   "%kt_15_load = load i6 %kt_15_addr" [attention_tile.cpp:79]   --->   Operation 145 'load' 'kt_15_load' <Predicate = (!icmp_ln75)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 146 [1/1] (1.58ns)   --->   "%store_ln75 = store i7 %add_ln75, i7 %d" [attention_tile.cpp:75]   --->   Operation 146 'store' 'store_ln75' <Predicate = (!icmp_ln75)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 3.37>
+ST_2 : Operation 147 [1/1] (0.00ns)   --->   "%sext_ln79 = sext i8 %tmp_1" [attention_tile.cpp:79]   --->   Operation 147 'sext' 'sext_ln79' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 148 [1/2] (2.32ns)   --->   "%kt_load = load i6 %kt_addr" [attention_tile.cpp:79]   --->   Operation 148 'load' 'kt_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 149 [1/1] (0.00ns)   --->   "%sext_ln79_1 = sext i8 %kt_load" [attention_tile.cpp:79]   --->   Operation 149 'sext' 'sext_ln79_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 150 [3/3] (1.05ns) (grouped into DSP with root node dot)   --->   "%mul_ln79 = mul i16 %sext_ln79_1, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 150 'mul' 'mul_ln79' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 151 [1/2] (2.32ns)   --->   "%kt_1_load = load i6 %kt_1_addr" [attention_tile.cpp:79]   --->   Operation 151 'load' 'kt_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 152 [1/1] (0.00ns)   --->   "%sext_ln79_3 = sext i8 %kt_1_load" [attention_tile.cpp:79]   --->   Operation 152 'sext' 'sext_ln79_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 153 [3/3] (1.05ns) (grouped into DSP with root node dot_32)   --->   "%mul_ln79_1 = mul i16 %sext_ln79_3, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 153 'mul' 'mul_ln79_1' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 154 [1/2] (2.32ns)   --->   "%kt_2_load = load i6 %kt_2_addr" [attention_tile.cpp:79]   --->   Operation 154 'load' 'kt_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 155 [1/1] (0.00ns)   --->   "%sext_ln79_5 = sext i8 %kt_2_load" [attention_tile.cpp:79]   --->   Operation 155 'sext' 'sext_ln79_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 156 [3/3] (1.05ns) (grouped into DSP with root node dot_33)   --->   "%mul_ln79_2 = mul i16 %sext_ln79_5, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 156 'mul' 'mul_ln79_2' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 157 [1/2] (2.32ns)   --->   "%kt_3_load = load i6 %kt_3_addr" [attention_tile.cpp:79]   --->   Operation 157 'load' 'kt_3_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 158 [1/1] (0.00ns)   --->   "%sext_ln79_7 = sext i8 %kt_3_load" [attention_tile.cpp:79]   --->   Operation 158 'sext' 'sext_ln79_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 159 [3/3] (1.05ns) (grouped into DSP with root node dot_34)   --->   "%mul_ln79_3 = mul i16 %sext_ln79_7, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 159 'mul' 'mul_ln79_3' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 160 [1/2] (2.32ns)   --->   "%kt_4_load = load i6 %kt_4_addr" [attention_tile.cpp:79]   --->   Operation 160 'load' 'kt_4_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 161 [1/1] (0.00ns)   --->   "%sext_ln79_9 = sext i8 %kt_4_load" [attention_tile.cpp:79]   --->   Operation 161 'sext' 'sext_ln79_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 162 [3/3] (1.05ns) (grouped into DSP with root node dot_35)   --->   "%mul_ln79_4 = mul i16 %sext_ln79_9, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 162 'mul' 'mul_ln79_4' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 163 [1/2] (2.32ns)   --->   "%kt_5_load = load i6 %kt_5_addr" [attention_tile.cpp:79]   --->   Operation 163 'load' 'kt_5_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 164 [1/1] (0.00ns)   --->   "%sext_ln79_11 = sext i8 %kt_5_load" [attention_tile.cpp:79]   --->   Operation 164 'sext' 'sext_ln79_11' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 165 [3/3] (1.05ns) (grouped into DSP with root node dot_36)   --->   "%mul_ln79_5 = mul i16 %sext_ln79_11, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 165 'mul' 'mul_ln79_5' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 166 [1/2] (2.32ns)   --->   "%kt_6_load = load i6 %kt_6_addr" [attention_tile.cpp:79]   --->   Operation 166 'load' 'kt_6_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 167 [1/1] (0.00ns)   --->   "%sext_ln79_13 = sext i8 %kt_6_load" [attention_tile.cpp:79]   --->   Operation 167 'sext' 'sext_ln79_13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 168 [3/3] (1.05ns) (grouped into DSP with root node dot_37)   --->   "%mul_ln79_6 = mul i16 %sext_ln79_13, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 168 'mul' 'mul_ln79_6' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 169 [1/2] (2.32ns)   --->   "%kt_7_load = load i6 %kt_7_addr" [attention_tile.cpp:79]   --->   Operation 169 'load' 'kt_7_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 170 [1/1] (0.00ns)   --->   "%sext_ln79_15 = sext i8 %kt_7_load" [attention_tile.cpp:79]   --->   Operation 170 'sext' 'sext_ln79_15' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 171 [3/3] (1.05ns) (grouped into DSP with root node dot_38)   --->   "%mul_ln79_7 = mul i16 %sext_ln79_15, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 171 'mul' 'mul_ln79_7' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 172 [1/2] (2.32ns)   --->   "%kt_8_load = load i6 %kt_8_addr" [attention_tile.cpp:79]   --->   Operation 172 'load' 'kt_8_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 173 [1/1] (0.00ns)   --->   "%sext_ln79_17 = sext i8 %kt_8_load" [attention_tile.cpp:79]   --->   Operation 173 'sext' 'sext_ln79_17' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 174 [3/3] (1.05ns) (grouped into DSP with root node dot_39)   --->   "%mul_ln79_8 = mul i16 %sext_ln79_17, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 174 'mul' 'mul_ln79_8' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 175 [1/2] (2.32ns)   --->   "%kt_9_load = load i6 %kt_9_addr" [attention_tile.cpp:79]   --->   Operation 175 'load' 'kt_9_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 176 [1/1] (0.00ns)   --->   "%sext_ln79_19 = sext i8 %kt_9_load" [attention_tile.cpp:79]   --->   Operation 176 'sext' 'sext_ln79_19' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 177 [3/3] (1.05ns) (grouped into DSP with root node dot_40)   --->   "%mul_ln79_9 = mul i16 %sext_ln79_19, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 177 'mul' 'mul_ln79_9' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 178 [1/2] (2.32ns)   --->   "%kt_10_load = load i6 %kt_10_addr" [attention_tile.cpp:79]   --->   Operation 178 'load' 'kt_10_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 179 [1/1] (0.00ns)   --->   "%sext_ln79_21 = sext i8 %kt_10_load" [attention_tile.cpp:79]   --->   Operation 179 'sext' 'sext_ln79_21' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 180 [3/3] (1.05ns) (grouped into DSP with root node dot_41)   --->   "%mul_ln79_10 = mul i16 %sext_ln79_21, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 180 'mul' 'mul_ln79_10' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 181 [1/2] (2.32ns)   --->   "%kt_11_load = load i6 %kt_11_addr" [attention_tile.cpp:79]   --->   Operation 181 'load' 'kt_11_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 182 [1/1] (0.00ns)   --->   "%sext_ln79_23 = sext i8 %kt_11_load" [attention_tile.cpp:79]   --->   Operation 182 'sext' 'sext_ln79_23' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 183 [3/3] (1.05ns) (grouped into DSP with root node dot_42)   --->   "%mul_ln79_11 = mul i16 %sext_ln79_23, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 183 'mul' 'mul_ln79_11' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 184 [1/2] (2.32ns)   --->   "%kt_12_load = load i6 %kt_12_addr" [attention_tile.cpp:79]   --->   Operation 184 'load' 'kt_12_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 185 [1/1] (0.00ns)   --->   "%sext_ln79_25 = sext i8 %kt_12_load" [attention_tile.cpp:79]   --->   Operation 185 'sext' 'sext_ln79_25' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 186 [3/3] (1.05ns) (grouped into DSP with root node dot_43)   --->   "%mul_ln79_12 = mul i16 %sext_ln79_25, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 186 'mul' 'mul_ln79_12' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 187 [1/2] (2.32ns)   --->   "%kt_13_load = load i6 %kt_13_addr" [attention_tile.cpp:79]   --->   Operation 187 'load' 'kt_13_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 188 [1/1] (0.00ns)   --->   "%sext_ln79_27 = sext i8 %kt_13_load" [attention_tile.cpp:79]   --->   Operation 188 'sext' 'sext_ln79_27' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 189 [3/3] (1.05ns) (grouped into DSP with root node dot_44)   --->   "%mul_ln79_13 = mul i16 %sext_ln79_27, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 189 'mul' 'mul_ln79_13' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 190 [1/2] (2.32ns)   --->   "%kt_14_load = load i6 %kt_14_addr" [attention_tile.cpp:79]   --->   Operation 190 'load' 'kt_14_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 191 [1/1] (0.00ns)   --->   "%sext_ln79_29 = sext i8 %kt_14_load" [attention_tile.cpp:79]   --->   Operation 191 'sext' 'sext_ln79_29' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 192 [3/3] (1.05ns) (grouped into DSP with root node dot_45)   --->   "%mul_ln79_14 = mul i16 %sext_ln79_29, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 192 'mul' 'mul_ln79_14' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 193 [1/2] (2.32ns)   --->   "%kt_15_load = load i6 %kt_15_addr" [attention_tile.cpp:79]   --->   Operation 193 'load' 'kt_15_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 194 [1/1] (0.00ns)   --->   "%sext_ln79_31 = sext i8 %kt_15_load" [attention_tile.cpp:79]   --->   Operation 194 'sext' 'sext_ln79_31' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 195 [3/3] (1.05ns) (grouped into DSP with root node dot_46)   --->   "%mul_ln79_15 = mul i16 %sext_ln79_31, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 195 'mul' 'mul_ln79_15' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 3 <SV = 2> <Delay = 1.05>
+ST_3 : Operation 196 [2/3] (1.05ns) (grouped into DSP with root node dot)   --->   "%mul_ln79 = mul i16 %sext_ln79_1, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 196 'mul' 'mul_ln79' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 197 [2/3] (1.05ns) (grouped into DSP with root node dot_32)   --->   "%mul_ln79_1 = mul i16 %sext_ln79_3, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 197 'mul' 'mul_ln79_1' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 198 [2/3] (1.05ns) (grouped into DSP with root node dot_33)   --->   "%mul_ln79_2 = mul i16 %sext_ln79_5, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 198 'mul' 'mul_ln79_2' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 199 [2/3] (1.05ns) (grouped into DSP with root node dot_34)   --->   "%mul_ln79_3 = mul i16 %sext_ln79_7, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 199 'mul' 'mul_ln79_3' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 200 [2/3] (1.05ns) (grouped into DSP with root node dot_35)   --->   "%mul_ln79_4 = mul i16 %sext_ln79_9, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 200 'mul' 'mul_ln79_4' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 201 [2/3] (1.05ns) (grouped into DSP with root node dot_36)   --->   "%mul_ln79_5 = mul i16 %sext_ln79_11, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 201 'mul' 'mul_ln79_5' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 202 [2/3] (1.05ns) (grouped into DSP with root node dot_37)   --->   "%mul_ln79_6 = mul i16 %sext_ln79_13, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 202 'mul' 'mul_ln79_6' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 203 [2/3] (1.05ns) (grouped into DSP with root node dot_38)   --->   "%mul_ln79_7 = mul i16 %sext_ln79_15, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 203 'mul' 'mul_ln79_7' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 204 [2/3] (1.05ns) (grouped into DSP with root node dot_39)   --->   "%mul_ln79_8 = mul i16 %sext_ln79_17, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 204 'mul' 'mul_ln79_8' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 205 [2/3] (1.05ns) (grouped into DSP with root node dot_40)   --->   "%mul_ln79_9 = mul i16 %sext_ln79_19, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 205 'mul' 'mul_ln79_9' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 206 [2/3] (1.05ns) (grouped into DSP with root node dot_41)   --->   "%mul_ln79_10 = mul i16 %sext_ln79_21, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 206 'mul' 'mul_ln79_10' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 207 [2/3] (1.05ns) (grouped into DSP with root node dot_42)   --->   "%mul_ln79_11 = mul i16 %sext_ln79_23, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 207 'mul' 'mul_ln79_11' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 208 [2/3] (1.05ns) (grouped into DSP with root node dot_43)   --->   "%mul_ln79_12 = mul i16 %sext_ln79_25, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 208 'mul' 'mul_ln79_12' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 209 [2/3] (1.05ns) (grouped into DSP with root node dot_44)   --->   "%mul_ln79_13 = mul i16 %sext_ln79_27, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 209 'mul' 'mul_ln79_13' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 210 [2/3] (1.05ns) (grouped into DSP with root node dot_45)   --->   "%mul_ln79_14 = mul i16 %sext_ln79_29, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 210 'mul' 'mul_ln79_14' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 211 [2/3] (1.05ns) (grouped into DSP with root node dot_46)   --->   "%mul_ln79_15 = mul i16 %sext_ln79_31, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 211 'mul' 'mul_ln79_15' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 4 <SV = 3> <Delay = 2.10>
+ST_4 : Operation 212 [1/1] (0.00ns)   --->   "%dot_16_load_1 = load i22 %dot_16" [attention_tile.cpp:79]   --->   Operation 212 'load' 'dot_16_load_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 213 [1/1] (0.00ns)   --->   "%dot_17_load_1 = load i22 %dot_17" [attention_tile.cpp:79]   --->   Operation 213 'load' 'dot_17_load_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 214 [1/1] (0.00ns)   --->   "%dot_18_load_1 = load i22 %dot_18" [attention_tile.cpp:79]   --->   Operation 214 'load' 'dot_18_load_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 215 [1/1] (0.00ns)   --->   "%dot_19_load_1 = load i22 %dot_19" [attention_tile.cpp:79]   --->   Operation 215 'load' 'dot_19_load_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 216 [1/1] (0.00ns)   --->   "%dot_20_load_1 = load i22 %dot_20" [attention_tile.cpp:79]   --->   Operation 216 'load' 'dot_20_load_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 217 [1/1] (0.00ns)   --->   "%dot_21_load_1 = load i22 %dot_21" [attention_tile.cpp:79]   --->   Operation 217 'load' 'dot_21_load_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 218 [1/1] (0.00ns)   --->   "%dot_22_load_1 = load i22 %dot_22" [attention_tile.cpp:79]   --->   Operation 218 'load' 'dot_22_load_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 219 [1/1] (0.00ns)   --->   "%dot_23_load_1 = load i22 %dot_23" [attention_tile.cpp:79]   --->   Operation 219 'load' 'dot_23_load_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 220 [1/1] (0.00ns)   --->   "%dot_24_load_1 = load i22 %dot_24" [attention_tile.cpp:79]   --->   Operation 220 'load' 'dot_24_load_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 221 [1/1] (0.00ns)   --->   "%dot_25_load_1 = load i22 %dot_25" [attention_tile.cpp:79]   --->   Operation 221 'load' 'dot_25_load_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 222 [1/1] (0.00ns)   --->   "%dot_26_load_1 = load i22 %dot_26" [attention_tile.cpp:79]   --->   Operation 222 'load' 'dot_26_load_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 223 [1/1] (0.00ns)   --->   "%dot_27_load_1 = load i22 %dot_27" [attention_tile.cpp:79]   --->   Operation 223 'load' 'dot_27_load_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 224 [1/1] (0.00ns)   --->   "%dot_28_load_1 = load i22 %dot_28" [attention_tile.cpp:79]   --->   Operation 224 'load' 'dot_28_load_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 225 [1/1] (0.00ns)   --->   "%dot_29_load_1 = load i22 %dot_29" [attention_tile.cpp:79]   --->   Operation 225 'load' 'dot_29_load_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 226 [1/1] (0.00ns)   --->   "%dot_30_load_1 = load i22 %dot_30" [attention_tile.cpp:79]   --->   Operation 226 'load' 'dot_30_load_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 227 [1/1] (0.00ns)   --->   "%dot_31_load_1 = load i22 %dot_31" [attention_tile.cpp:79]   --->   Operation 227 'load' 'dot_31_load_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 228 [1/3] (0.00ns) (grouped into DSP with root node dot)   --->   "%mul_ln79 = mul i16 %sext_ln79_1, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 228 'mul' 'mul_ln79' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 229 [1/1] (0.00ns) (grouped into DSP with root node dot)   --->   "%sext_ln79_2 = sext i16 %mul_ln79" [attention_tile.cpp:79]   --->   Operation 229 'sext' 'sext_ln79_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 230 [2/2] (2.10ns) (root node of the DSP)   --->   "%dot = add i22 %sext_ln79_2, i22 %dot_16_load_1" [attention_tile.cpp:79]   --->   Operation 230 'add' 'dot' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 231 [1/3] (0.00ns) (grouped into DSP with root node dot_32)   --->   "%mul_ln79_1 = mul i16 %sext_ln79_3, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 231 'mul' 'mul_ln79_1' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 232 [1/1] (0.00ns) (grouped into DSP with root node dot_32)   --->   "%sext_ln79_4 = sext i16 %mul_ln79_1" [attention_tile.cpp:79]   --->   Operation 232 'sext' 'sext_ln79_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 233 [2/2] (2.10ns) (root node of the DSP)   --->   "%dot_32 = add i22 %sext_ln79_4, i22 %dot_17_load_1" [attention_tile.cpp:79]   --->   Operation 233 'add' 'dot_32' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 234 [1/3] (0.00ns) (grouped into DSP with root node dot_33)   --->   "%mul_ln79_2 = mul i16 %sext_ln79_5, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 234 'mul' 'mul_ln79_2' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 235 [1/1] (0.00ns) (grouped into DSP with root node dot_33)   --->   "%sext_ln79_6 = sext i16 %mul_ln79_2" [attention_tile.cpp:79]   --->   Operation 235 'sext' 'sext_ln79_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 236 [2/2] (2.10ns) (root node of the DSP)   --->   "%dot_33 = add i22 %sext_ln79_6, i22 %dot_18_load_1" [attention_tile.cpp:79]   --->   Operation 236 'add' 'dot_33' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 237 [1/3] (0.00ns) (grouped into DSP with root node dot_34)   --->   "%mul_ln79_3 = mul i16 %sext_ln79_7, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 237 'mul' 'mul_ln79_3' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 238 [1/1] (0.00ns) (grouped into DSP with root node dot_34)   --->   "%sext_ln79_8 = sext i16 %mul_ln79_3" [attention_tile.cpp:79]   --->   Operation 238 'sext' 'sext_ln79_8' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 239 [2/2] (2.10ns) (root node of the DSP)   --->   "%dot_34 = add i22 %sext_ln79_8, i22 %dot_19_load_1" [attention_tile.cpp:79]   --->   Operation 239 'add' 'dot_34' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 240 [1/3] (0.00ns) (grouped into DSP with root node dot_35)   --->   "%mul_ln79_4 = mul i16 %sext_ln79_9, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 240 'mul' 'mul_ln79_4' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 241 [1/1] (0.00ns) (grouped into DSP with root node dot_35)   --->   "%sext_ln79_10 = sext i16 %mul_ln79_4" [attention_tile.cpp:79]   --->   Operation 241 'sext' 'sext_ln79_10' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 242 [2/2] (2.10ns) (root node of the DSP)   --->   "%dot_35 = add i22 %sext_ln79_10, i22 %dot_20_load_1" [attention_tile.cpp:79]   --->   Operation 242 'add' 'dot_35' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 243 [1/3] (0.00ns) (grouped into DSP with root node dot_36)   --->   "%mul_ln79_5 = mul i16 %sext_ln79_11, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 243 'mul' 'mul_ln79_5' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 244 [1/1] (0.00ns) (grouped into DSP with root node dot_36)   --->   "%sext_ln79_12 = sext i16 %mul_ln79_5" [attention_tile.cpp:79]   --->   Operation 244 'sext' 'sext_ln79_12' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 245 [2/2] (2.10ns) (root node of the DSP)   --->   "%dot_36 = add i22 %sext_ln79_12, i22 %dot_21_load_1" [attention_tile.cpp:79]   --->   Operation 245 'add' 'dot_36' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 246 [1/3] (0.00ns) (grouped into DSP with root node dot_37)   --->   "%mul_ln79_6 = mul i16 %sext_ln79_13, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 246 'mul' 'mul_ln79_6' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 247 [1/1] (0.00ns) (grouped into DSP with root node dot_37)   --->   "%sext_ln79_14 = sext i16 %mul_ln79_6" [attention_tile.cpp:79]   --->   Operation 247 'sext' 'sext_ln79_14' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 248 [2/2] (2.10ns) (root node of the DSP)   --->   "%dot_37 = add i22 %sext_ln79_14, i22 %dot_22_load_1" [attention_tile.cpp:79]   --->   Operation 248 'add' 'dot_37' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 249 [1/3] (0.00ns) (grouped into DSP with root node dot_38)   --->   "%mul_ln79_7 = mul i16 %sext_ln79_15, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 249 'mul' 'mul_ln79_7' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 250 [1/1] (0.00ns) (grouped into DSP with root node dot_38)   --->   "%sext_ln79_16 = sext i16 %mul_ln79_7" [attention_tile.cpp:79]   --->   Operation 250 'sext' 'sext_ln79_16' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 251 [2/2] (2.10ns) (root node of the DSP)   --->   "%dot_38 = add i22 %sext_ln79_16, i22 %dot_23_load_1" [attention_tile.cpp:79]   --->   Operation 251 'add' 'dot_38' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 252 [1/3] (0.00ns) (grouped into DSP with root node dot_39)   --->   "%mul_ln79_8 = mul i16 %sext_ln79_17, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 252 'mul' 'mul_ln79_8' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 253 [1/1] (0.00ns) (grouped into DSP with root node dot_39)   --->   "%sext_ln79_18 = sext i16 %mul_ln79_8" [attention_tile.cpp:79]   --->   Operation 253 'sext' 'sext_ln79_18' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 254 [2/2] (2.10ns) (root node of the DSP)   --->   "%dot_39 = add i22 %sext_ln79_18, i22 %dot_24_load_1" [attention_tile.cpp:79]   --->   Operation 254 'add' 'dot_39' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 255 [1/3] (0.00ns) (grouped into DSP with root node dot_40)   --->   "%mul_ln79_9 = mul i16 %sext_ln79_19, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 255 'mul' 'mul_ln79_9' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 256 [1/1] (0.00ns) (grouped into DSP with root node dot_40)   --->   "%sext_ln79_20 = sext i16 %mul_ln79_9" [attention_tile.cpp:79]   --->   Operation 256 'sext' 'sext_ln79_20' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 257 [2/2] (2.10ns) (root node of the DSP)   --->   "%dot_40 = add i22 %sext_ln79_20, i22 %dot_25_load_1" [attention_tile.cpp:79]   --->   Operation 257 'add' 'dot_40' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 258 [1/3] (0.00ns) (grouped into DSP with root node dot_41)   --->   "%mul_ln79_10 = mul i16 %sext_ln79_21, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 258 'mul' 'mul_ln79_10' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 259 [1/1] (0.00ns) (grouped into DSP with root node dot_41)   --->   "%sext_ln79_22 = sext i16 %mul_ln79_10" [attention_tile.cpp:79]   --->   Operation 259 'sext' 'sext_ln79_22' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 260 [2/2] (2.10ns) (root node of the DSP)   --->   "%dot_41 = add i22 %sext_ln79_22, i22 %dot_26_load_1" [attention_tile.cpp:79]   --->   Operation 260 'add' 'dot_41' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 261 [1/3] (0.00ns) (grouped into DSP with root node dot_42)   --->   "%mul_ln79_11 = mul i16 %sext_ln79_23, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 261 'mul' 'mul_ln79_11' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 262 [1/1] (0.00ns) (grouped into DSP with root node dot_42)   --->   "%sext_ln79_24 = sext i16 %mul_ln79_11" [attention_tile.cpp:79]   --->   Operation 262 'sext' 'sext_ln79_24' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 263 [2/2] (2.10ns) (root node of the DSP)   --->   "%dot_42 = add i22 %sext_ln79_24, i22 %dot_27_load_1" [attention_tile.cpp:79]   --->   Operation 263 'add' 'dot_42' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 264 [1/3] (0.00ns) (grouped into DSP with root node dot_43)   --->   "%mul_ln79_12 = mul i16 %sext_ln79_25, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 264 'mul' 'mul_ln79_12' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 265 [1/1] (0.00ns) (grouped into DSP with root node dot_43)   --->   "%sext_ln79_26 = sext i16 %mul_ln79_12" [attention_tile.cpp:79]   --->   Operation 265 'sext' 'sext_ln79_26' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 266 [2/2] (2.10ns) (root node of the DSP)   --->   "%dot_43 = add i22 %sext_ln79_26, i22 %dot_28_load_1" [attention_tile.cpp:79]   --->   Operation 266 'add' 'dot_43' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 267 [1/3] (0.00ns) (grouped into DSP with root node dot_44)   --->   "%mul_ln79_13 = mul i16 %sext_ln79_27, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 267 'mul' 'mul_ln79_13' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 268 [1/1] (0.00ns) (grouped into DSP with root node dot_44)   --->   "%sext_ln79_28 = sext i16 %mul_ln79_13" [attention_tile.cpp:79]   --->   Operation 268 'sext' 'sext_ln79_28' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 269 [2/2] (2.10ns) (root node of the DSP)   --->   "%dot_44 = add i22 %sext_ln79_28, i22 %dot_29_load_1" [attention_tile.cpp:79]   --->   Operation 269 'add' 'dot_44' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 270 [1/3] (0.00ns) (grouped into DSP with root node dot_45)   --->   "%mul_ln79_14 = mul i16 %sext_ln79_29, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 270 'mul' 'mul_ln79_14' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 271 [1/1] (0.00ns) (grouped into DSP with root node dot_45)   --->   "%sext_ln79_30 = sext i16 %mul_ln79_14" [attention_tile.cpp:79]   --->   Operation 271 'sext' 'sext_ln79_30' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 272 [2/2] (2.10ns) (root node of the DSP)   --->   "%dot_45 = add i22 %sext_ln79_30, i22 %dot_30_load_1" [attention_tile.cpp:79]   --->   Operation 272 'add' 'dot_45' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 273 [1/3] (0.00ns) (grouped into DSP with root node dot_46)   --->   "%mul_ln79_15 = mul i16 %sext_ln79_31, i16 %sext_ln79" [attention_tile.cpp:79]   --->   Operation 273 'mul' 'mul_ln79_15' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 274 [1/1] (0.00ns) (grouped into DSP with root node dot_46)   --->   "%sext_ln79_32 = sext i16 %mul_ln79_15" [attention_tile.cpp:79]   --->   Operation 274 'sext' 'sext_ln79_32' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 275 [2/2] (2.10ns) (root node of the DSP)   --->   "%dot_46 = add i22 %sext_ln79_32, i22 %dot_31_load_1" [attention_tile.cpp:79]   --->   Operation 275 'add' 'dot_46' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 311 [1/1] (0.00ns)   --->   "%dot_16_load = load i22 %dot_16"   --->   Operation 311 'load' 'dot_16_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 312 [1/1] (0.00ns)   --->   "%dot_17_load = load i22 %dot_17"   --->   Operation 312 'load' 'dot_17_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 313 [1/1] (0.00ns)   --->   "%dot_18_load = load i22 %dot_18"   --->   Operation 313 'load' 'dot_18_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 314 [1/1] (0.00ns)   --->   "%dot_19_load = load i22 %dot_19"   --->   Operation 314 'load' 'dot_19_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 315 [1/1] (0.00ns)   --->   "%dot_20_load = load i22 %dot_20"   --->   Operation 315 'load' 'dot_20_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 316 [1/1] (0.00ns)   --->   "%dot_21_load = load i22 %dot_21"   --->   Operation 316 'load' 'dot_21_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 317 [1/1] (0.00ns)   --->   "%dot_22_load = load i22 %dot_22"   --->   Operation 317 'load' 'dot_22_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 318 [1/1] (0.00ns)   --->   "%dot_23_load = load i22 %dot_23"   --->   Operation 318 'load' 'dot_23_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 319 [1/1] (0.00ns)   --->   "%dot_24_load = load i22 %dot_24"   --->   Operation 319 'load' 'dot_24_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 320 [1/1] (0.00ns)   --->   "%dot_25_load = load i22 %dot_25"   --->   Operation 320 'load' 'dot_25_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 321 [1/1] (0.00ns)   --->   "%dot_26_load = load i22 %dot_26"   --->   Operation 321 'load' 'dot_26_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 322 [1/1] (0.00ns)   --->   "%dot_27_load = load i22 %dot_27"   --->   Operation 322 'load' 'dot_27_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 323 [1/1] (0.00ns)   --->   "%dot_28_load = load i22 %dot_28"   --->   Operation 323 'load' 'dot_28_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 324 [1/1] (0.00ns)   --->   "%dot_29_load = load i22 %dot_29"   --->   Operation 324 'load' 'dot_29_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 325 [1/1] (0.00ns)   --->   "%dot_30_load = load i22 %dot_30"   --->   Operation 325 'load' 'dot_30_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 326 [1/1] (0.00ns)   --->   "%dot_31_load = load i22 %dot_31"   --->   Operation 326 'load' 'dot_31_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 327 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1539_out, i22 %dot_31_load"   --->   Operation 327 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 328 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1438_out, i22 %dot_30_load"   --->   Operation 328 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 329 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1337_out, i22 %dot_29_load"   --->   Operation 329 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 330 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1236_out, i22 %dot_28_load"   --->   Operation 330 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 331 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1135_out, i22 %dot_27_load"   --->   Operation 331 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 332 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1034_out, i22 %dot_26_load"   --->   Operation 332 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 333 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_933_out, i22 %dot_25_load"   --->   Operation 333 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 334 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_832_out, i22 %dot_24_load"   --->   Operation 334 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 335 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_731_out, i22 %dot_23_load"   --->   Operation 335 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 336 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_630_out, i22 %dot_22_load"   --->   Operation 336 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 337 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_529_out, i22 %dot_21_load"   --->   Operation 337 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 338 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_428_out, i22 %dot_20_load"   --->   Operation 338 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 339 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_327_out, i22 %dot_19_load"   --->   Operation 339 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 340 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_226_out, i22 %dot_18_load"   --->   Operation 340 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 341 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_125_out, i22 %dot_17_load"   --->   Operation 341 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 342 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add7124_out, i22 %dot_16_load"   --->   Operation 342 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 343 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 343 'ret' 'ret_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 3.68>
+ST_5 : Operation 276 [1/1] (0.00ns)   --->   "%specpipeline_ln76 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_3" [attention_tile.cpp:76]   --->   Operation 276 'specpipeline' 'specpipeline_ln76' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 277 [1/1] (0.00ns)   --->   "%specloopname_ln75 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17" [attention_tile.cpp:75]   --->   Operation 277 'specloopname' 'specloopname_ln75' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 278 [1/2] (2.10ns) (root node of the DSP)   --->   "%dot = add i22 %sext_ln79_2, i22 %dot_16_load_1" [attention_tile.cpp:79]   --->   Operation 278 'add' 'dot' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 279 [1/2] (2.10ns) (root node of the DSP)   --->   "%dot_32 = add i22 %sext_ln79_4, i22 %dot_17_load_1" [attention_tile.cpp:79]   --->   Operation 279 'add' 'dot_32' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 280 [1/2] (2.10ns) (root node of the DSP)   --->   "%dot_33 = add i22 %sext_ln79_6, i22 %dot_18_load_1" [attention_tile.cpp:79]   --->   Operation 280 'add' 'dot_33' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 281 [1/2] (2.10ns) (root node of the DSP)   --->   "%dot_34 = add i22 %sext_ln79_8, i22 %dot_19_load_1" [attention_tile.cpp:79]   --->   Operation 281 'add' 'dot_34' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 282 [1/2] (2.10ns) (root node of the DSP)   --->   "%dot_35 = add i22 %sext_ln79_10, i22 %dot_20_load_1" [attention_tile.cpp:79]   --->   Operation 282 'add' 'dot_35' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 283 [1/2] (2.10ns) (root node of the DSP)   --->   "%dot_36 = add i22 %sext_ln79_12, i22 %dot_21_load_1" [attention_tile.cpp:79]   --->   Operation 283 'add' 'dot_36' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 284 [1/2] (2.10ns) (root node of the DSP)   --->   "%dot_37 = add i22 %sext_ln79_14, i22 %dot_22_load_1" [attention_tile.cpp:79]   --->   Operation 284 'add' 'dot_37' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 285 [1/2] (2.10ns) (root node of the DSP)   --->   "%dot_38 = add i22 %sext_ln79_16, i22 %dot_23_load_1" [attention_tile.cpp:79]   --->   Operation 285 'add' 'dot_38' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 286 [1/2] (2.10ns) (root node of the DSP)   --->   "%dot_39 = add i22 %sext_ln79_18, i22 %dot_24_load_1" [attention_tile.cpp:79]   --->   Operation 286 'add' 'dot_39' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 287 [1/2] (2.10ns) (root node of the DSP)   --->   "%dot_40 = add i22 %sext_ln79_20, i22 %dot_25_load_1" [attention_tile.cpp:79]   --->   Operation 287 'add' 'dot_40' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 288 [1/2] (2.10ns) (root node of the DSP)   --->   "%dot_41 = add i22 %sext_ln79_22, i22 %dot_26_load_1" [attention_tile.cpp:79]   --->   Operation 288 'add' 'dot_41' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 289 [1/2] (2.10ns) (root node of the DSP)   --->   "%dot_42 = add i22 %sext_ln79_24, i22 %dot_27_load_1" [attention_tile.cpp:79]   --->   Operation 289 'add' 'dot_42' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 290 [1/2] (2.10ns) (root node of the DSP)   --->   "%dot_43 = add i22 %sext_ln79_26, i22 %dot_28_load_1" [attention_tile.cpp:79]   --->   Operation 290 'add' 'dot_43' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 291 [1/2] (2.10ns) (root node of the DSP)   --->   "%dot_44 = add i22 %sext_ln79_28, i22 %dot_29_load_1" [attention_tile.cpp:79]   --->   Operation 291 'add' 'dot_44' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 292 [1/2] (2.10ns) (root node of the DSP)   --->   "%dot_45 = add i22 %sext_ln79_30, i22 %dot_30_load_1" [attention_tile.cpp:79]   --->   Operation 292 'add' 'dot_45' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 293 [1/2] (2.10ns) (root node of the DSP)   --->   "%dot_46 = add i22 %sext_ln79_32, i22 %dot_31_load_1" [attention_tile.cpp:79]   --->   Operation 293 'add' 'dot_46' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 294 [1/1] (1.58ns)   --->   "%store_ln75 = store i22 %dot_46, i22 %dot_31" [attention_tile.cpp:75]   --->   Operation 294 'store' 'store_ln75' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 295 [1/1] (1.58ns)   --->   "%store_ln75 = store i22 %dot_45, i22 %dot_30" [attention_tile.cpp:75]   --->   Operation 295 'store' 'store_ln75' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 296 [1/1] (1.58ns)   --->   "%store_ln75 = store i22 %dot_44, i22 %dot_29" [attention_tile.cpp:75]   --->   Operation 296 'store' 'store_ln75' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 297 [1/1] (1.58ns)   --->   "%store_ln75 = store i22 %dot_43, i22 %dot_28" [attention_tile.cpp:75]   --->   Operation 297 'store' 'store_ln75' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 298 [1/1] (1.58ns)   --->   "%store_ln75 = store i22 %dot_42, i22 %dot_27" [attention_tile.cpp:75]   --->   Operation 298 'store' 'store_ln75' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 299 [1/1] (1.58ns)   --->   "%store_ln75 = store i22 %dot_41, i22 %dot_26" [attention_tile.cpp:75]   --->   Operation 299 'store' 'store_ln75' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 300 [1/1] (1.58ns)   --->   "%store_ln75 = store i22 %dot_40, i22 %dot_25" [attention_tile.cpp:75]   --->   Operation 300 'store' 'store_ln75' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 301 [1/1] (1.58ns)   --->   "%store_ln75 = store i22 %dot_39, i22 %dot_24" [attention_tile.cpp:75]   --->   Operation 301 'store' 'store_ln75' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 302 [1/1] (1.58ns)   --->   "%store_ln75 = store i22 %dot_38, i22 %dot_23" [attention_tile.cpp:75]   --->   Operation 302 'store' 'store_ln75' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 303 [1/1] (1.58ns)   --->   "%store_ln75 = store i22 %dot_37, i22 %dot_22" [attention_tile.cpp:75]   --->   Operation 303 'store' 'store_ln75' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 304 [1/1] (1.58ns)   --->   "%store_ln75 = store i22 %dot_36, i22 %dot_21" [attention_tile.cpp:75]   --->   Operation 304 'store' 'store_ln75' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 305 [1/1] (1.58ns)   --->   "%store_ln75 = store i22 %dot_35, i22 %dot_20" [attention_tile.cpp:75]   --->   Operation 305 'store' 'store_ln75' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 306 [1/1] (1.58ns)   --->   "%store_ln75 = store i22 %dot_34, i22 %dot_19" [attention_tile.cpp:75]   --->   Operation 306 'store' 'store_ln75' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 307 [1/1] (1.58ns)   --->   "%store_ln75 = store i22 %dot_33, i22 %dot_18" [attention_tile.cpp:75]   --->   Operation 307 'store' 'store_ln75' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 308 [1/1] (1.58ns)   --->   "%store_ln75 = store i22 %dot_32, i22 %dot_17" [attention_tile.cpp:75]   --->   Operation 308 'store' 'store_ln75' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 309 [1/1] (1.58ns)   --->   "%store_ln75 = store i22 %dot, i22 %dot_16" [attention_tile.cpp:75]   --->   Operation 309 'store' 'store_ln75' <Predicate = true> <Delay = 1.58>
+ST_5 : Operation 310 [1/1] (0.00ns)   --->   "%br_ln75 = br void %for.inc72" [attention_tile.cpp:75]   --->   Operation 310 'br' 'br_ln75' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.46ns
+The critical path consists of the following:
+	'alloca' operation ('d') [113]  (0 ns)
+	'load' operation ('d', attention_tile.cpp:75) on local variable 'd' [197]  (0 ns)
+	'add' operation ('add_ln75', attention_tile.cpp:75) [200]  (1.87 ns)
+	'store' operation ('store_ln75', attention_tile.cpp:75) of variable 'add_ln75', attention_tile.cpp:75 on local variable 'd' [320]  (1.59 ns)
+
+ <State 2>: 3.37ns
+The critical path consists of the following:
+	'load' operation ('kt_load', attention_tile.cpp:79) on array 'kt' [225]  (2.32 ns)
+	'mul' operation of DSP[229] ('mul_ln79', attention_tile.cpp:79) [227]  (1.05 ns)
+
+ <State 3>: 1.05ns
+The critical path consists of the following:
+	'mul' operation of DSP[229] ('mul_ln79', attention_tile.cpp:79) [227]  (1.05 ns)
+
+ <State 4>: 2.1ns
+The critical path consists of the following:
+	'load' operation ('dot_16_load_1', attention_tile.cpp:79) on local variable 'dot' [203]  (0 ns)
+	'add' operation of DSP[229] ('dot', attention_tile.cpp:79) [229]  (2.1 ns)
+
+ <State 5>: 3.69ns
+The critical path consists of the following:
+	'add' operation of DSP[319] ('dot', attention_tile.cpp:79) [319]  (2.1 ns)
+	'store' operation ('store_ln75', attention_tile.cpp:75) of variable 'dot', attention_tile.cpp:79 on local variable 'dot' [321]  (1.59 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

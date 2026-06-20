@@ -1,0 +1,30 @@
+<pragmas>
+<pragma file="attention_tile.cpp" line="126" pragmaType="pipeline" parentfunction="streaming_attention" off="0" ii="1" rewind="0" style=""/>
+<pragma file="attention_tile.cpp" line="71" pragmaType="unroll" parentfunction="streaming_attention" factor="-1" skip_exit_check="0"/>
+<pragma file="attention_tile.cpp" line="76" pragmaType="pipeline" parentfunction="streaming_attention" off="0" ii="1" rewind="0" style=""/>
+<pragma file="attention_tile.cpp" line="89" pragmaType="pipeline" parentfunction="streaming_attention" off="0" ii="1" rewind="0" style=""/>
+<pragma file="attention_tile.cpp" line="102" pragmaType="pipeline" parentfunction="streaming_attention" off="0" ii="1" rewind="0" style=""/>
+<pragma file="attention_tile.cpp" line="111" pragmaType="pipeline" parentfunction="streaming_attention" off="0" ii="1" rewind="0" style=""/>
+<pragma file="attention_tile.cpp" line="60" pragmaType="pipeline" parentfunction="streaming_attention" off="0" ii="1" rewind="0" style=""/>
+<pragma file="attention_tile.cpp" line="78" pragmaType="unroll" parentfunction="streaming_attention" factor="-1" skip_exit_check="0"/>
+<pragma file="attention_tile.cpp" line="114" pragmaType="unroll" parentfunction="streaming_attention" factor="-1" skip_exit_check="0"/>
+<pragma file="attention_tile.cpp" line="38" pragmaType="pipeline" parentfunction="streaming_attention" off="0" ii="1" rewind="0" style=""/>
+<pragma file="attention_tile.cpp" line="20" pragmaType="interface" parentfunction="streaming_attention" mode="m_axi" port="Q" bundle="gmem0" offset="slave" name="" depth="64" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="attention_tile.cpp" line="21" pragmaType="interface" parentfunction="streaming_attention" mode="m_axi" port="K" bundle="gmem1" offset="slave" name="" depth="65536" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="attention_tile.cpp" line="22" pragmaType="interface" parentfunction="streaming_attention" mode="m_axi" port="V" bundle="gmem2" offset="slave" name="" depth="65536" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="attention_tile.cpp" line="23" pragmaType="interface" parentfunction="streaming_attention" mode="m_axi" port="O" bundle="gmem3" offset="slave" name="" depth="64" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="attention_tile.cpp" line="24" pragmaType="interface" parentfunction="streaming_attention" mode="s_axilite" port="Q" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="attention_tile.cpp" line="25" pragmaType="interface" parentfunction="streaming_attention" mode="s_axilite" port="K" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="attention_tile.cpp" line="26" pragmaType="interface" parentfunction="streaming_attention" mode="s_axilite" port="V" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="attention_tile.cpp" line="27" pragmaType="interface" parentfunction="streaming_attention" mode="s_axilite" port="O" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="attention_tile.cpp" line="28" pragmaType="interface" parentfunction="streaming_attention" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="attention_tile.cpp" line="32" pragmaType="array_partition" parentfunction="streaming_attention" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="attention_tile.cpp" line="34" pragmaType="array_partition" parentfunction="streaming_attention" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="attention_tile.cpp" line="49" pragmaType="array_partition" parentfunction="streaming_attention" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="attention_tile.cpp" line="50" pragmaType="array_partition" parentfunction="streaming_attention" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="attention_tile.cpp" line="68" pragmaType="array_partition" parentfunction="streaming_attention" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="attention_tile.cpp" line="85" pragmaType="array_partition" parentfunction="streaming_attention" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="attention_tile.cpp" line="98" pragmaType="array_partition" parentfunction="streaming_attention" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp" line="21" pragmaType="inline" parentfunction="expf" off="0" region="0" recursive="0"/>
+<pragma file="/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/common/hls_exp_float.cpp" line="16" pragmaType="inline" parentfunction="exp" off="0" region="0" recursive="0"/>
+</pragmas>
