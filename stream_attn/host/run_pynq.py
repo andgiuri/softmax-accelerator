@@ -20,8 +20,8 @@ BITFILE = "attention_tile.bit"   # .hwh must sit beside it with the same base na
 ol = Overlay(BITFILE)
 print("IP dict:", list(ol.ip_dict.keys()))
 
-# The HLS IP instance is usually named 'streaming_attention_0'.
-ip = ol.streaming_attention_0
+# The HLS IP cell is named 'attn0' in the block design.
+ip = ol.attn0
 print("register_map:\n", ip.register_map)
 
 # ---- Load inputs and stage them in contiguous DDR buffers ----
