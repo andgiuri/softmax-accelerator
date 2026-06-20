@@ -96,25 +96,47 @@ TILES:
 
         float beta[TILE_N];
 #pragma HLS ARRAY_PARTITION variable=beta complete dim=1
-        float l_tile = 0.0f;
     BETA:
         for (int j = 0; j < TILE_N; j++) {
 #pragma HLS PIPELINE II=1
             beta[j] = hls::expf(score[j] - m_new);
-            l_tile += beta[j];
         }
-        l = l * alpha + l_tile;
+
+        // Denominator update via a balanced adder tree (parallel, not a chain).
+        float lt[TILE_N];
+#pragma HLS ARRAY_PARTITION variable=lt complete dim=1
+        for (int j = 0; j < TILE_N; j++) {
+#pragma HLS UNROLL
+            lt[j] = beta[j];
+        }
+        for (int s = TILE_N / 2; s > 0; s >>= 1) {
+#pragma HLS UNROLL
+            for (int j = 0; j < s; j++) {
+#pragma HLS UNROLL
+                lt[j] += lt[j + s];
+            }
+        }
+        l = l * alpha + lt[0];
 
         // ---- AV accumulate: acc[d] = acc[d]*alpha + sum_j beta_j * V_j[d] ----
+        // 16 parallel products, balanced adder tree -> pipelines at II=1.
     AV:
         for (int d = 0; d < HEAD_DIM; d++) {
 #pragma HLS PIPELINE II=1
-            float a = acc[d] * alpha;
+            float prod[TILE_N];
+#pragma HLS ARRAY_PARTITION variable=prod complete dim=1
             for (int j = 0; j < TILE_N; j++) {
 #pragma HLS UNROLL
-                a += beta[j] * (float)vt[j][d];
+                prod[j] = beta[j] * (float)vt[j][d];
             }
-            acc[d] = a;
+            for (int s = TILE_N / 2; s > 0; s >>= 1) {
+#pragma HLS UNROLL
+                for (int j = 0; j < s; j++) {
+#pragma HLS UNROLL
+                    prod[j] += prod[j + s];
+                }
+            }
+            acc[d] = acc[d] * alpha + prod[0];
         }
 
         m = m_new;
