@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'streaming_attention_Pipeline_SCORE'
 ================================================================
-* Date:           Sat Jun 20 05:22:15 2026
+* Date:           Sat Jun 20 05:29:37 2026
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        stream_attn_hls
@@ -199,10 +199,10 @@
 |ap_done              |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_SCORE|  return value|
 |ap_idle              |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_SCORE|  return value|
 |ap_ready             |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_SCORE|  return value|
-|grp_fu_4109_p_din0   |  out|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_SCORE|  return value|
-|grp_fu_4109_p_din1   |  out|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_SCORE|  return value|
-|grp_fu_4109_p_dout0  |   in|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_SCORE|  return value|
-|grp_fu_4109_p_ce     |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_SCORE|  return value|
+|grp_fu_1580_p_din0   |  out|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_SCORE|  return value|
+|grp_fu_1580_p_din1   |  out|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_SCORE|  return value|
+|grp_fu_1580_p_dout0  |   in|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_SCORE|  return value|
+|grp_fu_1580_p_ce     |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_SCORE|  return value|
 |tile_max_4           |   in|   32|     ap_none|                          tile_max_4|        scalar|
 |sext_ln75            |   in|   22|     ap_none|                           sext_ln75|        scalar|
 |sext_ln75_1          |   in|   22|     ap_none|                         sext_ln75_1|        scalar|
@@ -365,7 +365,7 @@ ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%j_1 = load i5 %j" [attention_tile.
 ST_1 : Operation 70 [1/1] (1.36ns)   --->   "%icmp_ln88 = icmp_eq  i5 %j_1, i5 16" [attention_tile.cpp:88]   --->   Operation 70 'icmp' 'icmp_ln88' <Predicate = true> <Delay = 1.36> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 16, i64 16, i64 16"   --->   Operation 71 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 72 [1/1] (1.78ns)   --->   "%add_ln88 = add i5 %j_1, i5 1" [attention_tile.cpp:88]   --->   Operation 72 'add' 'add_ln88' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%br_ln88 = br i1 %icmp_ln88, void %for.body82.split, void %for.inc111.preheader.exitStub" [attention_tile.cpp:88]   --->   Operation 73 'br' 'br_ln88' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%br_ln88 = br i1 %icmp_ln88, void %for.body82.split, void %for.inc108.preheader.exitStub" [attention_tile.cpp:88]   --->   Operation 73 'br' 'br_ln88' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 74 [1/1] (2.06ns)   --->   "%tmp_2 = mux i32 @_ssdm_op_Mux.ap_auto.16i32.i5, i32 %sext_ln75_cast, i32 %sext_ln75_1_cast, i32 %sext_ln75_2_cast, i32 %sext_ln75_3_cast, i32 %sext_ln75_4_cast, i32 %sext_ln75_5_cast, i32 %sext_ln75_6_cast, i32 %sext_ln75_7_cast, i32 %sext_ln75_8_cast, i32 %sext_ln75_9_cast, i32 %sext_ln75_10_cast, i32 %sext_ln75_11_cast, i32 %sext_ln75_12_cast, i32 %sext_ln75_13_cast, i32 %sext_ln75_14_cast, i32 %sext_ln75_15_cast, i5 %j_1" [attention_tile.cpp:90]   --->   Operation 74 'mux' 'tmp_2' <Predicate = (!icmp_ln88)> <Delay = 2.06> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.06> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 75 [6/6] (6.41ns)   --->   "%conv = sitofp i32 %tmp_2" [attention_tile.cpp:90]   --->   Operation 75 'sitofp' 'conv' <Predicate = (!icmp_ln88)> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
 ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%trunc_ln90 = trunc i5 %j_1" [attention_tile.cpp:90]   --->   Operation 76 'trunc' 'trunc_ln90' <Predicate = (!icmp_ln88)> <Delay = 0.00>

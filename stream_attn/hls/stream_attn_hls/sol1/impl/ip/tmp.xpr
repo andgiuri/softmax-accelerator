@@ -6,7 +6,7 @@
 <Project Version="7" Minor="60" Path="/home/users/andgiuri/softmax-accelerator/stream_attn/hls/stream_attn_hls/sol1/impl/ip/tmp.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="6b86c0343c414eed8de4cd0fbd0bd2fb"/>
+    <Option Name="Id" Val="b1775bb3703e48a2afb74b5a758b550b"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -87,6 +87,13 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/ip/streaming_attention_fadd_32ns_32ns_32_5_full_dsp_1_ip/streaming_attention_fadd_32ns_32ns_32_5_full_dsp_1_ip.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/ip/streaming_attention_faddfsub_32ns_32ns_32_5_full_dsp_1_ip/streaming_attention_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>

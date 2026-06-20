@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'streaming_attention_Pipeline_BETA'
 ================================================================
-* Date:           Sat Jun 20 05:22:15 2026
+* Date:           Sat Jun 20 05:29:37 2026
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        stream_attn_hls
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  8.844 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  7.256 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
     |   min   |   max   |    min   |    max   | min | max |   Type  |
     +---------+---------+----------+----------+-----+-----+---------+
-    |       82|       82|  0.820 us|  0.820 us|   82|   82|       no|
+    |       32|       32|  0.320 us|  0.320 us|   32|   32|       no|
     +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +----------+---------+---------+----------+-----------+-----------+------+----------+
-        |- BETA    |       80|       80|        21|          4|          1|    16|       yes|
+        |- BETA    |       30|       30|        16|          1|          1|    16|       yes|
         +----------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -58,10 +58,10 @@
 |FIFO             |        -|    -|       -|      -|    -|
 |Instance         |        -|    -|       0|     65|    -|
 |Memory           |        -|    -|       -|      -|    -|
-|Multiplexer      |        -|    -|       -|    175|    -|
-|Register         |        -|    -|     798|     64|    -|
+|Multiplexer      |        -|    -|       -|     36|    -|
+|Register         |        -|    -|     745|     64|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    0|     798|    329|    0|
+|Total            |        0|    0|     745|    190|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
@@ -91,82 +91,86 @@
     +----------------------+----------+----+---+----+------------+------------+
     |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------+----------+----+---+----+------------+------------+
-    |add_ln101_fu_451_p2   |         +|   0|  0|  13|           5|           1|
-    |icmp_ln101_fu_445_p2  |      icmp|   0|  0|  10|           5|           6|
+    |add_ln100_fu_431_p2   |         +|   0|  0|  13|           5|           1|
+    |icmp_ln100_fu_425_p2  |      icmp|   0|  0|  10|           5|           6|
     |ap_enable_pp0         |       xor|   0|  0|   2|           1|           2|
     +----------------------+----------+----+---+----+------------+------------+
     |Total                 |          |   0|  0|  25|          11|           9|
     +----------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +----------------------------------+----+-----------+-----+-----------+
-    |               Name               | LUT| Input Size| Bits| Total Bits|
-    +----------------------------------+----+-----------+-----+-----------+
-    |ap_NS_fsm                         |  25|          5|    1|          5|
-    |ap_done_int                       |   9|          2|    1|          2|
-    |ap_enable_reg_pp0_iter0           |   9|          2|    1|          2|
-    |ap_enable_reg_pp0_iter1           |   9|          2|    1|          2|
-    |ap_enable_reg_pp0_iter5           |   9|          2|    1|          2|
-    |ap_loop_exit_ready_pp0_iter1_reg  |   9|          2|    1|          2|
-    |ap_loop_exit_ready_pp0_iter2_reg  |   9|          2|    1|          2|
-    |ap_loop_exit_ready_pp0_iter3_reg  |   9|          2|    1|          2|
-    |ap_loop_exit_ready_pp0_iter4_reg  |   9|          2|    1|          2|
-    |ap_sig_allocacmp_j_2              |   9|          2|    5|         10|
-    |ap_sig_allocacmp_l_tile_load      |   9|          2|   32|         64|
-    |grp_fu_423_opcode                 |  14|          3|    2|          6|
-    |grp_fu_423_p0                     |  14|          3|   32|         96|
-    |grp_fu_423_p1                     |  14|          3|   32|         96|
-    |j_fu_134                          |   9|          2|    5|         10|
-    |l_tile_fu_130                     |   9|          2|   32|         64|
-    +----------------------------------+----+-----------+-----+-----------+
-    |Total                             | 175|         38|  149|        367|
-    +----------------------------------+----+-----------+-----+-----------+
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_j_2     |   9|          2|    5|         10|
+    |j_fu_126                 |   9|          2|    5|         10|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  36|          8|   12|         24|
+    +-------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +----------------------------------+----+----+-----+-----------+
-    |               Name               | FF | LUT| Bits| Const Bits|
-    +----------------------------------+----+----+-----+-----------+
-    |add_ln101_reg_780                 |   5|   0|    5|          0|
-    |ap_CS_fsm                         |   4|   0|    4|          0|
-    |ap_done_reg                       |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter0_reg       |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter3           |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter4           |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter5           |   1|   0|    1|          0|
-    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
-    |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
-    |ap_loop_exit_ready_pp0_iter3_reg  |   1|   0|    1|          0|
-    |ap_loop_exit_ready_pp0_iter4_reg  |   1|   0|    1|          0|
-    |beta_10_fu_178                    |  32|   0|   32|          0|
-    |beta_11_fu_182                    |  32|   0|   32|          0|
-    |beta_12_fu_186                    |  32|   0|   32|          0|
-    |beta_13_fu_190                    |  32|   0|   32|          0|
-    |beta_14_fu_194                    |  32|   0|   32|          0|
-    |beta_15_fu_198                    |  32|   0|   32|          0|
-    |beta_16_reg_799                   |  32|   0|   32|          0|
-    |beta_1_fu_142                     |  32|   0|   32|          0|
-    |beta_2_fu_146                     |  32|   0|   32|          0|
-    |beta_3_fu_150                     |  32|   0|   32|          0|
-    |beta_4_fu_154                     |  32|   0|   32|          0|
-    |beta_5_fu_158                     |  32|   0|   32|          0|
-    |beta_6_fu_162                     |  32|   0|   32|          0|
-    |beta_7_fu_166                     |  32|   0|   32|          0|
-    |beta_8_fu_170                     |  32|   0|   32|          0|
-    |beta_9_fu_174                     |  32|   0|   32|          0|
-    |beta_fu_138                       |  32|   0|   32|          0|
-    |icmp_ln101_reg_776                |   1|   0|    1|          0|
-    |j_fu_134                          |   5|   0|    5|          0|
-    |l_tile_fu_130                     |  32|   0|   32|          0|
-    |tmp_4_reg_785                     |  32|   0|   32|          0|
-    |trunc_ln103_reg_790               |   4|   0|    4|          0|
-    |x_assign_1_reg_794                |  32|   0|   32|          0|
-    |icmp_ln101_reg_776                |  64|  32|    1|          0|
-    |trunc_ln103_reg_790               |  64|  32|    4|          0|
-    +----------------------------------+----+----+-----+-----------+
-    |Total                             | 798|  64|  675|          0|
-    +----------------------------------+----+----+-----+-----------+
+    +-----------------------------------+----+----+-----+-----------+
+    |                Name               | FF | LUT| Bits| Const Bits|
+    +-----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                          |   1|   0|    1|          0|
+    |ap_done_reg                        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter10           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter11           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter12           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter13           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter14           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter15           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter9            |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter10_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter11_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter12_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter13_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter14_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter4_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter5_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter6_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter7_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter8_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter9_reg   |   1|   0|    1|          0|
+    |beta_10_fu_170                     |  32|   0|   32|          0|
+    |beta_11_fu_174                     |  32|   0|   32|          0|
+    |beta_12_fu_178                     |  32|   0|   32|          0|
+    |beta_13_fu_182                     |  32|   0|   32|          0|
+    |beta_14_fu_186                     |  32|   0|   32|          0|
+    |beta_15_fu_190                     |  32|   0|   32|          0|
+    |beta_1_fu_134                      |  32|   0|   32|          0|
+    |beta_2_fu_138                      |  32|   0|   32|          0|
+    |beta_3_fu_142                      |  32|   0|   32|          0|
+    |beta_4_fu_146                      |  32|   0|   32|          0|
+    |beta_5_fu_150                      |  32|   0|   32|          0|
+    |beta_6_fu_154                      |  32|   0|   32|          0|
+    |beta_7_fu_158                      |  32|   0|   32|          0|
+    |beta_8_fu_162                      |  32|   0|   32|          0|
+    |beta_9_fu_166                      |  32|   0|   32|          0|
+    |beta_fu_130                        |  32|   0|   32|          0|
+    |icmp_ln100_reg_736                 |   1|   0|    1|          0|
+    |j_fu_126                           |   5|   0|    5|          0|
+    |tmp_4_reg_740                      |  32|   0|   32|          0|
+    |trunc_ln102_reg_745                |   4|   0|    4|          0|
+    |x_assign_1_reg_749                 |  32|   0|   32|          0|
+    |icmp_ln100_reg_736                 |  64|  32|    1|          0|
+    |trunc_ln102_reg_745                |  64|  32|    4|          0|
+    +-----------------------------------+----+----+-----+-----------+
+    |Total                              | 745|  64|  622|          0|
+    +-----------------------------------+----+----+-----+-----------+
 
 
 
@@ -183,15 +187,15 @@
 |ap_done               |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
 |ap_idle               |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
 |ap_ready              |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
-|grp_fu_4113_p_din0    |  out|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
-|grp_fu_4113_p_din1    |  out|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
-|grp_fu_4113_p_opcode  |  out|    2|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
-|grp_fu_4113_p_dout0   |   in|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
-|grp_fu_4113_p_ce      |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
-|grp_fu_1561_p_din0    |  out|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
-|grp_fu_1561_p_din1    |  out|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
-|grp_fu_1561_p_dout0   |   in|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
-|grp_fu_1561_p_ce      |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_1556_p_din0    |  out|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_1556_p_din1    |  out|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_1556_p_opcode  |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_1556_p_dout0   |   in|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_1556_p_ce      |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_1584_p_din0    |  out|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_1584_p_din1    |  out|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_1584_p_dout0   |   in|   32|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
+|grp_fu_1584_p_ce      |  out|    1|  ap_ctrl_hs|  streaming_attention_Pipeline_BETA|  return value|
 |score_reload          |   in|   32|     ap_none|                       score_reload|        scalar|
 |score_1_reload        |   in|   32|     ap_none|                     score_1_reload|        scalar|
 |score_2_reload        |   in|   32|     ap_none|                     score_2_reload|        scalar|
@@ -241,7 +245,5 @@
 |beta_1_out_ap_vld     |  out|    1|      ap_vld|                         beta_1_out|       pointer|
 |beta_out              |  out|   32|      ap_vld|                           beta_out|       pointer|
 |beta_out_ap_vld       |  out|    1|      ap_vld|                           beta_out|       pointer|
-|l_tile_out            |  out|   32|      ap_vld|                         l_tile_out|       pointer|
-|l_tile_out_ap_vld     |  out|    1|      ap_vld|                         l_tile_out|       pointer|
 +----------------------+-----+-----+------------+-----------------------------------+--------------+
 

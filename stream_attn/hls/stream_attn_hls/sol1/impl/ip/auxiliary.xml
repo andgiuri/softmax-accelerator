@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="streaming_attention" xd:componentRef="streaming_attention" xd:initiationInterval="354792" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="streaming_attention" xd:componentRef="streaming_attention" xd:initiationInterval="107688" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
   <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
   <xd:arg xd:name="*(Q)" xd:originalName="Q" xd:direction="inout" xd:interfaceRef="m_axi_gmem0" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="in"/>
   <xd:arg xd:name="Q" xd:originalName="Q" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x10" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem0"/>
@@ -9,6 +9,6 @@
   <xd:arg xd:name="V" xd:originalName="V" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x28" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem2"/>
   <xd:arg xd:name="*(O)" xd:originalName="O" xd:direction="inout" xd:interfaceRef="m_axi_gmem3" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="out"/>
   <xd:arg xd:name="O" xd:originalName="O" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x34" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem3"/>
-  <xd:latencyEstimates xd:best-case="354791" xd:worst-case="354791" xd:average-case="354791"/>
-  <xd:resourceEstimates xd:LUT="15692" xd:FF="10918" xd:BRAM="0" xd:DSP="36"/>
+  <xd:latencyEstimates xd:best-case="107687" xd:worst-case="107687" xd:average-case="107687"/>
+  <xd:resourceEstimates xd:LUT="18118" xd:FF="12792" xd:BRAM="0" xd:DSP="48"/>
 </xd:acceleratorMap>

@@ -65,10 +65,10 @@ module streaming_attention_streaming_attention_Pipeline_SCORE (
         score_out_ap_vld,
         tile_max_out,
         tile_max_out_ap_vld,
-        grp_fu_4109_p_din0,
-        grp_fu_4109_p_din1,
-        grp_fu_4109_p_dout0,
-        grp_fu_4109_p_ce
+        grp_fu_1580_p_din0,
+        grp_fu_1580_p_din1,
+        grp_fu_1580_p_dout0,
+        grp_fu_1580_p_ce
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
@@ -130,10 +130,10 @@ output  [31:0] score_out;
 output   score_out_ap_vld;
 output  [31:0] tile_max_out;
 output   tile_max_out_ap_vld;
-output  [31:0] grp_fu_4109_p_din0;
-output  [31:0] grp_fu_4109_p_din1;
-input  [31:0] grp_fu_4109_p_dout0;
-output   grp_fu_4109_p_ce;
+output  [31:0] grp_fu_1580_p_din0;
+output  [31:0] grp_fu_1580_p_din1;
+input  [31:0] grp_fu_1580_p_dout0;
+output   grp_fu_1580_p_ce;
 
 reg ap_idle;
 reg score_15_out_ap_vld;
@@ -570,7 +570,7 @@ always @ (posedge ap_clk) begin
         icmp_ln91_2_reg_976 <= icmp_ln91_2_fu_713_p2;
         icmp_ln91_3_reg_981 <= icmp_ln91_3_fu_719_p2;
         icmp_ln91_reg_966 <= icmp_ln91_fu_701_p2;
-        tile_max_1_reg_953 <= grp_fu_4109_p_dout0;
+        tile_max_1_reg_953 <= grp_fu_1580_p_dout0;
         tile_max_1_reg_953_pp0_iter10_reg <= tile_max_1_reg_953;
         tile_max_load_1_reg_960 <= ap_sig_allocacmp_tile_max_load_1;
         trunc_ln90_reg_944_pp0_iter2_reg <= trunc_ln90_reg_944_pp0_iter1_reg;
@@ -595,97 +595,97 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1) & (trunc_ln90_reg_944_pp0_iter8_reg == 4'd10))) begin
-        score_10_fu_188 <= grp_fu_4109_p_dout0;
+        score_10_fu_188 <= grp_fu_1580_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1) & (trunc_ln90_reg_944_pp0_iter8_reg == 4'd11))) begin
-        score_11_fu_192 <= grp_fu_4109_p_dout0;
+        score_11_fu_192 <= grp_fu_1580_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1) & (trunc_ln90_reg_944_pp0_iter8_reg == 4'd12))) begin
-        score_12_fu_196 <= grp_fu_4109_p_dout0;
+        score_12_fu_196 <= grp_fu_1580_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1) & (trunc_ln90_reg_944_pp0_iter8_reg == 4'd13))) begin
-        score_13_fu_200 <= grp_fu_4109_p_dout0;
+        score_13_fu_200 <= grp_fu_1580_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1) & (trunc_ln90_reg_944_pp0_iter8_reg == 4'd14))) begin
-        score_14_fu_204 <= grp_fu_4109_p_dout0;
+        score_14_fu_204 <= grp_fu_1580_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1) & (trunc_ln90_reg_944_pp0_iter8_reg == 4'd15))) begin
-        score_15_fu_208 <= grp_fu_4109_p_dout0;
+        score_15_fu_208 <= grp_fu_1580_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1) & (trunc_ln90_reg_944_pp0_iter8_reg == 4'd1))) begin
-        score_1_fu_152 <= grp_fu_4109_p_dout0;
+        score_1_fu_152 <= grp_fu_1580_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1) & (trunc_ln90_reg_944_pp0_iter8_reg == 4'd2))) begin
-        score_2_fu_156 <= grp_fu_4109_p_dout0;
+        score_2_fu_156 <= grp_fu_1580_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1) & (trunc_ln90_reg_944_pp0_iter8_reg == 4'd3))) begin
-        score_3_fu_160 <= grp_fu_4109_p_dout0;
+        score_3_fu_160 <= grp_fu_1580_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1) & (trunc_ln90_reg_944_pp0_iter8_reg == 4'd4))) begin
-        score_4_fu_164 <= grp_fu_4109_p_dout0;
+        score_4_fu_164 <= grp_fu_1580_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1) & (trunc_ln90_reg_944_pp0_iter8_reg == 4'd5))) begin
-        score_5_fu_168 <= grp_fu_4109_p_dout0;
+        score_5_fu_168 <= grp_fu_1580_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1) & (trunc_ln90_reg_944_pp0_iter8_reg == 4'd6))) begin
-        score_6_fu_172 <= grp_fu_4109_p_dout0;
+        score_6_fu_172 <= grp_fu_1580_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1) & (trunc_ln90_reg_944_pp0_iter8_reg == 4'd7))) begin
-        score_7_fu_176 <= grp_fu_4109_p_dout0;
+        score_7_fu_176 <= grp_fu_1580_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1) & (trunc_ln90_reg_944_pp0_iter8_reg == 4'd8))) begin
-        score_8_fu_180 <= grp_fu_4109_p_dout0;
+        score_8_fu_180 <= grp_fu_1580_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1) & (trunc_ln90_reg_944_pp0_iter8_reg == 4'd9))) begin
-        score_9_fu_184 <= grp_fu_4109_p_dout0;
+        score_9_fu_184 <= grp_fu_1580_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1) & (trunc_ln90_reg_944_pp0_iter8_reg == 4'd0))) begin
-        score_fu_148 <= grp_fu_4109_p_dout0;
+        score_fu_148 <= grp_fu_1580_p_dout0;
     end
 end
 
@@ -950,11 +950,11 @@ assign bitcast_ln91_1_fu_683_p1 = ap_sig_allocacmp_tile_max_load_1;
 
 assign bitcast_ln91_fu_666_p1 = tile_max_1_reg_953;
 
-assign grp_fu_4109_p_ce = 1'b1;
+assign grp_fu_1580_p_ce = 1'b1;
 
-assign grp_fu_4109_p_din0 = conv_reg_948;
+assign grp_fu_1580_p_din0 = conv_reg_948;
 
-assign grp_fu_4109_p_din1 = 32'd956433936;
+assign grp_fu_1580_p_din1 = 32'd956433936;
 
 assign icmp_ln88_fu_522_p2 = ((ap_sig_allocacmp_j_1 == 5'd16) ? 1'b1 : 1'b0);
 

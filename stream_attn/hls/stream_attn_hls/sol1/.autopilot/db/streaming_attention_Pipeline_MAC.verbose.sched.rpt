@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'streaming_attention_Pipeline_MAC'
 ================================================================
-* Date:           Sat Jun 20 05:22:09 2026
+* Date:           Sat Jun 20 05:29:32 2026
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        stream_attn_hls
@@ -378,22 +378,22 @@ ST_4 : Operation 323 [1/1] (0.00ns)   --->   "%dot_28_load = load i22 %dot_28"  
 ST_4 : Operation 324 [1/1] (0.00ns)   --->   "%dot_29_load = load i22 %dot_29"   --->   Operation 324 'load' 'dot_29_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
 ST_4 : Operation 325 [1/1] (0.00ns)   --->   "%dot_30_load = load i22 %dot_30"   --->   Operation 325 'load' 'dot_30_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
 ST_4 : Operation 326 [1/1] (0.00ns)   --->   "%dot_31_load = load i22 %dot_31"   --->   Operation 326 'load' 'dot_31_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 327 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1539_out, i22 %dot_31_load"   --->   Operation 327 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 328 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1438_out, i22 %dot_30_load"   --->   Operation 328 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 329 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1337_out, i22 %dot_29_load"   --->   Operation 329 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 330 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1236_out, i22 %dot_28_load"   --->   Operation 330 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 331 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1135_out, i22 %dot_27_load"   --->   Operation 331 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 332 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1034_out, i22 %dot_26_load"   --->   Operation 332 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 333 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_933_out, i22 %dot_25_load"   --->   Operation 333 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 334 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_832_out, i22 %dot_24_load"   --->   Operation 334 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 335 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_731_out, i22 %dot_23_load"   --->   Operation 335 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 336 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_630_out, i22 %dot_22_load"   --->   Operation 336 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 337 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_529_out, i22 %dot_21_load"   --->   Operation 337 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 338 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_428_out, i22 %dot_20_load"   --->   Operation 338 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 339 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_327_out, i22 %dot_19_load"   --->   Operation 339 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 340 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_226_out, i22 %dot_18_load"   --->   Operation 340 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 341 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_125_out, i22 %dot_17_load"   --->   Operation 341 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 342 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add7124_out, i22 %dot_16_load"   --->   Operation 342 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 327 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1570_out, i22 %dot_31_load"   --->   Operation 327 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 328 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1469_out, i22 %dot_30_load"   --->   Operation 328 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 329 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1368_out, i22 %dot_29_load"   --->   Operation 329 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 330 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1267_out, i22 %dot_28_load"   --->   Operation 330 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 331 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1166_out, i22 %dot_27_load"   --->   Operation 331 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 332 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1065_out, i22 %dot_26_load"   --->   Operation 332 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 333 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_964_out, i22 %dot_25_load"   --->   Operation 333 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 334 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_863_out, i22 %dot_24_load"   --->   Operation 334 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 335 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_762_out, i22 %dot_23_load"   --->   Operation 335 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 336 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_661_out, i22 %dot_22_load"   --->   Operation 336 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 337 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_560_out, i22 %dot_21_load"   --->   Operation 337 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 338 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_459_out, i22 %dot_20_load"   --->   Operation 338 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 339 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_358_out, i22 %dot_19_load"   --->   Operation 339 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 340 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_257_out, i22 %dot_18_load"   --->   Operation 340 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 341 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_156_out, i22 %dot_17_load"   --->   Operation 341 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 342 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add7155_out, i22 %dot_16_load"   --->   Operation 342 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
 ST_4 : Operation 343 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 343 'ret' 'ret_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
 
 State 5 <SV = 4> <Delay = 3.68>

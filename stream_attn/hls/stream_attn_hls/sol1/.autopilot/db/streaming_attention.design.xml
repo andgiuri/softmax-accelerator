@@ -5,46 +5,46 @@
 <ModuleName>streaming_attention</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_streaming_attention_Pipeline_LOAD_Q_fu_1027</InstName>
+<InstName>grp_streaming_attention_Pipeline_LOAD_Q_fu_1023</InstName>
 <ModuleName>streaming_attention_Pipeline_LOAD_Q</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>1027</ID>
+<ID>1023</ID>
 </Instance>
 <Instance>
-<InstName>grp_streaming_attention_Pipeline_LOAD_TILE_VITIS_LOOP_59_1_fu_1162</InstName>
+<InstName>grp_streaming_attention_Pipeline_LOAD_TILE_VITIS_LOOP_59_1_fu_1158</InstName>
 <ModuleName>streaming_attention_Pipeline_LOAD_TILE_VITIS_LOOP_59_1</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>1162</ID>
+<ID>1158</ID>
 </Instance>
 <Instance>
-<InstName>grp_streaming_attention_Pipeline_MAC_fu_1204</InstName>
+<InstName>grp_streaming_attention_Pipeline_MAC_fu_1200</InstName>
 <ModuleName>streaming_attention_Pipeline_MAC</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>1204</ID>
+<ID>1200</ID>
 </Instance>
 <Instance>
-<InstName>grp_streaming_attention_Pipeline_SCORE_fu_1304</InstName>
+<InstName>grp_streaming_attention_Pipeline_SCORE_fu_1300</InstName>
 <ModuleName>streaming_attention_Pipeline_SCORE</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>1304</ID>
+<ID>1300</ID>
 </Instance>
 <Instance>
-<InstName>grp_streaming_attention_Pipeline_BETA_fu_1342</InstName>
+<InstName>grp_streaming_attention_Pipeline_BETA_fu_1338</InstName>
 <ModuleName>streaming_attention_Pipeline_BETA</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>1342</ID>
+<ID>1338</ID>
 </Instance>
 <Instance>
-<InstName>grp_streaming_attention_Pipeline_AV_fu_1380</InstName>
+<InstName>grp_streaming_attention_Pipeline_AV_fu_1375</InstName>
 <ModuleName>streaming_attention_Pipeline_AV</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>1380</ID>
+<ID>1375</ID>
 </Instance>
 <Instance>
-<InstName>grp_streaming_attention_Pipeline_WRITE_O_fu_1481</InstName>
+<InstName>grp_streaming_attention_Pipeline_WRITE_O_fu_1476</InstName>
 <ModuleName>streaming_attention_Pipeline_WRITE_O</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>1481</ID>
+<ID>1476</ID>
 </Instance>
 </InstancesList>
 </TopModule>
@@ -7426,8 +7426,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_1539_out</name>
-<Object>add71_1539_out</Object>
+<name>add71_1570_out</name>
+<Object>add71_1570_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7437,8 +7437,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_1539_out_ap_vld</name>
-<Object>add71_1539_out</Object>
+<name>add71_1570_out_ap_vld</name>
+<Object>add71_1570_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7448,8 +7448,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_1438_out</name>
-<Object>add71_1438_out</Object>
+<name>add71_1469_out</name>
+<Object>add71_1469_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7459,8 +7459,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_1438_out_ap_vld</name>
-<Object>add71_1438_out</Object>
+<name>add71_1469_out_ap_vld</name>
+<Object>add71_1469_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7470,8 +7470,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_1337_out</name>
-<Object>add71_1337_out</Object>
+<name>add71_1368_out</name>
+<Object>add71_1368_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7481,8 +7481,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_1337_out_ap_vld</name>
-<Object>add71_1337_out</Object>
+<name>add71_1368_out_ap_vld</name>
+<Object>add71_1368_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7492,8 +7492,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_1236_out</name>
-<Object>add71_1236_out</Object>
+<name>add71_1267_out</name>
+<Object>add71_1267_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7503,8 +7503,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_1236_out_ap_vld</name>
-<Object>add71_1236_out</Object>
+<name>add71_1267_out_ap_vld</name>
+<Object>add71_1267_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7514,8 +7514,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_1135_out</name>
-<Object>add71_1135_out</Object>
+<name>add71_1166_out</name>
+<Object>add71_1166_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7525,8 +7525,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_1135_out_ap_vld</name>
-<Object>add71_1135_out</Object>
+<name>add71_1166_out_ap_vld</name>
+<Object>add71_1166_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7536,8 +7536,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_1034_out</name>
-<Object>add71_1034_out</Object>
+<name>add71_1065_out</name>
+<Object>add71_1065_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7547,8 +7547,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_1034_out_ap_vld</name>
-<Object>add71_1034_out</Object>
+<name>add71_1065_out_ap_vld</name>
+<Object>add71_1065_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7558,8 +7558,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_933_out</name>
-<Object>add71_933_out</Object>
+<name>add71_964_out</name>
+<Object>add71_964_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7569,8 +7569,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_933_out_ap_vld</name>
-<Object>add71_933_out</Object>
+<name>add71_964_out_ap_vld</name>
+<Object>add71_964_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7580,8 +7580,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_832_out</name>
-<Object>add71_832_out</Object>
+<name>add71_863_out</name>
+<Object>add71_863_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7591,8 +7591,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_832_out_ap_vld</name>
-<Object>add71_832_out</Object>
+<name>add71_863_out_ap_vld</name>
+<Object>add71_863_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7602,8 +7602,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_731_out</name>
-<Object>add71_731_out</Object>
+<name>add71_762_out</name>
+<Object>add71_762_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7613,8 +7613,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_731_out_ap_vld</name>
-<Object>add71_731_out</Object>
+<name>add71_762_out_ap_vld</name>
+<Object>add71_762_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7624,8 +7624,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_630_out</name>
-<Object>add71_630_out</Object>
+<name>add71_661_out</name>
+<Object>add71_661_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7635,8 +7635,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_630_out_ap_vld</name>
-<Object>add71_630_out</Object>
+<name>add71_661_out_ap_vld</name>
+<Object>add71_661_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7646,8 +7646,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_529_out</name>
-<Object>add71_529_out</Object>
+<name>add71_560_out</name>
+<Object>add71_560_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7657,8 +7657,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_529_out_ap_vld</name>
-<Object>add71_529_out</Object>
+<name>add71_560_out_ap_vld</name>
+<Object>add71_560_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7668,8 +7668,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_428_out</name>
-<Object>add71_428_out</Object>
+<name>add71_459_out</name>
+<Object>add71_459_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7679,8 +7679,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_428_out_ap_vld</name>
-<Object>add71_428_out</Object>
+<name>add71_459_out_ap_vld</name>
+<Object>add71_459_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7690,8 +7690,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_327_out</name>
-<Object>add71_327_out</Object>
+<name>add71_358_out</name>
+<Object>add71_358_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7701,8 +7701,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_327_out_ap_vld</name>
-<Object>add71_327_out</Object>
+<name>add71_358_out_ap_vld</name>
+<Object>add71_358_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7712,8 +7712,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_226_out</name>
-<Object>add71_226_out</Object>
+<name>add71_257_out</name>
+<Object>add71_257_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7723,8 +7723,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_226_out_ap_vld</name>
-<Object>add71_226_out</Object>
+<name>add71_257_out_ap_vld</name>
+<Object>add71_257_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7734,8 +7734,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_125_out</name>
-<Object>add71_125_out</Object>
+<name>add71_156_out</name>
+<Object>add71_156_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7745,8 +7745,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add71_125_out_ap_vld</name>
-<Object>add71_125_out</Object>
+<name>add71_156_out_ap_vld</name>
+<Object>add71_156_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7756,8 +7756,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add7124_out</name>
-<Object>add7124_out</Object>
+<name>add7155_out</name>
+<Object>add7155_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7767,8 +7767,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add7124_out_ap_vld</name>
-<Object>add7124_out</Object>
+<name>add7155_out_ap_vld</name>
+<Object>add7155_out</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -7901,7 +7901,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_4109_p_din0</name>
+<name>grp_fu_1580_p_din0</name>
 <Object>streaming_attention_Pipeline_SCORE</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -7912,7 +7912,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_4109_p_din1</name>
+<name>grp_fu_1580_p_din1</name>
 <Object>streaming_attention_Pipeline_SCORE</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -7923,7 +7923,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_4109_p_dout0</name>
+<name>grp_fu_1580_p_dout0</name>
 <Object>streaming_attention_Pipeline_SCORE</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -7934,7 +7934,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_4109_p_ce</name>
+<name>grp_fu_1580_p_ce</name>
 <Object>streaming_attention_Pipeline_SCORE</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -8516,26 +8516,26 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>8.844</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.256</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>82</Best-caseLatency>
-<Average-caseLatency>82</Average-caseLatency>
-<Worst-caseLatency>82</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.820 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.820 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.820 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>82</PipelineInitiationInterval>
+<Best-caseLatency>32</Best-caseLatency>
+<Average-caseLatency>32</Average-caseLatency>
+<Worst-caseLatency>32</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.320 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.320 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.320 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>32</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <BETA>
 <Name>BETA</Name>
 <TripCount>16</TripCount>
-<Latency>80</Latency>
-<AbsoluteTimeLatency>0.800 us</AbsoluteTimeLatency>
-<PipelineII>4</PipelineII>
-<PipelineDepth>21</PipelineDepth>
+<Latency>30</Latency>
+<AbsoluteTimeLatency>0.300 us</AbsoluteTimeLatency>
+<PipelineII>1</PipelineII>
+<PipelineDepth>16</PipelineDepth>
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
@@ -8544,10 +8544,10 @@
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<FF>798</FF>
+<FF>745</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>329</LUT>
+<LUT>190</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
 <UTIL_LUT>~0</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
@@ -8629,7 +8629,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_4113_p_din0</name>
+<name>grp_fu_1556_p_din0</name>
 <Object>streaming_attention_Pipeline_BETA</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -8640,7 +8640,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_4113_p_din1</name>
+<name>grp_fu_1556_p_din1</name>
 <Object>streaming_attention_Pipeline_BETA</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -8651,29 +8651,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_4113_p_opcode</name>
-<Object>streaming_attention_Pipeline_BETA</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>2</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_4113_p_dout0</name>
-<Object>streaming_attention_Pipeline_BETA</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_4113_p_ce</name>
+<name>grp_fu_1556_p_opcode</name>
 <Object>streaming_attention_Pipeline_BETA</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -8684,29 +8662,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1561_p_din0</name>
-<Object>streaming_attention_Pipeline_BETA</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_1561_p_din1</name>
-<Object>streaming_attention_Pipeline_BETA</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_1561_p_dout0</name>
+<name>grp_fu_1556_p_dout0</name>
 <Object>streaming_attention_Pipeline_BETA</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -8717,7 +8673,51 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1561_p_ce</name>
+<name>grp_fu_1556_p_ce</name>
+<Object>streaming_attention_Pipeline_BETA</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1584_p_din0</name>
+<Object>streaming_attention_Pipeline_BETA</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1584_p_din1</name>
+<Object>streaming_attention_Pipeline_BETA</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1584_p_dout0</name>
+<Object>streaming_attention_Pipeline_BETA</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1584_p_ce</name>
 <Object>streaming_attention_Pipeline_BETA</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -9266,28 +9266,6 @@
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
-<RtlPorts>
-<name>l_tile_out</name>
-<Object>l_tile_out</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_vld</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>l_tile_out_ap_vld</name>
-<Object>l_tile_out</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_vld</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
 </InterfaceSummary>
 </Module>
 <Module>
@@ -9299,26 +9277,26 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>14.512</EstimatedClockPeriod>
+<EstimatedClockPeriod>12.958</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>4296</Best-caseLatency>
-<Average-caseLatency>4296</Average-caseLatency>
-<Worst-caseLatency>4296</Worst-caseLatency>
-<Best-caseRealTimeLatency>62.344 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>62.344 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>62.344 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>4296</PipelineInitiationInterval>
+<Best-caseLatency>482</Best-caseLatency>
+<Average-caseLatency>482</Average-caseLatency>
+<Worst-caseLatency>482</Worst-caseLatency>
+<Best-caseRealTimeLatency>6.246 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>6.246 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>6.246 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>482</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <AV>
 <Name>AV</Name>
 <TripCount>64</TripCount>
-<Latency>4294</Latency>
-<AbsoluteTimeLatency>62.315 us</AbsoluteTimeLatency>
-<PipelineII>67</PipelineII>
-<PipelineDepth>74</PipelineDepth>
+<Latency>480</Latency>
+<AbsoluteTimeLatency>6.220 us</AbsoluteTimeLatency>
+<PipelineII>7</PipelineII>
+<PipelineDepth>40</PipelineDepth>
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
@@ -9327,15 +9305,15 @@
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<DSP>3</DSP>
+<DSP>6</DSP>
 <AVAIL_DSP>220</AVAIL_DSP>
-<UTIL_DSP>1</UTIL_DSP>
-<FF>776</FF>
+<UTIL_DSP>2</UTIL_DSP>
+<FF>1357</FF>
 <AVAIL_FF>106400</AVAIL_FF>
-<UTIL_FF>~0</UTIL_FF>
-<LUT>2387</LUT>
+<UTIL_FF>1</UTIL_FF>
+<LUT>2708</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
-<UTIL_LUT>4</UTIL_LUT>
+<UTIL_LUT>5</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
 <AVAIL_BRAM>280</AVAIL_BRAM>
 <UTIL_BRAM>0</UTIL_BRAM>
@@ -9412,7 +9390,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_4113_p_din0</name>
+<name>grp_fu_1556_p_din0</name>
 <Object>streaming_attention_Pipeline_AV</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -9423,7 +9401,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_4113_p_din1</name>
+<name>grp_fu_1556_p_din1</name>
 <Object>streaming_attention_Pipeline_AV</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -9434,29 +9412,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_4113_p_opcode</name>
-<Object>streaming_attention_Pipeline_AV</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_4113_p_dout0</name>
-<Object>streaming_attention_Pipeline_AV</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_4113_p_ce</name>
+<name>grp_fu_1556_p_opcode</name>
 <Object>streaming_attention_Pipeline_AV</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -9467,29 +9423,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_4109_p_din0</name>
-<Object>streaming_attention_Pipeline_AV</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_4109_p_din1</name>
-<Object>streaming_attention_Pipeline_AV</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_4109_p_dout0</name>
+<name>grp_fu_1556_p_dout0</name>
 <Object>streaming_attention_Pipeline_AV</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -9500,7 +9434,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_4109_p_ce</name>
+<name>grp_fu_1556_p_ce</name>
 <Object>streaming_attention_Pipeline_AV</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -9511,14 +9445,212 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>alpha</name>
-<Object>alpha</Object>
-<Type>scalar</Type>
+<name>grp_fu_1560_p_din0</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
 <Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1560_p_din1</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1560_p_opcode</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1560_p_dout0</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1560_p_ce</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1564_p_din0</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1564_p_din1</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1564_p_opcode</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1564_p_dout0</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1564_p_ce</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1568_p_din0</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1568_p_din1</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1568_p_opcode</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1568_p_dout0</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1568_p_ce</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1580_p_din0</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1580_p_din1</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1580_p_dout0</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>grp_fu_1580_p_ce</name>
+<Object>streaming_attention_Pipeline_AV</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -10217,6 +10349,17 @@
 <RtlPorts>
 <name>beta_15_reload</name>
 <Object>beta_15_reload</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>alpha</name>
+<Object>alpha</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -12967,8 +13110,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln125</name>
-<Object>sext_ln125</Object>
+<name>sext_ln147</name>
+<Object>sext_ln147</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -13703,33 +13846,33 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>14.512</EstimatedClockPeriod>
+<EstimatedClockPeriod>12.958</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>354791</Best-caseLatency>
-<Average-caseLatency>354791</Average-caseLatency>
-<Worst-caseLatency>354791</Worst-caseLatency>
-<Best-caseRealTimeLatency>5.149 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>5.149 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>5.149 ms</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>354792</PipelineInitiationInterval>
+<Best-caseLatency>107687</Best-caseLatency>
+<Average-caseLatency>107687</Average-caseLatency>
+<Worst-caseLatency>107687</Worst-caseLatency>
+<Best-caseRealTimeLatency>1.395 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>1.395 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>1.395 ms</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>107688</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <TILES>
 <Name>TILES</Name>
 <TripCount>64</TripCount>
-<Latency>354624</Latency>
-<AbsoluteTimeLatency>5.146 ms</AbsoluteTimeLatency>
-<IterationLatency>5541</IterationLatency>
-<PipelineDepth>5541</PipelineDepth>
+<Latency>107520</Latency>
+<AbsoluteTimeLatency>1.393 ms</AbsoluteTimeLatency>
+<IterationLatency>1680</IterationLatency>
+<PipelineDepth>1680</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_streaming_attention_Pipeline_LOAD_TILE_VITIS_LOOP_59_1_fu_1162</Instance>
-<Instance>grp_streaming_attention_Pipeline_MAC_fu_1204</Instance>
-<Instance>grp_streaming_attention_Pipeline_SCORE_fu_1304</Instance>
-<Instance>grp_streaming_attention_Pipeline_BETA_fu_1342</Instance>
-<Instance>grp_streaming_attention_Pipeline_AV_fu_1380</Instance>
+<Instance>grp_streaming_attention_Pipeline_LOAD_TILE_VITIS_LOOP_59_1_fu_1158</Instance>
+<Instance>grp_streaming_attention_Pipeline_MAC_fu_1200</Instance>
+<Instance>grp_streaming_attention_Pipeline_SCORE_fu_1300</Instance>
+<Instance>grp_streaming_attention_Pipeline_BETA_fu_1338</Instance>
+<Instance>grp_streaming_attention_Pipeline_AV_fu_1375</Instance>
 </InstanceList>
 </TILES>
 </SummaryOfLoopLatency>
@@ -13739,15 +13882,15 @@
 <BRAM_18K>0</BRAM_18K>
 <AVAIL_BRAM>280</AVAIL_BRAM>
 <UTIL_BRAM>0</UTIL_BRAM>
-<DSP>36</DSP>
+<DSP>48</DSP>
 <AVAIL_DSP>220</AVAIL_DSP>
-<UTIL_DSP>16</UTIL_DSP>
-<FF>10918</FF>
+<UTIL_DSP>21</UTIL_DSP>
+<FF>12792</FF>
 <AVAIL_FF>106400</AVAIL_FF>
-<UTIL_FF>10</UTIL_FF>
-<LUT>15692</LUT>
+<UTIL_FF>12</UTIL_FF>
+<LUT>18118</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
-<UTIL_LUT>29</UTIL_LUT>
+<UTIL_LUT>34</UTIL_LUT>
 <URAM>0</URAM>
 <AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>

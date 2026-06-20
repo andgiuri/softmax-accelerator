@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'streaming_attention'
 ================================================================
 + General Information: 
-    * Date:           Sat Jun 20 05:22:17 2026
+    * Date:           Sat Jun 20 05:29:40 2026
     * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
     * Project:        stream_attn_hls
     * Solution:       sol1 (Vivado IP Flow Target)
@@ -19,22 +19,22 @@
     |                           Modules                          |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |      |          |             |             |     |
     |                           & Loops                          |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |      FF     |     LUT     | URAM|
     +------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+------+----------+-------------+-------------+-----+
-    |+ streaming_attention                                       |  Timing|  -7.21|   354791|  5.149e+06|         -|   354792|     -|        no|     -|  36 (16%)|  10918 (10%)|  15692 (29%)|    -|
+    |+ streaming_attention                                       |  Timing|  -5.66|   107687|  1.395e+06|         -|   107688|     -|        no|     -|  48 (21%)|  12792 (12%)|  18118 (34%)|    -|
     | + streaming_attention_Pipeline_LOAD_Q                      |       -|   0.00|       66|    660.000|         -|       66|     -|        no|     -|         -|    528 (~0%)|     74 (~0%)|    -|
     |  o LOAD_Q                                                  |       -|   7.30|       64|    640.000|         2|        1|    64|       yes|     -|         -|            -|            -|    -|
     | + streaming_attention_Pipeline_WRITE_O                     |       -|   0.00|       82|    820.000|         -|       82|     -|        no|     -|         -|    171 (~0%)|    379 (~0%)|    -|
     |  o WRITE_O                                                 |       -|   7.30|       80|    800.000|        18|        1|    64|       yes|     -|         -|            -|            -|    -|
-    | o TILES                                                    |       -|   7.30|   354624|  5.146e+06|      5541|        -|    64|        no|     -|         -|            -|            -|    -|
+    | o TILES                                                    |       -|   7.30|   107520|  1.393e+06|      1680|        -|    64|        no|     -|         -|            -|            -|    -|
     |  + streaming_attention_Pipeline_LOAD_TILE_VITIS_LOOP_59_1  |       -|   0.00|     1027|  1.027e+04|         -|     1027|     -|        no|     -|         -|     44 (~0%)|    152 (~0%)|    -|
     |   o LOAD_TILE_VITIS_LOOP_59_1                              |       -|   7.30|     1025|  1.025e+04|         3|        1|  1024|       yes|     -|         -|            -|            -|    -|
     |  + streaming_attention_Pipeline_MAC                        |       -|   3.61|       69|    690.000|         -|       69|     -|        no|     -|   16 (7%)|    441 (~0%)|     656 (1%)|    -|
     |   o MAC                                                    |       -|   7.30|       67|    670.000|         5|        1|    64|       yes|     -|         -|            -|            -|    -|
     |  + streaming_attention_Pipeline_SCORE                      |  Timing|  -1.40|       28|    280.000|         -|       28|     -|        no|     -|         -|    837 (~0%)|    300 (~0%)|    -|
     |   o SCORE                                                  |       -|   7.30|       26|    260.000|        12|        1|    16|       yes|     -|         -|            -|            -|    -|
-    |  + streaming_attention_Pipeline_BETA                       |  Timing|  -1.54|       82|    820.000|         -|       82|     -|        no|     -|         -|    798 (~0%)|    329 (~0%)|    -|
-    |   o BETA                                                   |      II|   7.30|       80|    800.000|        21|        4|    16|       yes|     -|         -|            -|            -|    -|
-    |  + streaming_attention_Pipeline_AV                         |  Timing|  -7.21|     4296|  6.234e+04|         -|     4296|     -|        no|     -|    3 (1%)|    776 (~0%)|    2387 (4%)|    -|
-    |   o AV                                                     |      II|   7.30|     4294|  6.231e+04|        74|       67|    64|       yes|     -|         -|            -|            -|    -|
+    |  + streaming_attention_Pipeline_BETA                       |       -|   0.04|       32|    320.000|         -|       32|     -|        no|     -|         -|    745 (~0%)|    190 (~0%)|    -|
+    |   o BETA                                                   |       -|   7.30|       30|    300.000|        16|        1|    16|       yes|     -|         -|            -|            -|    -|
+    |  + streaming_attention_Pipeline_AV                         |  Timing|  -5.66|      482|  6.246e+03|         -|      482|     -|        no|     -|    6 (2%)|    1357 (1%)|    2708 (5%)|    -|
+    |   o AV                                                     |      II|   7.30|      480|  6.220e+03|        40|        7|    64|       yes|     -|         -|            -|            -|    -|
     +------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+------+----------+-------------+-------------+-----+
 
 
@@ -132,7 +132,7 @@
 | m_axi_gmem0  | LOAD_Q    | read      | 64     | 8     | attention_tile.cpp:37:5  |
 | m_axi_gmem1  | LOAD_TILE | read      | 1024   | 8     | attention_tile.cpp:58:9  |
 | m_axi_gmem2  | LOAD_TILE | read      | 1024   | 8     | attention_tile.cpp:58:9  |
-| m_axi_gmem3  | WRITE_O   | write     | 64     | 32    | attention_tile.cpp:125:5 |
+| m_axi_gmem3  | WRITE_O   | write     | 64     | 32    | attention_tile.cpp:147:5 |
 +--------------+-----------+-----------+--------+-------+--------------------------+
 
 * Inferred Bursts and Widening Missed
@@ -141,7 +141,7 @@
 +--------------+----------+-----------------+---------------------------------------------------------------------------------------------------------+------------+--------------------------+
 | m_axi_gmem1  | K        |                 | Access is clobbered by load                                                                             | 214-231    | attention_tile.cpp:58:9  |
 | m_axi_gmem2  | V        |                 | Access is clobbered by load                                                                             | 214-231    | attention_tile.cpp:58:9  |
-| m_axi_gmem3  | O        | WRITE_O         | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | attention_tile.cpp:125:5 |
+| m_axi_gmem3  | O        | WRITE_O         | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | attention_tile.cpp:147:5 |
 | m_axi_gmem1  | K        | VITIS_LOOP_59_1 | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0    | 214-353    | attention_tile.cpp:59:30 |
 | m_axi_gmem2  | V        | VITIS_LOOP_59_1 | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0    | 214-353    | attention_tile.cpp:59:30 |
 | m_axi_gmem0  | Q        | LOAD_Q          | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0    | 214-353    | attention_tile.cpp:37:5  |
@@ -155,14 +155,29 @@
 +-----------------------------------------------------------+-----+--------+-------------+------+---------+---------+
 | Name                                                      | DSP | Pragma | Variable    | Op   | Impl    | Latency |
 +-----------------------------------------------------------+-----+--------+-------------+------+---------+---------+
-| + streaming_attention                                     | 36  |        |             |      |         |         |
-|   add_ln53_fu_1805_p2                                     | -   |        | add_ln53    | add  | fabric  | 0       |
-|   add_ln54_fu_1827_p2                                     | -   |        | add_ln54    | add  | fabric  | 0       |
-|   add_ln54_1_fu_1832_p2                                   | -   |        | add_ln54_1  | add  | fabric  | 0       |
-|   faddfsub_32ns_32ns_32_5_full_dsp_1_U535                 | 2   |        | x_assign    | fsub | fulldsp | 4       |
-|   fexp_32ns_32ns_32_10_full_dsp_1_U537                    | 7   |        | alpha       | fexp | fulldsp | 9       |
-|   fmul_32ns_32ns_32_4_max_dsp_1_U536                      | 3   |        | mul         | fmul | maxdsp  | 3       |
-|   faddfsub_32ns_32ns_32_5_full_dsp_1_U535                 | 2   |        | l_1         | fsub | fulldsp | 4       |
+| + streaming_attention                                     | 48  |        |             |      |         |         |
+|   add_ln53_fu_1849_p2                                     | -   |        | add_ln53    | add  | fabric  | 0       |
+|   add_ln54_fu_1871_p2                                     | -   |        | add_ln54    | add  | fabric  | 0       |
+|   add_ln54_1_fu_1876_p2                                   | -   |        | add_ln54_1  | add  | fabric  | 0       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U540                 | 2   |        | x_assign    | fsub | fulldsp | 4       |
+|   fexp_32ns_32ns_32_10_full_dsp_1_U549                    | 7   |        | alpha       | fexp | fulldsp | 9       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U540                 | 2   |        | add137_7    | fsub | fulldsp | 4       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U541                     | 2   |        | add137_s    | fadd | fulldsp | 4       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U540                 | 2   |        | add137_1_3  | fsub | fulldsp | 4       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U542                 | 2   |        | add137_8    | fadd | fulldsp | 4       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U543                     | 2   |        | add137_5    | fadd | fulldsp | 4       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U541                     | 2   |        | add137_1_1  | fadd | fulldsp | 4       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U540                 | 2   |        | add137_2_1  | fsub | fulldsp | 4       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U548                      | 3   |        | mul         | fmul | maxdsp  | 3       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U544                     | 2   |        | add         | fadd | fulldsp | 4       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U545                     | 2   |        | add137_9    | fadd | fulldsp | 4       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U546                     | 2   |        | add137_4    | fadd | fulldsp | 4       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U547                     | 2   |        | add137_6    | fadd | fulldsp | 4       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U542                 | 2   |        | add137_1    | fadd | fulldsp | 4       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U543                     | 2   |        | add137_1_2  | fadd | fulldsp | 4       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U541                     | 2   |        | add137_2    | fadd | fulldsp | 4       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U540                 | 2   |        | add137_3    | fsub | fulldsp | 4       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U540                 | 2   |        | l_1         | fsub | fulldsp | 4       |
 |  + streaming_attention_Pipeline_LOAD_Q                    | 0   |        |             |      |         |         |
 |    add_ln37_fu_1557_p2                                    | -   |        | add_ln37    | add  | fabric  | 0       |
 |  + streaming_attention_Pipeline_LOAD_TILE_VITIS_LOOP_59_1 | 0   |        |             |      |         |         |
@@ -206,56 +221,66 @@
 |  + streaming_attention_Pipeline_SCORE                     | 0   |        |             |      |         |         |
 |    add_ln88_fu_528_p2                                     | -   |        | add_ln88    | add  | fabric  | 0       |
 |  + streaming_attention_Pipeline_BETA                      | 0   |        |             |      |         |         |
-|    add_ln101_fu_451_p2                                    | -   |        | add_ln101   | add  | fabric  | 0       |
-|  + streaming_attention_Pipeline_AV                        | 3   |        |             |      |         |         |
-|    add_ln110_fu_757_p2                                    | -   |        | add_ln110   | add  | fabric  | 0       |
-|    fmul_32ns_32ns_32_4_max_dsp_1_U363                     | 3   |        | mul2        | fmul | maxdsp  | 3       |
+|    add_ln100_fu_431_p2                                    | -   |        | add_ln100   | add  | fabric  | 0       |
+|  + streaming_attention_Pipeline_AV                        | 6   |        |             |      |         |         |
+|    add_ln124_fu_778_p2                                    | -   |        | add_ln124   | add  | fabric  | 0       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U365                     | 3   |        | mul163_2    | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U366                     | 3   |        | mul163_3    | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U365                     | 3   |        | mul163_5    | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U366                     | 3   |        | mul163_6    | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U365                     | 3   |        | mul163_9    | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U366                     | 3   |        | mul163_s    | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U365                     | 3   |        | mul163_11   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U366                     | 3   |        | mul163_12   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U365                     | 3   |        | mul163_13   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U366                     | 3   |        | mul163_14   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U365                     | 3   |        | mul2        | fmul | maxdsp  | 3       |
 |  + streaming_attention_Pipeline_WRITE_O                   | 0   |        |             |      |         |         |
-|    add_ln125_fu_612_p2                                    | -   |        | add_ln125   | add  | fabric  | 0       |
-|    fdiv_32ns_32ns_32_16_no_dsp_1_U465                     | -   |        | div         | fdiv | fabric  | 15      |
+|    add_ln147_fu_612_p2                                    | -   |        | add_ln147   | add  | fabric  | 0       |
+|    fdiv_32ns_32ns_32_16_no_dsp_1_U470                     | -   |        | div         | fdiv | fabric  | 15      |
 +-----------------------------------------------------------+-----+--------+-------------+------+---------+---------+
 
 
 ================================================================
 == Bind Storage Report
 ================================================================
-+-------------------------------------------+------+------+--------+----------+---------+------+---------+
-| Name                                      | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
-+-------------------------------------------+------+------+--------+----------+---------+------+---------+
-| + streaming_attention                     | 0    | 0    |        |          |         |      |         |
-|   kt_U                                    | -    | -    |        | kt       | ram_1p  | auto | 1       |
-|   kt_1_U                                  | -    | -    |        | kt_1     | ram_1p  | auto | 1       |
-|   kt_2_U                                  | -    | -    |        | kt_2     | ram_1p  | auto | 1       |
-|   kt_3_U                                  | -    | -    |        | kt_3     | ram_1p  | auto | 1       |
-|   fmul_32ns_32ns_32_4_max_dsp_1_U538      | -    | -    |        | kt_4     | ram_1p  | auto | 1       |
-|   faddfsub_32ns_32ns_32_5_full_dsp_1_U539 | -    | -    |        | kt_5     | ram_1p  | auto | 1       |
-|   kt_6_U                                  | -    | -    |        | kt_6     | ram_1p  | auto | 1       |
-|   kt_7_U                                  | -    | -    |        | kt_7     | ram_1p  | auto | 1       |
-|   kt_8_U                                  | -    | -    |        | kt_8     | ram_1p  | auto | 1       |
-|   kt_9_U                                  | -    | -    |        | kt_9     | ram_1p  | auto | 1       |
-|   fmul_32ns_32ns_32_4_max_dsp_1_U538      | -    | -    |        | kt_10    | ram_1p  | auto | 1       |
-|   faddfsub_32ns_32ns_32_5_full_dsp_1_U539 | -    | -    |        | kt_11    | ram_1p  | auto | 1       |
-|   kt_12_U                                 | -    | -    |        | kt_12    | ram_1p  | auto | 1       |
-|   kt_13_U                                 | -    | -    |        | kt_13    | ram_1p  | auto | 1       |
-|   kt_14_U                                 | -    | -    |        | kt_14    | ram_1p  | auto | 1       |
-|   kt_15_U                                 | -    | -    |        | kt_15    | ram_1p  | auto | 1       |
-|   fmul_32ns_32ns_32_4_max_dsp_1_U538      | -    | -    |        | vt       | ram_1p  | auto | 1       |
-|   faddfsub_32ns_32ns_32_5_full_dsp_1_U539 | -    | -    |        | vt_1     | ram_1p  | auto | 1       |
-|   vt_2_U                                  | -    | -    |        | vt_2     | ram_1p  | auto | 1       |
-|   vt_3_U                                  | -    | -    |        | vt_3     | ram_1p  | auto | 1       |
-|   vt_4_U                                  | -    | -    |        | vt_4     | ram_1p  | auto | 1       |
-|   vt_5_U                                  | -    | -    |        | vt_5     | ram_1p  | auto | 1       |
-|   fmul_32ns_32ns_32_4_max_dsp_1_U538      | -    | -    |        | vt_6     | ram_1p  | auto | 1       |
-|   faddfsub_32ns_32ns_32_5_full_dsp_1_U539 | -    | -    |        | vt_7     | ram_1p  | auto | 1       |
-|   vt_8_U                                  | -    | -    |        | vt_8     | ram_1p  | auto | 1       |
-|   vt_9_U                                  | -    | -    |        | vt_9     | ram_1p  | auto | 1       |
-|   vt_10_U                                 | -    | -    |        | vt_10    | ram_1p  | auto | 1       |
-|   vt_11_U                                 | -    | -    |        | vt_11    | ram_1p  | auto | 1       |
-|   fmul_32ns_32ns_32_4_max_dsp_1_U538      | -    | -    |        | vt_12    | ram_1p  | auto | 1       |
-|   faddfsub_32ns_32ns_32_5_full_dsp_1_U539 | -    | -    |        | vt_13    | ram_1p  | auto | 1       |
-|   vt_14_U                                 | -    | -    |        | vt_14    | ram_1p  | auto | 1       |
-|   vt_15_U                                 | -    | -    |        | vt_15    | ram_1p  | auto | 1       |
-+-------------------------------------------+------+------+--------+----------+---------+------+---------+
++--------------------------------------+------+------+--------+----------+---------+------+---------+
+| Name                                 | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
++--------------------------------------+------+------+--------+----------+---------+------+---------+
+| + streaming_attention                | 0    | 0    |        |          |         |      |         |
+|   kt_U                               | -    | -    |        | kt       | ram_1p  | auto | 1       |
+|   kt_1_U                             | -    | -    |        | kt_1     | ram_1p  | auto | 1       |
+|   kt_2_U                             | -    | -    |        | kt_2     | ram_1p  | auto | 1       |
+|   kt_3_U                             | -    | -    |        | kt_3     | ram_1p  | auto | 1       |
+|   kt_4_U                             | -    | -    |        | kt_4     | ram_1p  | auto | 1       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U548 | -    | -    |        | kt_5     | ram_1p  | auto | 1       |
+|   kt_6_U                             | -    | -    |        | kt_6     | ram_1p  | auto | 1       |
+|   kt_7_U                             | -    | -    |        | kt_7     | ram_1p  | auto | 1       |
+|   kt_8_U                             | -    | -    |        | kt_8     | ram_1p  | auto | 1       |
+|   kt_9_U                             | -    | -    |        | kt_9     | ram_1p  | auto | 1       |
+|   kt_10_U                            | -    | -    |        | kt_10    | ram_1p  | auto | 1       |
+|   kt_11_U                            | -    | -    |        | kt_11    | ram_1p  | auto | 1       |
+|   kt_12_U                            | -    | -    |        | kt_12    | ram_1p  | auto | 1       |
+|   kt_13_U                            | -    | -    |        | kt_13    | ram_1p  | auto | 1       |
+|   kt_14_U                            | -    | -    |        | kt_14    | ram_1p  | auto | 1       |
+|   kt_15_U                            | -    | -    |        | kt_15    | ram_1p  | auto | 1       |
+|   vt_U                               | -    | -    |        | vt       | ram_1p  | auto | 1       |
+|   vt_1_U                             | -    | -    |        | vt_1     | ram_1p  | auto | 1       |
+|   vt_2_U                             | -    | -    |        | vt_2     | ram_1p  | auto | 1       |
+|   vt_3_U                             | -    | -    |        | vt_3     | ram_1p  | auto | 1       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U548 | -    | -    |        | vt_4     | ram_1p  | auto | 1       |
+|   vt_5_U                             | -    | -    |        | vt_5     | ram_1p  | auto | 1       |
+|   vt_6_U                             | -    | -    |        | vt_6     | ram_1p  | auto | 1       |
+|   vt_7_U                             | -    | -    |        | vt_7     | ram_1p  | auto | 1       |
+|   vt_8_U                             | -    | -    |        | vt_8     | ram_1p  | auto | 1       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U548 | -    | -    |        | vt_9     | ram_1p  | auto | 1       |
+|   vt_10_U                            | -    | -    |        | vt_10    | ram_1p  | auto | 1       |
+|   vt_11_U                            | -    | -    |        | vt_11    | ram_1p  | auto | 1       |
+|   vt_12_U                            | -    | -    |        | vt_12    | ram_1p  | auto | 1       |
+|   vt_13_U                            | -    | -    |        | vt_13    | ram_1p  | auto | 1       |
+|   vt_14_U                            | -    | -    |        | vt_14    | ram_1p  | auto | 1       |
+|   vt_15_U                            | -    | -    |        | vt_15    | ram_1p  | auto | 1       |
++--------------------------------------+------+------+--------+----------+---------+------+---------+
 
 
 ================================================================
@@ -287,10 +312,17 @@
 | array_partition | variable=score complete dim=1                      | attention_tile.cpp:85 in streaming_attention, score  |
 | pipeline        | II=1                                               | attention_tile.cpp:89 in streaming_attention         |
 | array_partition | variable=beta complete dim=1                       | attention_tile.cpp:98 in streaming_attention, beta   |
-| pipeline        | II=1                                               | attention_tile.cpp:102 in streaming_attention        |
-| pipeline        | II=1                                               | attention_tile.cpp:111 in streaming_attention        |
-| unroll          |                                                    | attention_tile.cpp:114 in streaming_attention        |
-| pipeline        | II=1                                               | attention_tile.cpp:126 in streaming_attention        |
+| pipeline        | II=1                                               | attention_tile.cpp:101 in streaming_attention        |
+| array_partition | variable=lt complete dim=1                         | attention_tile.cpp:107 in streaming_attention, lt    |
+| unroll          |                                                    | attention_tile.cpp:109 in streaming_attention        |
+| unroll          |                                                    | attention_tile.cpp:113 in streaming_attention        |
+| unroll          |                                                    | attention_tile.cpp:115 in streaming_attention        |
+| pipeline        | II=1                                               | attention_tile.cpp:125 in streaming_attention        |
+| array_partition | variable=prod complete dim=1                       | attention_tile.cpp:127 in streaming_attention, prod  |
+| unroll          |                                                    | attention_tile.cpp:129 in streaming_attention        |
+| unroll          |                                                    | attention_tile.cpp:133 in streaming_attention        |
+| unroll          |                                                    | attention_tile.cpp:135 in streaming_attention        |
+| pipeline        | II=1                                               | attention_tile.cpp:148 in streaming_attention        |
 +-----------------+----------------------------------------------------+------------------------------------------------------+
 
 

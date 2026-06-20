@@ -1,7 +1,8 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-make: 'csim.exe' is up to date.
-max_abs=0.000175476 mean_abs=7.29305e-05
+   Compiling ../../../../attention_tile.cpp in debug mode
+   Generating csim.exe
+max_abs=0.000228882 mean_abs=6.85984e-05
 PASS
 INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

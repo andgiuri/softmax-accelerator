@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'streaming_attention_Pipeline_MAC'
 ================================================================
-* Date:           Sat Jun 20 05:22:14 2026
+* Date:           Sat Jun 20 05:29:37 2026
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        stream_attn_hls
@@ -325,38 +325,38 @@
 |kt_15_address0         |  out|    6|   ap_memory|                             kt_15|         array|
 |kt_15_ce0              |  out|    1|   ap_memory|                             kt_15|         array|
 |kt_15_q0               |   in|    8|   ap_memory|                             kt_15|         array|
-|add71_1539_out         |  out|   22|      ap_vld|                    add71_1539_out|       pointer|
-|add71_1539_out_ap_vld  |  out|    1|      ap_vld|                    add71_1539_out|       pointer|
-|add71_1438_out         |  out|   22|      ap_vld|                    add71_1438_out|       pointer|
-|add71_1438_out_ap_vld  |  out|    1|      ap_vld|                    add71_1438_out|       pointer|
-|add71_1337_out         |  out|   22|      ap_vld|                    add71_1337_out|       pointer|
-|add71_1337_out_ap_vld  |  out|    1|      ap_vld|                    add71_1337_out|       pointer|
-|add71_1236_out         |  out|   22|      ap_vld|                    add71_1236_out|       pointer|
-|add71_1236_out_ap_vld  |  out|    1|      ap_vld|                    add71_1236_out|       pointer|
-|add71_1135_out         |  out|   22|      ap_vld|                    add71_1135_out|       pointer|
-|add71_1135_out_ap_vld  |  out|    1|      ap_vld|                    add71_1135_out|       pointer|
-|add71_1034_out         |  out|   22|      ap_vld|                    add71_1034_out|       pointer|
-|add71_1034_out_ap_vld  |  out|    1|      ap_vld|                    add71_1034_out|       pointer|
-|add71_933_out          |  out|   22|      ap_vld|                     add71_933_out|       pointer|
-|add71_933_out_ap_vld   |  out|    1|      ap_vld|                     add71_933_out|       pointer|
-|add71_832_out          |  out|   22|      ap_vld|                     add71_832_out|       pointer|
-|add71_832_out_ap_vld   |  out|    1|      ap_vld|                     add71_832_out|       pointer|
-|add71_731_out          |  out|   22|      ap_vld|                     add71_731_out|       pointer|
-|add71_731_out_ap_vld   |  out|    1|      ap_vld|                     add71_731_out|       pointer|
-|add71_630_out          |  out|   22|      ap_vld|                     add71_630_out|       pointer|
-|add71_630_out_ap_vld   |  out|    1|      ap_vld|                     add71_630_out|       pointer|
-|add71_529_out          |  out|   22|      ap_vld|                     add71_529_out|       pointer|
-|add71_529_out_ap_vld   |  out|    1|      ap_vld|                     add71_529_out|       pointer|
-|add71_428_out          |  out|   22|      ap_vld|                     add71_428_out|       pointer|
-|add71_428_out_ap_vld   |  out|    1|      ap_vld|                     add71_428_out|       pointer|
-|add71_327_out          |  out|   22|      ap_vld|                     add71_327_out|       pointer|
-|add71_327_out_ap_vld   |  out|    1|      ap_vld|                     add71_327_out|       pointer|
-|add71_226_out          |  out|   22|      ap_vld|                     add71_226_out|       pointer|
-|add71_226_out_ap_vld   |  out|    1|      ap_vld|                     add71_226_out|       pointer|
-|add71_125_out          |  out|   22|      ap_vld|                     add71_125_out|       pointer|
-|add71_125_out_ap_vld   |  out|    1|      ap_vld|                     add71_125_out|       pointer|
-|add7124_out            |  out|   22|      ap_vld|                       add7124_out|       pointer|
-|add7124_out_ap_vld     |  out|    1|      ap_vld|                       add7124_out|       pointer|
+|add71_1570_out         |  out|   22|      ap_vld|                    add71_1570_out|       pointer|
+|add71_1570_out_ap_vld  |  out|    1|      ap_vld|                    add71_1570_out|       pointer|
+|add71_1469_out         |  out|   22|      ap_vld|                    add71_1469_out|       pointer|
+|add71_1469_out_ap_vld  |  out|    1|      ap_vld|                    add71_1469_out|       pointer|
+|add71_1368_out         |  out|   22|      ap_vld|                    add71_1368_out|       pointer|
+|add71_1368_out_ap_vld  |  out|    1|      ap_vld|                    add71_1368_out|       pointer|
+|add71_1267_out         |  out|   22|      ap_vld|                    add71_1267_out|       pointer|
+|add71_1267_out_ap_vld  |  out|    1|      ap_vld|                    add71_1267_out|       pointer|
+|add71_1166_out         |  out|   22|      ap_vld|                    add71_1166_out|       pointer|
+|add71_1166_out_ap_vld  |  out|    1|      ap_vld|                    add71_1166_out|       pointer|
+|add71_1065_out         |  out|   22|      ap_vld|                    add71_1065_out|       pointer|
+|add71_1065_out_ap_vld  |  out|    1|      ap_vld|                    add71_1065_out|       pointer|
+|add71_964_out          |  out|   22|      ap_vld|                     add71_964_out|       pointer|
+|add71_964_out_ap_vld   |  out|    1|      ap_vld|                     add71_964_out|       pointer|
+|add71_863_out          |  out|   22|      ap_vld|                     add71_863_out|       pointer|
+|add71_863_out_ap_vld   |  out|    1|      ap_vld|                     add71_863_out|       pointer|
+|add71_762_out          |  out|   22|      ap_vld|                     add71_762_out|       pointer|
+|add71_762_out_ap_vld   |  out|    1|      ap_vld|                     add71_762_out|       pointer|
+|add71_661_out          |  out|   22|      ap_vld|                     add71_661_out|       pointer|
+|add71_661_out_ap_vld   |  out|    1|      ap_vld|                     add71_661_out|       pointer|
+|add71_560_out          |  out|   22|      ap_vld|                     add71_560_out|       pointer|
+|add71_560_out_ap_vld   |  out|    1|      ap_vld|                     add71_560_out|       pointer|
+|add71_459_out          |  out|   22|      ap_vld|                     add71_459_out|       pointer|
+|add71_459_out_ap_vld   |  out|    1|      ap_vld|                     add71_459_out|       pointer|
+|add71_358_out          |  out|   22|      ap_vld|                     add71_358_out|       pointer|
+|add71_358_out_ap_vld   |  out|    1|      ap_vld|                     add71_358_out|       pointer|
+|add71_257_out          |  out|   22|      ap_vld|                     add71_257_out|       pointer|
+|add71_257_out_ap_vld   |  out|    1|      ap_vld|                     add71_257_out|       pointer|
+|add71_156_out          |  out|   22|      ap_vld|                     add71_156_out|       pointer|
+|add71_156_out_ap_vld   |  out|    1|      ap_vld|                     add71_156_out|       pointer|
+|add7155_out            |  out|   22|      ap_vld|                       add7155_out|       pointer|
+|add7155_out_ap_vld     |  out|    1|      ap_vld|                       add7155_out|       pointer|
 +-----------------------+-----+-----+------------+----------------------------------+--------------+
 
 ============================================================
@@ -693,22 +693,22 @@ ST_4 : Operation 323 [1/1] (0.00ns)   --->   "%dot_28_load = load i22 %dot_28"  
 ST_4 : Operation 324 [1/1] (0.00ns)   --->   "%dot_29_load = load i22 %dot_29"   --->   Operation 324 'load' 'dot_29_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
 ST_4 : Operation 325 [1/1] (0.00ns)   --->   "%dot_30_load = load i22 %dot_30"   --->   Operation 325 'load' 'dot_30_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
 ST_4 : Operation 326 [1/1] (0.00ns)   --->   "%dot_31_load = load i22 %dot_31"   --->   Operation 326 'load' 'dot_31_load' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 327 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1539_out, i22 %dot_31_load"   --->   Operation 327 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 328 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1438_out, i22 %dot_30_load"   --->   Operation 328 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 329 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1337_out, i22 %dot_29_load"   --->   Operation 329 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 330 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1236_out, i22 %dot_28_load"   --->   Operation 330 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 331 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1135_out, i22 %dot_27_load"   --->   Operation 331 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 332 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1034_out, i22 %dot_26_load"   --->   Operation 332 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 333 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_933_out, i22 %dot_25_load"   --->   Operation 333 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 334 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_832_out, i22 %dot_24_load"   --->   Operation 334 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 335 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_731_out, i22 %dot_23_load"   --->   Operation 335 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 336 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_630_out, i22 %dot_22_load"   --->   Operation 336 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 337 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_529_out, i22 %dot_21_load"   --->   Operation 337 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 338 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_428_out, i22 %dot_20_load"   --->   Operation 338 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 339 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_327_out, i22 %dot_19_load"   --->   Operation 339 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 340 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_226_out, i22 %dot_18_load"   --->   Operation 340 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 341 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_125_out, i22 %dot_17_load"   --->   Operation 341 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
-ST_4 : Operation 342 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add7124_out, i22 %dot_16_load"   --->   Operation 342 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 327 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1570_out, i22 %dot_31_load"   --->   Operation 327 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 328 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1469_out, i22 %dot_30_load"   --->   Operation 328 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 329 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1368_out, i22 %dot_29_load"   --->   Operation 329 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 330 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1267_out, i22 %dot_28_load"   --->   Operation 330 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 331 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1166_out, i22 %dot_27_load"   --->   Operation 331 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 332 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_1065_out, i22 %dot_26_load"   --->   Operation 332 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 333 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_964_out, i22 %dot_25_load"   --->   Operation 333 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 334 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_863_out, i22 %dot_24_load"   --->   Operation 334 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 335 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_762_out, i22 %dot_23_load"   --->   Operation 335 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 336 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_661_out, i22 %dot_22_load"   --->   Operation 336 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 337 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_560_out, i22 %dot_21_load"   --->   Operation 337 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 338 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_459_out, i22 %dot_20_load"   --->   Operation 338 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 339 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_358_out, i22 %dot_19_load"   --->   Operation 339 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 340 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_257_out, i22 %dot_18_load"   --->   Operation 340 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 341 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add71_156_out, i22 %dot_17_load"   --->   Operation 341 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
+ST_4 : Operation 342 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i22P0A, i22 %add7155_out, i22 %dot_16_load"   --->   Operation 342 'write' 'write_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
 ST_4 : Operation 343 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 343 'ret' 'ret_ln0' <Predicate = (icmp_ln75)> <Delay = 0.00>
 
 State 5 <SV = 4> <Delay = 3.68>
@@ -840,22 +840,22 @@ Port [ kt_12]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; exte
 Port [ kt_13]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
 Port [ kt_14]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
 Port [ kt_15]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
-Port [ add71_1539_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ add71_1438_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ add71_1337_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ add71_1236_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ add71_1135_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ add71_1034_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ add71_933_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ add71_832_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ add71_731_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ add71_630_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ add71_529_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ add71_428_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ add71_327_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ add71_226_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ add71_125_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ add7124_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ add71_1570_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ add71_1469_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ add71_1368_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ add71_1267_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ add71_1166_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ add71_1065_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ add71_964_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ add71_863_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ add71_762_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ add71_661_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ add71_560_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ add71_459_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ add71_358_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ add71_257_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ add71_156_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ add7155_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -1875,147 +1875,147 @@ ret_ln0           (ret              ) [ 000000]
 </bind>
 </comp>
 
-<comp id="160" class="1000" name="add71_1539_out">
+<comp id="160" class="1000" name="add71_1570_out">
 <pin_list>
 <pin id="161" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="add71_1539_out"/></StgValue>
+<StgValue><ssdm name="add71_1570_out"/></StgValue>
 </bind>
 </comp>
 
-<comp id="162" class="1000" name="add71_1438_out">
+<comp id="162" class="1000" name="add71_1469_out">
 <pin_list>
 <pin id="163" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="add71_1438_out"/></StgValue>
+<StgValue><ssdm name="add71_1469_out"/></StgValue>
 </bind>
 </comp>
 
-<comp id="164" class="1000" name="add71_1337_out">
+<comp id="164" class="1000" name="add71_1368_out">
 <pin_list>
 <pin id="165" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="add71_1337_out"/></StgValue>
+<StgValue><ssdm name="add71_1368_out"/></StgValue>
 </bind>
 </comp>
 
-<comp id="166" class="1000" name="add71_1236_out">
+<comp id="166" class="1000" name="add71_1267_out">
 <pin_list>
 <pin id="167" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="add71_1236_out"/></StgValue>
+<StgValue><ssdm name="add71_1267_out"/></StgValue>
 </bind>
 </comp>
 
-<comp id="168" class="1000" name="add71_1135_out">
+<comp id="168" class="1000" name="add71_1166_out">
 <pin_list>
 <pin id="169" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="add71_1135_out"/></StgValue>
+<StgValue><ssdm name="add71_1166_out"/></StgValue>
 </bind>
 </comp>
 
-<comp id="170" class="1000" name="add71_1034_out">
+<comp id="170" class="1000" name="add71_1065_out">
 <pin_list>
 <pin id="171" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="add71_1034_out"/></StgValue>
+<StgValue><ssdm name="add71_1065_out"/></StgValue>
 </bind>
 </comp>
 
-<comp id="172" class="1000" name="add71_933_out">
+<comp id="172" class="1000" name="add71_964_out">
 <pin_list>
 <pin id="173" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="add71_933_out"/></StgValue>
+<StgValue><ssdm name="add71_964_out"/></StgValue>
 </bind>
 </comp>
 
-<comp id="174" class="1000" name="add71_832_out">
+<comp id="174" class="1000" name="add71_863_out">
 <pin_list>
 <pin id="175" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="add71_832_out"/></StgValue>
+<StgValue><ssdm name="add71_863_out"/></StgValue>
 </bind>
 </comp>
 
-<comp id="176" class="1000" name="add71_731_out">
+<comp id="176" class="1000" name="add71_762_out">
 <pin_list>
 <pin id="177" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="add71_731_out"/></StgValue>
+<StgValue><ssdm name="add71_762_out"/></StgValue>
 </bind>
 </comp>
 
-<comp id="178" class="1000" name="add71_630_out">
+<comp id="178" class="1000" name="add71_661_out">
 <pin_list>
 <pin id="179" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="add71_630_out"/></StgValue>
+<StgValue><ssdm name="add71_661_out"/></StgValue>
 </bind>
 </comp>
 
-<comp id="180" class="1000" name="add71_529_out">
+<comp id="180" class="1000" name="add71_560_out">
 <pin_list>
 <pin id="181" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="add71_529_out"/></StgValue>
+<StgValue><ssdm name="add71_560_out"/></StgValue>
 </bind>
 </comp>
 
-<comp id="182" class="1000" name="add71_428_out">
+<comp id="182" class="1000" name="add71_459_out">
 <pin_list>
 <pin id="183" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="add71_428_out"/></StgValue>
+<StgValue><ssdm name="add71_459_out"/></StgValue>
 </bind>
 </comp>
 
-<comp id="184" class="1000" name="add71_327_out">
+<comp id="184" class="1000" name="add71_358_out">
 <pin_list>
 <pin id="185" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="add71_327_out"/></StgValue>
+<StgValue><ssdm name="add71_358_out"/></StgValue>
 </bind>
 </comp>
 
-<comp id="186" class="1000" name="add71_226_out">
+<comp id="186" class="1000" name="add71_257_out">
 <pin_list>
 <pin id="187" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="add71_226_out"/></StgValue>
+<StgValue><ssdm name="add71_257_out"/></StgValue>
 </bind>
 </comp>
 
-<comp id="188" class="1000" name="add71_125_out">
+<comp id="188" class="1000" name="add71_156_out">
 <pin_list>
 <pin id="189" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="add71_125_out"/></StgValue>
+<StgValue><ssdm name="add71_156_out"/></StgValue>
 </bind>
 </comp>
 
-<comp id="190" class="1000" name="add7124_out">
+<comp id="190" class="1000" name="add7155_out">
 <pin_list>
 <pin id="191" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="add7124_out"/></StgValue>
+<StgValue><ssdm name="add7155_out"/></StgValue>
 </bind>
 </comp>
 
@@ -6961,22 +6961,22 @@ ret_ln0           (ret              ) [ 000000]
 
 * FSMD analyzer results:
   - Output states:
-	Port: add71_1539_out | {4 }
-	Port: add71_1438_out | {4 }
-	Port: add71_1337_out | {4 }
-	Port: add71_1236_out | {4 }
-	Port: add71_1135_out | {4 }
-	Port: add71_1034_out | {4 }
-	Port: add71_933_out | {4 }
-	Port: add71_832_out | {4 }
-	Port: add71_731_out | {4 }
-	Port: add71_630_out | {4 }
-	Port: add71_529_out | {4 }
-	Port: add71_428_out | {4 }
-	Port: add71_327_out | {4 }
-	Port: add71_226_out | {4 }
-	Port: add71_125_out | {4 }
-	Port: add7124_out | {4 }
+	Port: add71_1570_out | {4 }
+	Port: add71_1469_out | {4 }
+	Port: add71_1368_out | {4 }
+	Port: add71_1267_out | {4 }
+	Port: add71_1166_out | {4 }
+	Port: add71_1065_out | {4 }
+	Port: add71_964_out | {4 }
+	Port: add71_863_out | {4 }
+	Port: add71_762_out | {4 }
+	Port: add71_661_out | {4 }
+	Port: add71_560_out | {4 }
+	Port: add71_459_out | {4 }
+	Port: add71_358_out | {4 }
+	Port: add71_257_out | {4 }
+	Port: add71_156_out | {4 }
+	Port: add7155_out | {4 }
  - Input state : 
 	Port: streaming_attention_Pipeline_MAC : q_reload | {1 }
 	Port: streaming_attention_Pipeline_MAC : q_1_reload | {1 }

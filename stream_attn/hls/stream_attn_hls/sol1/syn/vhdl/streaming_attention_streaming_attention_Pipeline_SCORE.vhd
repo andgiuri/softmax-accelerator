@@ -68,10 +68,10 @@ port (
     score_out_ap_vld : OUT STD_LOGIC;
     tile_max_out : OUT STD_LOGIC_VECTOR (31 downto 0);
     tile_max_out_ap_vld : OUT STD_LOGIC;
-    grp_fu_4109_p_din0 : OUT STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_4109_p_din1 : OUT STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_4109_p_dout0 : IN STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_4109_p_ce : OUT STD_LOGIC );
+    grp_fu_1580_p_din0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_1580_p_din1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_1580_p_dout0 : IN STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_1580_p_ce : OUT STD_LOGIC );
 end;
 
 
@@ -689,7 +689,7 @@ begin
                 icmp_ln91_2_reg_976 <= icmp_ln91_2_fu_713_p2;
                 icmp_ln91_3_reg_981 <= icmp_ln91_3_fu_719_p2;
                 icmp_ln91_reg_966 <= icmp_ln91_fu_701_p2;
-                tile_max_1_reg_953 <= grp_fu_4109_p_dout0;
+                tile_max_1_reg_953 <= grp_fu_1580_p_dout0;
                 tile_max_1_reg_953_pp0_iter10_reg <= tile_max_1_reg_953;
                 tile_max_load_1_reg_960 <= ap_sig_allocacmp_tile_max_load_1;
                 trunc_ln90_reg_944_pp0_iter2_reg <= trunc_ln90_reg_944_pp0_iter1_reg;
@@ -718,7 +718,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter9 = ap_const_logic_1) and (trunc_ln90_reg_944_pp0_iter8_reg = ap_const_lv4_A))) then
-                score_10_fu_188 <= grp_fu_4109_p_dout0;
+                score_10_fu_188 <= grp_fu_1580_p_dout0;
             end if;
         end if;
     end process;
@@ -726,7 +726,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter9 = ap_const_logic_1) and (trunc_ln90_reg_944_pp0_iter8_reg = ap_const_lv4_B))) then
-                score_11_fu_192 <= grp_fu_4109_p_dout0;
+                score_11_fu_192 <= grp_fu_1580_p_dout0;
             end if;
         end if;
     end process;
@@ -734,7 +734,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter9 = ap_const_logic_1) and (trunc_ln90_reg_944_pp0_iter8_reg = ap_const_lv4_C))) then
-                score_12_fu_196 <= grp_fu_4109_p_dout0;
+                score_12_fu_196 <= grp_fu_1580_p_dout0;
             end if;
         end if;
     end process;
@@ -742,7 +742,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter9 = ap_const_logic_1) and (trunc_ln90_reg_944_pp0_iter8_reg = ap_const_lv4_D))) then
-                score_13_fu_200 <= grp_fu_4109_p_dout0;
+                score_13_fu_200 <= grp_fu_1580_p_dout0;
             end if;
         end if;
     end process;
@@ -750,7 +750,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter9 = ap_const_logic_1) and (trunc_ln90_reg_944_pp0_iter8_reg = ap_const_lv4_E))) then
-                score_14_fu_204 <= grp_fu_4109_p_dout0;
+                score_14_fu_204 <= grp_fu_1580_p_dout0;
             end if;
         end if;
     end process;
@@ -758,7 +758,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter9 = ap_const_logic_1) and (trunc_ln90_reg_944_pp0_iter8_reg = ap_const_lv4_F))) then
-                score_15_fu_208 <= grp_fu_4109_p_dout0;
+                score_15_fu_208 <= grp_fu_1580_p_dout0;
             end if;
         end if;
     end process;
@@ -766,7 +766,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter9 = ap_const_logic_1) and (trunc_ln90_reg_944_pp0_iter8_reg = ap_const_lv4_1))) then
-                score_1_fu_152 <= grp_fu_4109_p_dout0;
+                score_1_fu_152 <= grp_fu_1580_p_dout0;
             end if;
         end if;
     end process;
@@ -774,7 +774,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter9 = ap_const_logic_1) and (trunc_ln90_reg_944_pp0_iter8_reg = ap_const_lv4_2))) then
-                score_2_fu_156 <= grp_fu_4109_p_dout0;
+                score_2_fu_156 <= grp_fu_1580_p_dout0;
             end if;
         end if;
     end process;
@@ -782,7 +782,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter9 = ap_const_logic_1) and (trunc_ln90_reg_944_pp0_iter8_reg = ap_const_lv4_3))) then
-                score_3_fu_160 <= grp_fu_4109_p_dout0;
+                score_3_fu_160 <= grp_fu_1580_p_dout0;
             end if;
         end if;
     end process;
@@ -790,7 +790,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter9 = ap_const_logic_1) and (trunc_ln90_reg_944_pp0_iter8_reg = ap_const_lv4_4))) then
-                score_4_fu_164 <= grp_fu_4109_p_dout0;
+                score_4_fu_164 <= grp_fu_1580_p_dout0;
             end if;
         end if;
     end process;
@@ -798,7 +798,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter9 = ap_const_logic_1) and (trunc_ln90_reg_944_pp0_iter8_reg = ap_const_lv4_5))) then
-                score_5_fu_168 <= grp_fu_4109_p_dout0;
+                score_5_fu_168 <= grp_fu_1580_p_dout0;
             end if;
         end if;
     end process;
@@ -806,7 +806,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter9 = ap_const_logic_1) and (trunc_ln90_reg_944_pp0_iter8_reg = ap_const_lv4_6))) then
-                score_6_fu_172 <= grp_fu_4109_p_dout0;
+                score_6_fu_172 <= grp_fu_1580_p_dout0;
             end if;
         end if;
     end process;
@@ -814,7 +814,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter9 = ap_const_logic_1) and (trunc_ln90_reg_944_pp0_iter8_reg = ap_const_lv4_7))) then
-                score_7_fu_176 <= grp_fu_4109_p_dout0;
+                score_7_fu_176 <= grp_fu_1580_p_dout0;
             end if;
         end if;
     end process;
@@ -822,7 +822,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter9 = ap_const_logic_1) and (trunc_ln90_reg_944_pp0_iter8_reg = ap_const_lv4_8))) then
-                score_8_fu_180 <= grp_fu_4109_p_dout0;
+                score_8_fu_180 <= grp_fu_1580_p_dout0;
             end if;
         end if;
     end process;
@@ -830,7 +830,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter9 = ap_const_logic_1) and (trunc_ln90_reg_944_pp0_iter8_reg = ap_const_lv4_9))) then
-                score_9_fu_184 <= grp_fu_4109_p_dout0;
+                score_9_fu_184 <= grp_fu_1580_p_dout0;
             end if;
         end if;
     end process;
@@ -838,7 +838,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter9 = ap_const_logic_1) and (trunc_ln90_reg_944_pp0_iter8_reg = ap_const_lv4_0))) then
-                score_fu_148 <= grp_fu_4109_p_dout0;
+                score_fu_148 <= grp_fu_1580_p_dout0;
             end if;
         end if;
     end process;
@@ -956,9 +956,9 @@ begin
 
     bitcast_ln91_1_fu_683_p1 <= ap_sig_allocacmp_tile_max_load_1;
     bitcast_ln91_fu_666_p1 <= tile_max_1_reg_953;
-    grp_fu_4109_p_ce <= ap_const_logic_1;
-    grp_fu_4109_p_din0 <= conv_reg_948;
-    grp_fu_4109_p_din1 <= ap_const_lv32_39020610;
+    grp_fu_1580_p_ce <= ap_const_logic_1;
+    grp_fu_1580_p_din0 <= conv_reg_948;
+    grp_fu_1580_p_din1 <= ap_const_lv32_39020610;
     icmp_ln88_fu_522_p2 <= "1" when (ap_sig_allocacmp_j_1 = ap_const_lv5_10) else "0";
     icmp_ln91_1_fu_707_p2 <= "1" when (trunc_ln91_fu_679_p1 = ap_const_lv23_0) else "0";
     icmp_ln91_2_fu_713_p2 <= "0" when (tmp_5_fu_687_p4 = ap_const_lv8_FF) else "1";

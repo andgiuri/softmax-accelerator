@@ -1,8 +1,26 @@
 # This script segment is generated automatically by AutoPilot
 
-set name streaming_attention_fexp_32ns_32ns_32_10_full_dsp_1
+set name streaming_attention_faddfsub_32ns_32ns_32_5_full_dsp_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fexp} IMPL {fulldsp} LATENCY 9 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 4 ALLOW_PRAGMA 1
+}
+
+
+set name streaming_attention_fadd_32ns_32ns_32_5_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 4 ALLOW_PRAGMA 1
+}
+
+
+set name streaming_attention_fadd_32ns_32ns_32_5_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 4 ALLOW_PRAGMA 1
+}
+
+
+set name streaming_attention_fadd_32ns_32ns_32_5_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 4 ALLOW_PRAGMA 1
 }
 
 
@@ -12,14 +30,14 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set name streaming_attention_faddfsub_32ns_32ns_32_5_full_dsp_1
+set name streaming_attention_fexp_32ns_32ns_32_10_full_dsp_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fsub} IMPL {fulldsp} LATENCY 4 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fexp} IMPL {fulldsp} LATENCY 9 ALLOW_PRAGMA 1
 }
 
 
 # Memory (RAM/ROM)  definition:
-set ID 543
+set ID 556
 set hasByteEnable 0
 set MemName streaming_attention_kt_RAM_AUTO_1R1W
 set CoreName ap_simcore_mem
@@ -176,7 +194,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 544 \
+			id 557 \
 			corename streaming_attention_control_axilite \
 			name streaming_attention_control_s_axi \
 			ports {$port_control} \

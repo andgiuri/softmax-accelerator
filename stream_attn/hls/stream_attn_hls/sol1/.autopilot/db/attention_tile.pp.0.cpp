@@ -29084,25 +29084,47 @@ TILES:
 
         float beta[16];
 #pragma HLS ARRAY_PARTITION variable=beta complete dim=1
- float l_tile = 0.0f;
-    BETA:
+ BETA:
         for (int j = 0; j < 16; j++) {
 #pragma HLS PIPELINE II=1
  beta[j] = hls::expf(score[j] - m_new);
-            l_tile += beta[j];
         }
-        l = l * alpha + l_tile;
+
+
+        float lt[16];
+#pragma HLS ARRAY_PARTITION variable=lt complete dim=1
+ VITIS_LOOP_108_3: for (int j = 0; j < 16; j++) {
+#pragma HLS UNROLL
+ lt[j] = beta[j];
+        }
+        VITIS_LOOP_112_4: for (int s = 16 / 2; s > 0; s >>= 1) {
+#pragma HLS UNROLL
+ VITIS_LOOP_114_5: for (int j = 0; j < s; j++) {
+#pragma HLS UNROLL
+ lt[j] += lt[j + s];
+            }
+        }
+        l = l * alpha + lt[0];
+
 
 
     AV:
         for (int d = 0; d < 64; d++) {
 #pragma HLS PIPELINE II=1
- float a = acc[d] * alpha;
-            VITIS_LOOP_113_3: for (int j = 0; j < 16; j++) {
+ float prod[16];
+#pragma HLS ARRAY_PARTITION variable=prod complete dim=1
+ VITIS_LOOP_128_6: for (int j = 0; j < 16; j++) {
 #pragma HLS UNROLL
- a += beta[j] * (float)vt[j][d];
+ prod[j] = beta[j] * (float)vt[j][d];
             }
-            acc[d] = a;
+            VITIS_LOOP_132_7: for (int s = 16 / 2; s > 0; s >>= 1) {
+#pragma HLS UNROLL
+ VITIS_LOOP_134_8: for (int j = 0; j < s; j++) {
+#pragma HLS UNROLL
+ prod[j] += prod[j + s];
+                }
+            }
+            acc[d] = acc[d] * alpha + prod[0];
         }
 
         m = m_new;

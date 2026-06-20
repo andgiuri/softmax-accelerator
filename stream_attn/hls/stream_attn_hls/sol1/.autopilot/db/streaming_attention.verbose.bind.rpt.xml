@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'streaming_attention'" level="0">
-<item name = "Date">Sat Jun 20 05:22:13 2026
+<item name = "Date">Sat Jun 20 05:29:35 2026
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
 <item name = "Project">stream_attn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 14.512 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 12.958 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,25 +24,25 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">354791, 354791, 5.149 ms, 5.149 ms, 354792, 354792, no</column>
+<column name="">107687, 107687, 1.395 ms, 1.395 ms, 107688, 107688, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_streaming_attention_Pipeline_LOAD_Q_fu_1027">streaming_attention_Pipeline_LOAD_Q, 66, 66, 0.660 us, 0.660 us, 66, 66, no</column>
-<column name="grp_streaming_attention_Pipeline_LOAD_TILE_VITIS_LOOP_59_1_fu_1162">streaming_attention_Pipeline_LOAD_TILE_VITIS_LOOP_59_1, 1027, 1027, 10.270 us, 10.270 us, 1027, 1027, no</column>
-<column name="grp_streaming_attention_Pipeline_MAC_fu_1204">streaming_attention_Pipeline_MAC, 69, 69, 0.690 us, 0.690 us, 69, 69, no</column>
-<column name="grp_streaming_attention_Pipeline_SCORE_fu_1304">streaming_attention_Pipeline_SCORE, 28, 28, 0.280 us, 0.280 us, 28, 28, no</column>
-<column name="grp_streaming_attention_Pipeline_BETA_fu_1342">streaming_attention_Pipeline_BETA, 82, 82, 0.820 us, 0.820 us, 82, 82, no</column>
-<column name="grp_streaming_attention_Pipeline_AV_fu_1380">streaming_attention_Pipeline_AV, 4296, 4296, 62.344 us, 62.344 us, 4296, 4296, no</column>
-<column name="grp_streaming_attention_Pipeline_WRITE_O_fu_1481">streaming_attention_Pipeline_WRITE_O, 82, 82, 0.820 us, 0.820 us, 82, 82, no</column>
+<column name="grp_streaming_attention_Pipeline_LOAD_Q_fu_1023">streaming_attention_Pipeline_LOAD_Q, 66, 66, 0.660 us, 0.660 us, 66, 66, no</column>
+<column name="grp_streaming_attention_Pipeline_LOAD_TILE_VITIS_LOOP_59_1_fu_1158">streaming_attention_Pipeline_LOAD_TILE_VITIS_LOOP_59_1, 1027, 1027, 10.270 us, 10.270 us, 1027, 1027, no</column>
+<column name="grp_streaming_attention_Pipeline_MAC_fu_1200">streaming_attention_Pipeline_MAC, 69, 69, 0.690 us, 0.690 us, 69, 69, no</column>
+<column name="grp_streaming_attention_Pipeline_SCORE_fu_1300">streaming_attention_Pipeline_SCORE, 28, 28, 0.280 us, 0.280 us, 28, 28, no</column>
+<column name="grp_streaming_attention_Pipeline_BETA_fu_1338">streaming_attention_Pipeline_BETA, 32, 32, 0.320 us, 0.320 us, 32, 32, no</column>
+<column name="grp_streaming_attention_Pipeline_AV_fu_1375">streaming_attention_Pipeline_AV, 482, 482, 6.246 us, 6.246 us, 482, 482, no</column>
+<column name="grp_streaming_attention_Pipeline_WRITE_O_fu_1476">streaming_attention_Pipeline_WRITE_O, 82, 82, 0.820 us, 0.820 us, 82, 82, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILES">354624, 354624, 5541, -, -, 64, no</column>
+<column name="- TILES">107520, 107520, 1680, -, -, 64, no</column>
 </table>
 </item>
 </section>

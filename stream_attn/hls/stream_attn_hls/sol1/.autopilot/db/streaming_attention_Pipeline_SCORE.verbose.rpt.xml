@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'streaming_attention_Pipeline_SCORE'" level="0">
-<item name = "Date">Sat Jun 20 05:22:15 2026
+<item name = "Date">Sat Jun 20 05:29:37 2026
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
 <item name = "Project">stream_attn_hls</item>
@@ -175,10 +175,10 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, streaming_attention_Pipeline_SCORE, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, streaming_attention_Pipeline_SCORE, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, streaming_attention_Pipeline_SCORE, return value</column>
-<column name="grp_fu_4109_p_din0">out, 32, ap_ctrl_hs, streaming_attention_Pipeline_SCORE, return value</column>
-<column name="grp_fu_4109_p_din1">out, 32, ap_ctrl_hs, streaming_attention_Pipeline_SCORE, return value</column>
-<column name="grp_fu_4109_p_dout0">in, 32, ap_ctrl_hs, streaming_attention_Pipeline_SCORE, return value</column>
-<column name="grp_fu_4109_p_ce">out, 1, ap_ctrl_hs, streaming_attention_Pipeline_SCORE, return value</column>
+<column name="grp_fu_1580_p_din0">out, 32, ap_ctrl_hs, streaming_attention_Pipeline_SCORE, return value</column>
+<column name="grp_fu_1580_p_din1">out, 32, ap_ctrl_hs, streaming_attention_Pipeline_SCORE, return value</column>
+<column name="grp_fu_1580_p_dout0">in, 32, ap_ctrl_hs, streaming_attention_Pipeline_SCORE, return value</column>
+<column name="grp_fu_1580_p_ce">out, 1, ap_ctrl_hs, streaming_attention_Pipeline_SCORE, return value</column>
 <column name="tile_max_4">in, 32, ap_none, tile_max_4, scalar</column>
 <column name="sext_ln75">in, 22, ap_none, sext_ln75, scalar</column>
 <column name="sext_ln75_1">in, 22, ap_none, sext_ln75_1, scalar</column>

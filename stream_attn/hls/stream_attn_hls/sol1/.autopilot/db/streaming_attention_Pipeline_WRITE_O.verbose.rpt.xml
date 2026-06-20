@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'streaming_attention_Pipeline_WRITE_O'" level="0">
-<item name = "Date">Sat Jun 20 05:22:16 2026
+<item name = "Date">Sat Jun 20 05:29:38 2026
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
 <item name = "Project">stream_attn_hls</item>
@@ -62,8 +62,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="fdiv_32ns_32ns_32_16_no_dsp_1_U465">fdiv_32ns_32ns_32_16_no_dsp_1, 0, 0, 0, 0, 0</column>
-<column name="mux_647_32_1_1_U466">mux_647_32_1_1, 0, 0, 0, 273, 0</column>
+<column name="fdiv_32ns_32ns_32_16_no_dsp_1_U470">fdiv_32ns_32ns_32_16_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="mux_647_32_1_1_U471">mux_647_32_1_1, 0, 0, 0, 273, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -80,9 +80,9 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln125_fu_612_p2">+, 0, 0, 14, 7, 1</column>
+<column name="add_ln147_fu_612_p2">+, 0, 0, 14, 7, 1</column>
 <column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln125_fu_606_p2">icmp, 0, 0, 11, 7, 8</column>
+<column name="icmp_ln147_fu_606_p2">icmp, 0, 0, 11, 7, 8</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -134,9 +134,9 @@
 <column name="ap_loop_exit_ready_pp0_iter9_reg">1, 0, 1, 0</column>
 <column name="d_fu_182">7, 0, 7, 0</column>
 <column name="div_reg_797">32, 0, 32, 0</column>
-<column name="icmp_ln125_reg_783">1, 0, 1, 0</column>
+<column name="icmp_ln147_reg_783">1, 0, 1, 0</column>
 <column name="tmp_reg_787">32, 0, 32, 0</column>
-<column name="icmp_ln125_reg_783">64, 32, 1, 0</column>
+<column name="icmp_ln147_reg_783">64, 32, 1, 0</column>
 </table>
 </item>
 </section>
@@ -198,7 +198,7 @@
 <column name="m_axi_gmem3_BRESP">in, 2, m_axi, gmem3, pointer</column>
 <column name="m_axi_gmem3_BID">in, 1, m_axi, gmem3, pointer</column>
 <column name="m_axi_gmem3_BUSER">in, 1, m_axi, gmem3, pointer</column>
-<column name="sext_ln125">in, 62, ap_none, sext_ln125, scalar</column>
+<column name="sext_ln147">in, 62, ap_none, sext_ln147, scalar</column>
 <column name="acc_64">in, 32, ap_none, acc_64, scalar</column>
 <column name="acc_65">in, 32, ap_none, acc_65, scalar</column>
 <column name="acc_66">in, 32, ap_none, acc_66, scalar</column>

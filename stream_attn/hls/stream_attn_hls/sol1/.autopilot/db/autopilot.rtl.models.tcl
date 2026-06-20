@@ -36,9 +36,10 @@ set SynModuleInfo {
   }
   {SRCNAME streaming_attention MODELNAME streaming_attention RTLNAME streaming_attention IS_TOP 1
     SUBMODULES {
-      {MODELNAME streaming_attention_fexp_32ns_32ns_32_10_full_dsp_1 RTLNAME streaming_attention_fexp_32ns_32ns_32_10_full_dsp_1 BINDTYPE op TYPE fexp IMPL fulldsp LATENCY 9 ALLOW_PRAGMA 1}
+      {MODELNAME streaming_attention_faddfsub_32ns_32ns_32_5_full_dsp_1 RTLNAME streaming_attention_faddfsub_32ns_32ns_32_5_full_dsp_1 BINDTYPE op TYPE fadd IMPL fulldsp LATENCY 4 ALLOW_PRAGMA 1}
+      {MODELNAME streaming_attention_fadd_32ns_32ns_32_5_full_dsp_1 RTLNAME streaming_attention_fadd_32ns_32ns_32_5_full_dsp_1 BINDTYPE op TYPE fadd IMPL fulldsp LATENCY 4 ALLOW_PRAGMA 1}
       {MODELNAME streaming_attention_fmul_32ns_32ns_32_4_max_dsp_1 RTLNAME streaming_attention_fmul_32ns_32ns_32_4_max_dsp_1 BINDTYPE op TYPE fmul IMPL maxdsp LATENCY 3 ALLOW_PRAGMA 1}
-      {MODELNAME streaming_attention_faddfsub_32ns_32ns_32_5_full_dsp_1 RTLNAME streaming_attention_faddfsub_32ns_32ns_32_5_full_dsp_1 BINDTYPE op TYPE fsub IMPL fulldsp LATENCY 4 ALLOW_PRAGMA 1}
+      {MODELNAME streaming_attention_fexp_32ns_32ns_32_10_full_dsp_1 RTLNAME streaming_attention_fexp_32ns_32ns_32_10_full_dsp_1 BINDTYPE op TYPE fexp IMPL fulldsp LATENCY 9 ALLOW_PRAGMA 1}
       {MODELNAME streaming_attention_kt_RAM_AUTO_1R1W RTLNAME streaming_attention_kt_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME streaming_attention_gmem0_m_axi RTLNAME streaming_attention_gmem0_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
       {MODELNAME streaming_attention_gmem1_m_axi RTLNAME streaming_attention_gmem1_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}

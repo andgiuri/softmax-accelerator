@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'streaming_attention'" level="0">
-<item name = "Date">Sat Jun 20 05:22:13 2026
+<item name = "Date">Sat Jun 20 05:29:35 2026
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
 <item name = "Project">stream_attn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 14.512 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 12.958 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">354791, 354791, 5.149 ms, 5.149 ms, 354792, 354792, no</column>
+<column name="">107687, 107687, 1.395 ms, 1.395 ms, 107688, 107688, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILES">354624, 354624, 5541, -, -, 64, no</column>
+<column name="- TILES">107520, 107520, 1680, -, -, 64, no</column>
 </table>
 </item>
 </section>

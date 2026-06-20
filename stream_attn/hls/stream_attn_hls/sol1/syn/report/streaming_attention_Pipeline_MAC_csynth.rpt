@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'streaming_attention_Pipeline_MAC'
 ================================================================
-* Date:           Sat Jun 20 05:22:14 2026
+* Date:           Sat Jun 20 05:29:37 2026
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        stream_attn_hls
@@ -325,37 +325,37 @@
 |kt_15_address0         |  out|    6|   ap_memory|                             kt_15|         array|
 |kt_15_ce0              |  out|    1|   ap_memory|                             kt_15|         array|
 |kt_15_q0               |   in|    8|   ap_memory|                             kt_15|         array|
-|add71_1539_out         |  out|   22|      ap_vld|                    add71_1539_out|       pointer|
-|add71_1539_out_ap_vld  |  out|    1|      ap_vld|                    add71_1539_out|       pointer|
-|add71_1438_out         |  out|   22|      ap_vld|                    add71_1438_out|       pointer|
-|add71_1438_out_ap_vld  |  out|    1|      ap_vld|                    add71_1438_out|       pointer|
-|add71_1337_out         |  out|   22|      ap_vld|                    add71_1337_out|       pointer|
-|add71_1337_out_ap_vld  |  out|    1|      ap_vld|                    add71_1337_out|       pointer|
-|add71_1236_out         |  out|   22|      ap_vld|                    add71_1236_out|       pointer|
-|add71_1236_out_ap_vld  |  out|    1|      ap_vld|                    add71_1236_out|       pointer|
-|add71_1135_out         |  out|   22|      ap_vld|                    add71_1135_out|       pointer|
-|add71_1135_out_ap_vld  |  out|    1|      ap_vld|                    add71_1135_out|       pointer|
-|add71_1034_out         |  out|   22|      ap_vld|                    add71_1034_out|       pointer|
-|add71_1034_out_ap_vld  |  out|    1|      ap_vld|                    add71_1034_out|       pointer|
-|add71_933_out          |  out|   22|      ap_vld|                     add71_933_out|       pointer|
-|add71_933_out_ap_vld   |  out|    1|      ap_vld|                     add71_933_out|       pointer|
-|add71_832_out          |  out|   22|      ap_vld|                     add71_832_out|       pointer|
-|add71_832_out_ap_vld   |  out|    1|      ap_vld|                     add71_832_out|       pointer|
-|add71_731_out          |  out|   22|      ap_vld|                     add71_731_out|       pointer|
-|add71_731_out_ap_vld   |  out|    1|      ap_vld|                     add71_731_out|       pointer|
-|add71_630_out          |  out|   22|      ap_vld|                     add71_630_out|       pointer|
-|add71_630_out_ap_vld   |  out|    1|      ap_vld|                     add71_630_out|       pointer|
-|add71_529_out          |  out|   22|      ap_vld|                     add71_529_out|       pointer|
-|add71_529_out_ap_vld   |  out|    1|      ap_vld|                     add71_529_out|       pointer|
-|add71_428_out          |  out|   22|      ap_vld|                     add71_428_out|       pointer|
-|add71_428_out_ap_vld   |  out|    1|      ap_vld|                     add71_428_out|       pointer|
-|add71_327_out          |  out|   22|      ap_vld|                     add71_327_out|       pointer|
-|add71_327_out_ap_vld   |  out|    1|      ap_vld|                     add71_327_out|       pointer|
-|add71_226_out          |  out|   22|      ap_vld|                     add71_226_out|       pointer|
-|add71_226_out_ap_vld   |  out|    1|      ap_vld|                     add71_226_out|       pointer|
-|add71_125_out          |  out|   22|      ap_vld|                     add71_125_out|       pointer|
-|add71_125_out_ap_vld   |  out|    1|      ap_vld|                     add71_125_out|       pointer|
-|add7124_out            |  out|   22|      ap_vld|                       add7124_out|       pointer|
-|add7124_out_ap_vld     |  out|    1|      ap_vld|                       add7124_out|       pointer|
+|add71_1570_out         |  out|   22|      ap_vld|                    add71_1570_out|       pointer|
+|add71_1570_out_ap_vld  |  out|    1|      ap_vld|                    add71_1570_out|       pointer|
+|add71_1469_out         |  out|   22|      ap_vld|                    add71_1469_out|       pointer|
+|add71_1469_out_ap_vld  |  out|    1|      ap_vld|                    add71_1469_out|       pointer|
+|add71_1368_out         |  out|   22|      ap_vld|                    add71_1368_out|       pointer|
+|add71_1368_out_ap_vld  |  out|    1|      ap_vld|                    add71_1368_out|       pointer|
+|add71_1267_out         |  out|   22|      ap_vld|                    add71_1267_out|       pointer|
+|add71_1267_out_ap_vld  |  out|    1|      ap_vld|                    add71_1267_out|       pointer|
+|add71_1166_out         |  out|   22|      ap_vld|                    add71_1166_out|       pointer|
+|add71_1166_out_ap_vld  |  out|    1|      ap_vld|                    add71_1166_out|       pointer|
+|add71_1065_out         |  out|   22|      ap_vld|                    add71_1065_out|       pointer|
+|add71_1065_out_ap_vld  |  out|    1|      ap_vld|                    add71_1065_out|       pointer|
+|add71_964_out          |  out|   22|      ap_vld|                     add71_964_out|       pointer|
+|add71_964_out_ap_vld   |  out|    1|      ap_vld|                     add71_964_out|       pointer|
+|add71_863_out          |  out|   22|      ap_vld|                     add71_863_out|       pointer|
+|add71_863_out_ap_vld   |  out|    1|      ap_vld|                     add71_863_out|       pointer|
+|add71_762_out          |  out|   22|      ap_vld|                     add71_762_out|       pointer|
+|add71_762_out_ap_vld   |  out|    1|      ap_vld|                     add71_762_out|       pointer|
+|add71_661_out          |  out|   22|      ap_vld|                     add71_661_out|       pointer|
+|add71_661_out_ap_vld   |  out|    1|      ap_vld|                     add71_661_out|       pointer|
+|add71_560_out          |  out|   22|      ap_vld|                     add71_560_out|       pointer|
+|add71_560_out_ap_vld   |  out|    1|      ap_vld|                     add71_560_out|       pointer|
+|add71_459_out          |  out|   22|      ap_vld|                     add71_459_out|       pointer|
+|add71_459_out_ap_vld   |  out|    1|      ap_vld|                     add71_459_out|       pointer|
+|add71_358_out          |  out|   22|      ap_vld|                     add71_358_out|       pointer|
+|add71_358_out_ap_vld   |  out|    1|      ap_vld|                     add71_358_out|       pointer|
+|add71_257_out          |  out|   22|      ap_vld|                     add71_257_out|       pointer|
+|add71_257_out_ap_vld   |  out|    1|      ap_vld|                     add71_257_out|       pointer|
+|add71_156_out          |  out|   22|      ap_vld|                     add71_156_out|       pointer|
+|add71_156_out_ap_vld   |  out|    1|      ap_vld|                     add71_156_out|       pointer|
+|add7155_out            |  out|   22|      ap_vld|                       add7155_out|       pointer|
+|add7155_out_ap_vld     |  out|    1|      ap_vld|                       add7155_out|       pointer|
 +-----------------------+-----+-----+------------+----------------------------------+--------------+
 

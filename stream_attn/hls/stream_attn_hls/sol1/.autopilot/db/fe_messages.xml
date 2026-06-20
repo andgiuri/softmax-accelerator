@@ -680,16 +680,37 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="attention_tile.cpp:98:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="streaming_attention" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=beta complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="attention_tile.cpp:102:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="attention_tile.cpp:101:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="streaming_attention" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="attention_tile.cpp:111:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="streaming_attention" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="attention_tile.cpp:107:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="streaming_attention" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=lt complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="attention_tile.cpp:114:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="attention_tile.cpp:109:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="streaming_attention" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="attention_tile.cpp:126:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="attention_tile.cpp:113:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="streaming_attention" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="attention_tile.cpp:115:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="streaming_attention" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="attention_tile.cpp:125:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="streaming_attention" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="attention_tile.cpp:127:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="streaming_attention" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=prod complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="attention_tile.cpp:129:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="streaming_attention" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="attention_tile.cpp:133:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="streaming_attention" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="attention_tile.cpp:135:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="streaming_attention" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="attention_tile.cpp:148:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="streaming_attention" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/c++/expfloat.cpp:22:9" msg_body="Inlining function 'exp_reduce_::exp(float)' into 'hls::expf(float)'">
@@ -698,14 +719,20 @@
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="attention_tile.cpp:95:29" msg_body="Inlining function 'hls::expf(float)' into 'streaming_attention(signed char const*, signed char const*, signed char const*, float*)'">
         <args Callee="hls::expf(float)" Caller="streaming_attention(signed char const*, signed char const*, signed char const*, float*)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="attention_tile.cpp:103:12" msg_body="Inlining function 'hls::expf(float)' into 'streaming_attention(signed char const*, signed char const*, signed char const*, float*)'">
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="attention_tile.cpp:102:12" msg_body="Inlining function 'hls::expf(float)' into 'streaming_attention(signed char const*, signed char const*, signed char const*, float*)'">
         <args Callee="hls::expf(float)" Caller="streaming_attention(signed char const*, signed char const*, signed char const*, float*)"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="attention_tile.cpp:77:19" msg_body="Loop 'VITIS_LOOP_77_2' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="VITIS_LOOP_77_2"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="attention_tile.cpp:113:31" msg_body="Loop 'VITIS_LOOP_113_3' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="VITIS_LOOP_113_3"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="attention_tile.cpp:128:20" msg_body="Loop 'VITIS_LOOP_128_6' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_128_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="attention_tile.cpp:132:31" msg_body="Loop 'VITIS_LOOP_132_7' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_132_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="attention_tile.cpp:134:20" msg_body="Loop 'VITIS_LOOP_134_8' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_134_8"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="attention_tile.cpp:19:0" msg_body="Unrolling loop 'INIT_DOT' (attention_tile.cpp:70:9) in function 'streaming_attention' completely with a factor of 16">
         <args Factor="16" LoopLoc="attention_tile.cpp:70:9" LoopName="INIT_DOT"/>
@@ -713,8 +740,41 @@
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="attention_tile.cpp:19:0" msg_body="Unrolling loop 'VITIS_LOOP_77_2' (attention_tile.cpp:77:19) in function 'streaming_attention' completely with a factor of 16">
         <args Factor="16" LoopLoc="attention_tile.cpp:77:19" LoopName="VITIS_LOOP_77_2"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="attention_tile.cpp:19:0" msg_body="Unrolling loop 'VITIS_LOOP_113_3' (attention_tile.cpp:113:31) in function 'streaming_attention' completely with a factor of 16">
-        <args Factor="16" LoopLoc="attention_tile.cpp:113:31" LoopName="VITIS_LOOP_113_3"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="attention_tile.cpp:19:0" msg_body="Unrolling loop 'VITIS_LOOP_108_3' (attention_tile.cpp:108:20) in function 'streaming_attention' completely with a factor of 16">
+        <args Factor="16" LoopLoc="attention_tile.cpp:108:20" LoopName="VITIS_LOOP_108_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="attention_tile.cpp:19:0" msg_body="Unrolling loop 'VITIS_LOOP_112_4' (attention_tile.cpp:112:27) in function 'streaming_attention' completely with a factor of 4">
+        <args Factor="4" LoopLoc="attention_tile.cpp:112:27" LoopName="VITIS_LOOP_112_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="attention_tile.cpp:19:0" msg_body="Unrolling loop 'VITIS_LOOP_114_5' (attention_tile.cpp:114:20) in function 'streaming_attention' completely with a factor of 1">
+        <args Factor="1" LoopLoc="attention_tile.cpp:114:20" LoopName="VITIS_LOOP_114_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="attention_tile.cpp:19:0" msg_body="Unrolling loop 'VITIS_LOOP_114_5' (attention_tile.cpp:114:20) in function 'streaming_attention' completely with a factor of 2">
+        <args Factor="2" LoopLoc="attention_tile.cpp:114:20" LoopName="VITIS_LOOP_114_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="attention_tile.cpp:19:0" msg_body="Unrolling loop 'VITIS_LOOP_114_5' (attention_tile.cpp:114:20) in function 'streaming_attention' completely with a factor of 4">
+        <args Factor="4" LoopLoc="attention_tile.cpp:114:20" LoopName="VITIS_LOOP_114_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="attention_tile.cpp:19:0" msg_body="Unrolling loop 'VITIS_LOOP_114_5' (attention_tile.cpp:114:20) in function 'streaming_attention' completely with a factor of 8">
+        <args Factor="8" LoopLoc="attention_tile.cpp:114:20" LoopName="VITIS_LOOP_114_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="attention_tile.cpp:19:0" msg_body="Unrolling loop 'VITIS_LOOP_128_6' (attention_tile.cpp:128:20) in function 'streaming_attention' completely with a factor of 16">
+        <args Factor="16" LoopLoc="attention_tile.cpp:128:20" LoopName="VITIS_LOOP_128_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="attention_tile.cpp:19:0" msg_body="Unrolling loop 'VITIS_LOOP_132_7' (attention_tile.cpp:132:31) in function 'streaming_attention' completely with a factor of 4">
+        <args Factor="4" LoopLoc="attention_tile.cpp:132:31" LoopName="VITIS_LOOP_132_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="attention_tile.cpp:19:0" msg_body="Unrolling loop 'VITIS_LOOP_134_8' (attention_tile.cpp:134:20) in function 'streaming_attention' completely with a factor of 1">
+        <args Factor="1" LoopLoc="attention_tile.cpp:134:20" LoopName="VITIS_LOOP_134_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="attention_tile.cpp:19:0" msg_body="Unrolling loop 'VITIS_LOOP_134_8' (attention_tile.cpp:134:20) in function 'streaming_attention' completely with a factor of 2">
+        <args Factor="2" LoopLoc="attention_tile.cpp:134:20" LoopName="VITIS_LOOP_134_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="attention_tile.cpp:19:0" msg_body="Unrolling loop 'VITIS_LOOP_134_8' (attention_tile.cpp:134:20) in function 'streaming_attention' completely with a factor of 4">
+        <args Factor="4" LoopLoc="attention_tile.cpp:134:20" LoopName="VITIS_LOOP_134_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="attention_tile.cpp:19:0" msg_body="Unrolling loop 'VITIS_LOOP_134_8' (attention_tile.cpp:134:20) in function 'streaming_attention' completely with a factor of 8">
+        <args Factor="8" LoopLoc="attention_tile.cpp:134:20" LoopName="VITIS_LOOP_134_8"/>
     </msg>
     <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="attention_tile.cpp:31:9" msg_body="Applying array_partition to 'q': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="q"/>

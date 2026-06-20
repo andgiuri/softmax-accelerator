@@ -18,25 +18,25 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>14.512</EstimatedClockPeriod>
+<EstimatedClockPeriod>12.958</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>354791</Best-caseLatency>
-<Average-caseLatency>354791</Average-caseLatency>
-<Worst-caseLatency>354791</Worst-caseLatency>
-<Best-caseRealTimeLatency>5.149 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>5.149 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>5.149 ms</Worst-caseRealTimeLatency>
-<Interval-min>354792</Interval-min>
-<Interval-max>354792</Interval-max>
+<Best-caseLatency>107687</Best-caseLatency>
+<Average-caseLatency>107687</Average-caseLatency>
+<Worst-caseLatency>107687</Worst-caseLatency>
+<Best-caseRealTimeLatency>1.395 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>1.395 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>1.395 ms</Worst-caseRealTimeLatency>
+<Interval-min>107688</Interval-min>
+<Interval-max>107688</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <TILES>
 <TripCount>64</TripCount>
-<Latency>354624</Latency>
-<AbsoluteTimeLatency>5146303</AbsoluteTimeLatency>
-<IterationLatency>5541</IterationLatency>
+<Latency>107520</Latency>
+<AbsoluteTimeLatency>1393244</AbsoluteTimeLatency>
+<IterationLatency>1680</IterationLatency>
 <InstanceList>
 </InstanceList>
 </TILES>
@@ -46,9 +46,9 @@
 <AreaEstimates>
 <Resources>
 <BRAM_18K>0</BRAM_18K>
-<DSP>36</DSP>
-<FF>10918</FF>
-<LUT>15692</LUT>
+<DSP>48</DSP>
+<FF>12792</FF>
+<LUT>18118</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
