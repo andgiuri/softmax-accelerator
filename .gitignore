@@ -1,0 +1,25 @@
+# Vitis / Vivado build outputs
+stream_attn/hls/stream_attn_hls/
+stream_attn/hls/*.zip
+stream_attn/hls/*.log
+stream_attn/hls/vitis_hls.log
+stream_attn/vivado/*/
+*.jou
+*.log
+*.str
+.Xil/
+vivado*.backup*
+
+# Bitstream / handoff artifacts (built on remote, uploaded to board)
+*.bit
+*.hwh
+*.bin
+*.xsa
+
+# Generated data
+*.npy
+*.npz
+
+# Python
+__pycache__/
+*.pyc
