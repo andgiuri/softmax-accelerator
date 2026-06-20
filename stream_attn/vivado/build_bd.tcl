@@ -38,9 +38,16 @@ if {![file isdirectory $ip_repo]} {
 # ---------------- project ----------------
 create_project $proj_name $proj_dir -part $part -force
 
-# Auto-detect the installed PYNQ-Z2 board part (vlnv varies by board-file source).
-set bp [lindex [get_board_parts -quiet *pynq-z2*] 0]
-if {$bp eq ""} { set bp [lindex [get_board_parts -quiet *pynq*] 0] }
+# Select the installed PYNQ-Z2 board part (filter the full list in Tcl; the
+# positional glob arg to get_board_parts is unreliable in batch mode).
+set want "tul.com.tw:pynq-z2:part0:1.0"
+set all  [get_board_parts -quiet]
+if {[lsearch -exact $all $want] >= 0} {
+    set bp $want
+} else {
+    set bp ""
+    foreach b $all { if {[string match *pynq-z2* $b]} { set bp $b; break } }
+}
 if {$bp eq ""} {
     error "PYNQ-Z2 board part not found. Run 'get_board_parts' in Vivado and tell me the string."
 }
