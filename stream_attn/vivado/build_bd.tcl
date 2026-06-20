@@ -3,14 +3,15 @@
 #
 # Builds a block design (Zynq PS + the streaming_attention HLS IP) and a full
 # bitstream + handoff (.hwh) for PYNQ. The IP m_axi masters (Q/K/V/O) go to the
-# PS HP0 slave port (DDR access); the s_axilite control goes to the PS GP0.
+# PS HP0 slave port (DDR access) through a SmartConnect; the s_axilite control
+# goes to the PS GP0 master. All wiring is explicit (no apply_bd_automation).
 #
 # Usage (on the build host):
 #   source <xilinx>/Vivado/2022.1/settings64.sh
 #   cd stream_attn/vivado
 #   vivado -mode batch -source build_bd.tcl
 #
-# Outputs land in stream_attn/vivado/outputs/ :
+# Outputs in stream_attn/vivado/outputs/ :
 #   attention_tile.bit, attention_tile.hwh  (upload both to the board)
 #   timing_summary.rpt, utilization.rpt
 # =============================================================================
@@ -18,7 +19,6 @@
 # ---------------- knobs ----------------
 set proj_name   attn_z2
 set part        xc7z020clg400-1
-set board_part  tul.com.tw:pynq-z2:part0:1.0
 set bd_name     design_1
 set ip_name     streaming_attention
 set fclk_mhz    75
@@ -37,7 +37,16 @@ if {![file isdirectory $ip_repo]} {
 
 # ---------------- project ----------------
 create_project $proj_name $proj_dir -part $part -force
-catch { set_property board_part $board_part [current_project] }
+
+# Auto-detect the installed PYNQ-Z2 board part (vlnv varies by board-file source).
+set bp [lindex [get_board_parts -quiet *pynq-z2*] 0]
+if {$bp eq ""} { set bp [lindex [get_board_parts -quiet *pynq*] 0] }
+if {$bp eq ""} {
+    error "PYNQ-Z2 board part not found. Run 'get_board_parts' in Vivado and tell me the string."
+}
+set_property board_part $bp [current_project]
+puts "==== Using board_part: $bp ===="
+
 set_property ip_repo_paths $ip_repo [current_project]
 update_ip_catalog
 
@@ -50,7 +59,7 @@ apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 \
     -config {make_external "FIXED_IO, DDR" apply_board_preset "1" \
              Master "Disable" Slave "Disable"} [get_bd_cells ps7]
 
-# Enable HP0 (DDR access for the masters), GP0 (control), set PL clock.
+# Enable HP0 (DDR for masters), GP0 (control), set PL clock.
 set_property -dict [list \
     CONFIG.PCW_USE_S_AXI_HP0 {1} \
     CONFIG.PCW_USE_M_AXI_GP0 {1} \
@@ -60,21 +69,41 @@ set_property -dict [list \
 # The streaming attention HLS IP.
 create_bd_cell -type ip -vlnv xilinx.com:hls:${ip_name}:1.0 attn0
 
-# Control path: PS GP0 master -> IP s_axilite slave.
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 \
-    -config {Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} \
-             Master {/ps7/M_AXI_GP0} Slave {/attn0/s_axi_control} \
-             ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}} \
-    [get_bd_intf_pins attn0/s_axi_control]
+# Reset block in the PL clock domain.
+create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst0
 
-# Data path: each IP master -> PS HP0 slave (DDR). Reuse one interconnect.
-foreach m {m_axi_gmem0 m_axi_gmem1 m_axi_gmem2 m_axi_gmem3} {
-    apply_bd_automation -rule xilinx.com:bd_rule:axi4 \
-        -config {Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} \
-                 Master "/attn0/$m" Slave {/ps7/S_AXI_HP0} \
-                 ddr_seg {Auto} intc_ip {Auto} master_apm {0}} \
-        [get_bd_intf_pins attn0/$m]
-}
+# Control interconnect: PS GP0 -> IP s_axilite.
+create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 ctrl_sc
+set_property -dict [list CONFIG.NUM_SI {1} CONFIG.NUM_MI {1}] [get_bd_cells ctrl_sc]
+
+# Data interconnect: 4 IP masters -> PS HP0.
+create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 hp_sc
+set_property -dict [list CONFIG.NUM_SI {4} CONFIG.NUM_MI {1}] [get_bd_cells hp_sc]
+
+# ---- clocks: everything on FCLK_CLK0 ----
+set clk [get_bd_pins ps7/FCLK_CLK0]
+connect_bd_net $clk [get_bd_pins ps7/M_AXI_GP0_ACLK]
+connect_bd_net $clk [get_bd_pins ps7/S_AXI_HP0_ACLK]
+connect_bd_net $clk [get_bd_pins attn0/ap_clk]
+connect_bd_net $clk [get_bd_pins rst0/slowest_sync_clk]
+connect_bd_net $clk [get_bd_pins ctrl_sc/aclk]
+connect_bd_net $clk [get_bd_pins hp_sc/aclk]
+
+# ---- resets ----
+connect_bd_net [get_bd_pins ps7/FCLK_RESET0_N] [get_bd_pins rst0/ext_reset_in]
+set rstn [get_bd_pins rst0/peripheral_aresetn]
+connect_bd_net $rstn [get_bd_pins attn0/ap_rst_n]
+connect_bd_net $rstn [get_bd_pins ctrl_sc/aresetn]
+connect_bd_net $rstn [get_bd_pins hp_sc/aresetn]
+
+# ---- AXI data nets ----
+connect_bd_intf_net [get_bd_intf_pins ps7/M_AXI_GP0]      [get_bd_intf_pins ctrl_sc/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ctrl_sc/M00_AXI]    [get_bd_intf_pins attn0/s_axi_control]
+connect_bd_intf_net [get_bd_intf_pins attn0/m_axi_gmem0]  [get_bd_intf_pins hp_sc/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins attn0/m_axi_gmem1]  [get_bd_intf_pins hp_sc/S01_AXI]
+connect_bd_intf_net [get_bd_intf_pins attn0/m_axi_gmem2]  [get_bd_intf_pins hp_sc/S02_AXI]
+connect_bd_intf_net [get_bd_intf_pins attn0/m_axi_gmem3]  [get_bd_intf_pins hp_sc/S03_AXI]
+connect_bd_intf_net [get_bd_intf_pins hp_sc/M00_AXI]      [get_bd_intf_pins ps7/S_AXI_HP0]
 
 assign_bd_address
 regenerate_bd_layout
@@ -82,8 +111,7 @@ validate_bd_design
 save_bd_design
 
 # ---------------- wrapper + implementation ----------------
-set bd_file [get_files ${bd_name}.bd]
-make_wrapper -files [get_files $bd_file] -top
+make_wrapper -files [get_files ${bd_name}.bd] -top
 add_files -norecurse [file normalize $proj_dir/$proj_name.gen/sources_1/bd/$bd_name/hdl/${bd_name}_wrapper.v]
 set_property top ${bd_name}_wrapper [current_fileset]
 update_compile_order -fileset sources_1
@@ -92,7 +120,7 @@ launch_runs impl_1 -to_step write_bitstream -jobs $jobs
 wait_on_run impl_1
 
 if {[get_property PROGRESS [get_runs impl_1]] != "100%"} {
-    error "Implementation did not finish (check $proj_dir/.../impl_1 logs)"
+    error "Implementation did not finish (check impl_1 logs under $proj_dir)"
 }
 
 # ---------------- collect outputs ----------------
@@ -104,8 +132,8 @@ puts "==== Implementation WNS = $wns ns (negative => fails at ${fclk_mhz} MHz) =
 
 set bit [glob -nocomplain $proj_dir/$proj_name.runs/impl_1/${bd_name}_wrapper.bit]
 set hwh [glob -nocomplain $proj_dir/$proj_name.gen/sources_1/bd/$bd_name/hw_handoff/${bd_name}.hwh]
-if {$bit eq ""} { error "bitstream not found" }
 if {$hwh eq ""} { set hwh [glob -nocomplain $proj_dir/$proj_name.srcs/sources_1/bd/$bd_name/hw_handoff/${bd_name}.hwh] }
+if {$bit eq ""} { error "bitstream not found" }
 
 file copy -force $bit $out_dir/attention_tile.bit
 if {$hwh ne ""} { file copy -force $hwh $out_dir/attention_tile.hwh } else { puts "WARNING: .hwh not found, locate it manually" }
