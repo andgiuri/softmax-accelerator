@@ -38,21 +38,10 @@ if {![file isdirectory $ip_repo]} {
 # ---------------- project ----------------
 create_project $proj_name $proj_dir -part $part -force
 
-# Select the installed PYNQ-Z2 board part (filter the full list in Tcl; the
-# positional glob arg to get_board_parts is unreliable in batch mode).
-set want "tul.com.tw:pynq-z2:part0:1.0"
-set all  [get_board_parts -quiet]
-if {[lsearch -exact $all $want] >= 0} {
-    set bp $want
-} else {
-    set bp ""
-    foreach b $all { if {[string match *pynq-z2* $b]} { set bp $b; break } }
-}
-if {$bp eq ""} {
-    error "PYNQ-Z2 board part not found. Run 'get_board_parts' in Vivado and tell me the string."
-}
-set_property board_part $bp [current_project]
-puts "==== Using board_part: $bp ===="
+# Set the PYNQ-Z2 board part directly (confirmed installed). This validates
+# against the catalog and is what apply_board_preset needs for the PS config.
+set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+puts "==== board_part: [get_property board_part [current_project]] ===="
 
 set_property ip_repo_paths $ip_repo [current_project]
 update_ip_catalog
